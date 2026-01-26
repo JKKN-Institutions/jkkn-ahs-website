@@ -1,0 +1,50 @@
+
+> ahs-website@0.1.0 build
+> next build
+
+▲ Next.js 16.1.4 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 19.4s
+  Running TypeScript ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/29) ...
+  Generating static pages using 7 workers (7/29) 
+  Generating static pages using 7 workers (14/29) 
+  Generating static pages using 7 workers (21/29) 
+✓ Generating static pages using 7 workers (29/29) in 2.4s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /academic-calendar
+├ ○ /accident-emergency-care
+├ ○ /ambulance-service
+├ ○ /bank-post-office
+├ ○ /cardiac-technology
+├ ○ /classroom
+├ ○ /contact
+├ ○ /critical-care-technology
+├ ○ /dialysis-technology
+├ ○ /food-court
+├ ○ /hostel
+├ ○ /lab
+├ ○ /library
+├ ○ /medical-record-science
+├ ○ /NAAC
+├ ○ /operation-theatre-anaesthesia
+├ ○ /our-management
+├ ○ /our-trust
+├ ○ /physician-assistant
+├ ○ /principal-message
+├ ○ /privacy-policy
+├ ○ /radiology-imaging-technology
+├ ○ /respiratory-therapy
+├ ○ /transport
+├ ○ /vision-mission
+└ ○ /wifi
+
+
+○  (Static)  prerendered as static content
+
