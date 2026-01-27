@@ -45,7 +45,7 @@ function HeroSection() {
                         B.Sc Accident & Emergency Care Technology
                     </h1>
                     <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                        Embark on a life-saving career in emergency medicine. Our comprehensive 3 years + 1 year internship program prepares Learners to become skilled emergency care technologists, mastering trauma management, emergency response, critical care, advanced life support, disaster management, and pre-hospital emergency care.
+                        Embark on a life-saving career in emergency medicine. Our comprehensive 3 Years + 1 Year Internship program prepares Learners to become skilled emergency care technologists, mastering trauma management, emergency response, critical care, advanced life support, disaster management, and pre-hospital emergency care.
                     </p>
                     <div className="flex flex-wrap gap-4">
                         <button className="px-8 py-3.5 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-[#095c37] transition-all transform hover:-translate-y-1">
@@ -121,10 +121,10 @@ function AboutSection() {
 
                 <div className="grid md:grid-cols-2 gap-6 mt-10">
                     {[
-                        { title: "Emergency Response Training", icon: <Siren />, desc: "Rapid assessment & intervention" },
-                        { title: "Advanced Life Support", icon: <HeartPulse />, desc: "ACLS & ATLS certification" },
-                        { title: "Clinical Excellence", icon: <Shield />, desc: "2000+ hours hands-on training" },
-                        { title: "Expert Faculty", icon: <Stethoscope />, desc: "Learn from emergency physicians" },
+                        { title: "Life-Saving Skills", icon: <Siren />, desc: "ACLS, BLS & PALS Certified Training" },
+                        { title: "Trauma Expertise", icon: <HeartPulse />, desc: "Advanced trauma care protocols" },
+                        { title: "Expert Mentorship", icon: <Shield />, desc: "Learn from ER specialists" }
+
                     ].map((item, i) => (
                         <div key={i} className="flex gap-4 items-start p-4 bg-white rounded-xl hover:shadow-lg transition-all border border-gray-100">
                             <div className="p-3 bg-[#0b6d41]/10 rounded-lg text-[#0b6d41] shrink-0">
@@ -145,10 +145,10 @@ function AboutSection() {
                     <h3 className="text-xl font-bold mb-6 border-b border-gray-100 pb-4 text-[#0b6d41]">Quick Course Information</h3>
                     <ul className="space-y-4 text-sm">
                         {[
-                            { label: "Duration", value: "3 + 1" },
+                            { label: "Duration", value: "3 Years + 1 Year Internship" },
                             { label: "Degree", value: "B.Sc" },
                             { label: "Intake", value: "10 Seats" },
-                            { label: "Session", value: "2025-2026" },
+                            { label: "Session", value: "2026-2027" },
                             { label: "Approval", value: "UGC Approved" },
                             { label: "Fee", value: "Contact Us" },
                         ].map((item, i) => (
@@ -185,10 +185,10 @@ function EligibilitySection() {
                         </h3>
                         <ul className="space-y-4">
                             {[
-                                "Passed 10+2 or equivalent from a recognized board",
+                                "Passed +2 or equivalent from a recognized board",
                                 "Physics, Chemistry, and Biology as core subjects",
                                 "Minimum 50% aggregate marks (40% for SC/ST/OBC)",
-                                "English as a compulsory subject in 10+2"
+                                "English as a compulsory subject in +2"
                             ].map((item, i) => (
                                 <li key={i} className="flex gap-3 text-gray-600">
                                     <CheckCircle2 className="w-5 h-5 text-[#0b6d41] shrink-0" />
@@ -230,7 +230,7 @@ function SyllabusSection() {
         'Year 1': [
             {
                 sem: 'Semester 1',
-                credits: '22 Credits',
+
                 subjects: [
                     { name: 'Human Anatomy', type: 'Theory' },
                     { name: 'Human Physiology', type: 'Theory' },
@@ -242,7 +242,7 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 2',
-                credits: '24 Credits',
+
                 subjects: [
                     { name: 'Emergency Medicine Fundamentals', type: 'Theory' },
                     { name: 'Pathology Basics', type: 'Theory' },
@@ -256,7 +256,7 @@ function SyllabusSection() {
         'Year 2': [
             {
                 sem: 'Semester 3',
-                credits: '24 Credits',
+
                 subjects: [
                     { name: 'Emergency Pharmacology', type: 'Theory' },
                     { name: 'Trauma Assessment', type: 'Theory' },
@@ -268,7 +268,7 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 4',
-                credits: '26 Credits',
+
                 subjects: [
                     { name: 'Medical Emergencies - II', type: 'Theory' },
                     { name: 'Trauma Management', type: 'Theory' },
@@ -282,7 +282,7 @@ function SyllabusSection() {
         'Year 3': [
             {
                 sem: 'Semester 5',
-                credits: '26 Credits',
+
                 subjects: [
                     { name: 'Advanced Trauma Life Support', type: 'Theory' },
                     { name: 'Pediatric Emergency Care', type: 'Theory' },
@@ -294,7 +294,7 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 6',
-                credits: '28 Credits',
+
                 subjects: [
                     { name: 'Pre-Hospital Emergency Care', type: 'Theory' },
                     { name: 'Emergency Ventilation', type: 'Theory' },
@@ -308,7 +308,7 @@ function SyllabusSection() {
         'Year 4': [
             {
                 sem: 'Semester 7',
-                credits: '28 Credits',
+
                 subjects: [
                     { name: 'Critical Care in Emergency', type: 'Theory' },
                     { name: 'Triage & Mass Casualty', type: 'Theory' },
@@ -320,7 +320,7 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 8',
-                credits: '30 Credits',
+
                 subjects: [
                     { name: 'Professional Ethics', type: 'Theory' },
                     { name: 'Healthcare Management', type: 'Theory' },
@@ -429,17 +429,17 @@ function FacilitiesSection() {
     return (
         <section className="py-24 max-w-7xl mx-auto px-4 text-center">
             <span className="text-[#0b6d41] font-bold tracking-widest uppercase text-xs mb-2 p-1 bg-[#0b6d41]/10 rounded inline-block">Infrastructure</span>
-            <h2 className="text-3xl font-black text-[#0b6d41] mb-4">World-Class Facilities</h2>
+            <h2 className="text-3xl font-black text-[#0b6d41] mb-4">World-Class Facilities with Tie-up Hospitals</h2>
             <p className="text-gray-500 mb-12 max-w-3xl mx-auto">State-of-the-art infrastructure for hands-on experience with emergency care equipment and protocols</p>
 
             <div className="grid md:grid-cols-3 gap-6">
                 {[
-                    { title: "Trauma Care Unit", color: "bg-[#ffde59]", text: "text-[#0b6d41]", desc: "Advanced trauma management equipment." },
-                    { title: "Ambulance Training", color: "bg-[#163a4a]", text: "text-white", desc: "Pre-hospital care and transport training." },
-                    { title: "ACLS/ATLS Lab", color: "bg-white", text: "text-[#0b6d41] border border-[#0b6d41]/10", desc: "Advanced life support certification training." },
                     { title: "Incubation", color: "bg-[#0b6d41]", text: "text-white", desc: "Innovation and startup support for healthcare ventures." },
-                    { title: "Simulation Lab (Tieup Hospitals)", color: "bg-[#0b6d41]", text: "text-white", desc: "High-fidelity emergency scenarios with partner hospitals." },
-                    { title: "Ambulance Simulator (Tieup Hospitals)", color: "bg-[#163a4a]", text: "text-white", desc: "Pre-hospital emergency care simulation with hospital partners." },
+                    { title: "Simulation Lab", color: "bg-[#0b6d41]", text: "text-white", desc: "High-fidelity emergency scenarios with partner hospitals." },
+
+                    { title: "Ambulance Simulator", color: "bg-[#163a4a]", text: "text-white", desc: "Pre-hospital emergency care simulation with hospital partners." },
+                    { title: "Digital Library", color: "bg-[#163a4a]", text: "text-white", desc: "E-journals and emergency medicine databases access" },
+
                 ].map((fac, i) => (
                     <div key={i} className={`${fac.color} ${fac.text} rounded-[2rem] p-8 text-left h-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all`}>
                         <h3 className="text-2xl font-black mb-6">{fac.title}</h3>

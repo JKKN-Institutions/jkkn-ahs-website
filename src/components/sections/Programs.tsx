@@ -15,7 +15,7 @@ const programs = [
         bgColor: "bg-[#0b6d41]"
     },
     {
-        title: "B.Sc. Radiology & Imaging",
+        title: "B.Sc. Radiography & Imaging Technology",
         icon: <Activity className="w-8 h-8" />,
         duration: "3 Years + 1 Year Internship",
         description: "Master X-ray, CT scan, MRI, ultrasound, and nuclear medicine imaging. High-demand field with excellent career prospects.",
@@ -33,7 +33,7 @@ const programs = [
         bgColor: "bg-[#0b6d41]"
     },
     {
-        title: "B.Sc. Operation Theatre Tech",
+        title: "B.Sc. Operation Theatre & Anaesthesia Technology",
         icon: <ShieldCheck className="w-8 h-8" />,
         duration: "3 Years + 1 Year Internship",
         description: "Learn surgical assistance, sterilization, instrument handling, and perioperative care. Essential role in every surgical team.",
@@ -78,7 +78,7 @@ const programs = [
         bgColor: "bg-[#0b6d41]"
     },
     {
-        title: "B.Sc. Accident & Emergency Care",
+        title: "B.Sc. Accident & Emergency Care Technology",
         icon: <Ambulance className="w-8 h-8" />,
         duration: "3 Years + 1 Year Internship",
         description: "Train in emergency response, trauma care, and pre-hospital emergency services. Critical role in saving lives during emergencies.",
@@ -108,9 +108,8 @@ export function Programs() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className={`bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all relative ${
-                                program.popular ? 'border-2 border-[#0b6d41]' : 'border border-gray-100'
-                            }`}
+                            className={`bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all relative ${program.popular ? 'border-2 border-[#0b6d41]' : 'border border-gray-100'
+                                }`}
                         >
                             {program.popular && (
                                 <div className="absolute -top-2 sm:-top-3 left-4 sm:left-6">

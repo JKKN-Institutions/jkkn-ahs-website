@@ -35,7 +35,7 @@ const navLinks: NavLink[] = [
             { name: 'B.SC - Medical Record Science', href: '/medical-record-science' },
             { name: 'B.SC - Operation Theatre & Anaesthesia Technology', href: '/operation-theatre-anaesthesia' },
             { name: 'B.SC - Physician Assistant', href: '/physician-assistant' },
-            { name: 'B.SC - Radiology Imaging Technology', href: '/radiology-imaging-technology' },
+            { name: 'B.SC - Radiogrphy & Imaging Technology', href: '/radiology-imaging-technology' },
             { name: 'B.SC - Respiratory Therapy', href: '/respiratory-therapy' }
         ]
     },

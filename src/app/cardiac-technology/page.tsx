@@ -44,7 +44,7 @@ function HeroSection() {
                         B.Sc <span className="text-[#0b6d41]">Cardiac Technology</span>
                     </h1>
                     <p className="text-gray-900 text-lg mb-8 leading-relaxed">
-                        Embark on a transformative journey into cardiovascular healthcare. Our comprehensive 3 years + 1 year internship program prepares learners to master refined cardiac technologies, mastering ECG interpretation, echocardiography, cardiac catheterization, and advanced cardiovascular diagnostics.
+                        Embark on a transformative journey into cardiovascular healthcare. Our comprehensive 3 Years + 1 Year Internship program prepares learners to master refined cardiac technologies, mastering ECG interpretation, echocardiography, cardiac catheterization, and advanced cardiovascular diagnostics.
                     </p>
                     <div className="flex flex-wrap gap-4">
                         <button className="px-8 py-3.5 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-[#095c37] transition-all transform hover:-translate-y-1">
@@ -72,7 +72,7 @@ function HeroSection() {
 // 2. Stats Section
 function StatsSection() {
     const stats = [
-        { label: "Years Duration", value: "3+1", icon: <Clock className="w-5 h-5" /> },
+        { label: "Years Duration", value: "3 Years + 1 Year Internship", icon: <Clock className="w-5 h-5" /> },
         { label: "Placement Rate", value: "95%", icon: <Users className="w-5 h-5" /> },
         { label: "Hospital Partners", value: "25+", icon: <Building2 className="w-5 h-5" /> },
         { label: "Clinical Hours", value: "2000+", icon: <Activity className="w-5 h-5" /> },
@@ -123,7 +123,7 @@ function AboutSection() {
                         {[
                             { title: "Advanced Diagnostics", icon: <Activity />, desc: "Training in ECG, Echo & Cath Lab" },
                             { title: "Clinical Excellence", icon: <Stethoscope />, desc: "2000+ hours of clinical training" },
-                            { title: "Rapid Response", icon: <HeartPulse />, desc: "Critical care & emergency skills" },
+                            { title: "Expert Guidance", icon: <HeartPulse />, desc: "Learn from Cardiologists" },
                         ].map((item, i) => (
                             <div key={i} className="flex gap-4 items-start p-4 bg-white rounded-xl hover:shadow-lg transition-all border border-gray-100">
                                 <div className="p-3 bg-[#0b6d41]/10 rounded-lg text-[#0b6d41] shrink-0">
@@ -146,7 +146,7 @@ function AboutSection() {
                             {[
                                 { label: "Duration", value: "3 + 1" },
                                 { label: "Degree", value: "B.Sc" },
-                                { label: "Intake", value: "10 Seats" },
+                                { label: "Intake", value: "7 Seats" },
                                 { label: "Mode", value: "Full-time" },
                                 { label: "Eligibility", value: "+2 Pass (Science)" },
                                 { label: "Fee", value: "Contact Us" },
@@ -185,10 +185,10 @@ function EligibilitySection() {
                         </h3>
                         <ul className="space-y-4">
                             {[
-                                "Passed 10+2 or equivalent from a recognized board",
+                                "Passed +2 or equivalent from a recognized board",
                                 "Physics, Chemistry, and Biology/Mathematics as core subjects",
-                                "Minimum 50% aggregate marks (45% for SC/ST/OBC)",
-                                "English as a compulsory subject in 10+2"
+                                "Minimum 50% aggregate marks (40% for SC/ST/OBC)",
+                                "English as a compulsory subject in +2"
                             ].map((item, i) => (
                                 <li key={i} className="flex gap-3 text-gray-900">
                                     <CheckCircle2 className="w-5 h-5 text-[#0b6d41] shrink-0" />
@@ -230,7 +230,7 @@ function SyllabusSection() {
         'Year 1': [
             {
                 sem: 'Semester 1',
-                credits: '22 Credits',
+
                 subjects: [
                     { name: 'Human Anatomy', type: 'Theory' },
                     { name: 'Human Physiology', type: 'Theory' },
@@ -242,7 +242,7 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 2',
-                credits: '24 Credits',
+
                 subjects: [
                     { name: 'Cardiovascular Anatomy', type: 'Theory' },
                     { name: 'Cardiovascular Physiology', type: 'Theory' },
@@ -256,7 +256,7 @@ function SyllabusSection() {
         'Year 2': [
             {
                 sem: 'Semester 3',
-                credits: '24 Credits',
+
                 subjects: [
                     { name: 'Pharmacology', type: 'Theory' },
                     { name: 'Electrocardiography - I', type: 'Theory' },
@@ -268,7 +268,7 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 4',
-                credits: '26 Credits',
+
                 subjects: [
                     { name: 'Electrocardiography - II', type: 'Theory' },
                     { name: 'Echocardiography Basics', type: 'Theory' },
@@ -282,7 +282,7 @@ function SyllabusSection() {
         'Year 3': [
             {
                 sem: 'Semester 5',
-                credits: '26 Credits',
+
                 subjects: [
                     { name: 'Advanced Echocardiography', type: 'Theory' },
                     { name: 'Cardiac Catheterization - I', type: 'Theory' },
@@ -294,7 +294,7 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 6',
-                credits: '26 Credits',
+
                 subjects: [
                     { name: 'Cardiac Catheterization - II', type: 'Theory' },
                     { name: 'Interventional Cardiology', type: 'Theory' },
@@ -308,7 +308,7 @@ function SyllabusSection() {
         'Year 4': [
             {
                 sem: 'Semester 7',
-                credits: '28 Credits',
+
                 subjects: [
                     { name: 'Cardiac Rehabilitation', type: 'Theory' },
                     { name: 'Electrophysiology Studies', type: 'Theory' },
@@ -320,7 +320,7 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 8',
-                credits: '30 Credits',
+
                 subjects: [
                     { name: 'Professional Ethics', type: 'Theory' },
                     { name: 'Quality Management', type: 'Theory' },
@@ -430,13 +430,13 @@ function FacilitiesSection() {
         <section className="py-24 bg-white text-center">
             <div className="max-w-7xl mx-auto px-4">
                 <span className="text-[#0b6d41] font-bold tracking-widest uppercase text-xs mb-2 p-1 bg-[#0b6d41]/10 rounded inline-block">Infrastructure</span>
-                <h2 className="text-3xl font-black text-[#0b6d41] mb-12">World-Class Facilities</h2>
+                <h2 className="text-3xl font-black text-[#0b6d41] mb-12">World-Class Facilities with Tie-up Hospitals</h2>
 
                 <div className="grid md:grid-cols-4 gap-6">
                     {[
                         { title: "ECG Lab", color: "bg-[#0b6d41]", text: "text-white", desc: "RPM Scholarship. Modern monitoring machines for student learning." },
-                        { title: "Echo Suite (Tieup Hospitals)", color: "bg-[#ffde59]", text: "text-[#0b6d41]", desc: "Echo Suits. Latest portable and console echo units with partner hospitals." },
-                        { title: "Cath Lab (Tieup Hospitals)", color: "bg-[#163a4a]", text: "text-white", desc: "Cath Lab. Simulation based training for procedures with partner hospitals." },
+                        { title: "Echo Suite", color: "bg-[#ffde59]", text: "text-[#0b6d41]", desc: "Echo Suits. Latest portable and console echo units with partner hospitals." },
+                        { title: "Cath Lab ", color: "bg-[#163a4a]", text: "text-white", desc: "Cath Lab. Simulation based training for procedures with partner hospitals." },
                         { title: "Library", color: "bg-white", text: "text-[#0b6d41] border border-[#0b6d41]/10", desc: "Digital Library. Vast collection of medical references." },
                     ].map((fac, i) => (
                         <div key={i} className={`${fac.color} ${fac.text} rounded-[2rem] p-8 text-left h-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all`}>

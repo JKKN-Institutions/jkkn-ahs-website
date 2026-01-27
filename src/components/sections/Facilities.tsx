@@ -19,7 +19,7 @@ const facilities = [
     },
     {
         title: "Digital Library",
-        description: "5000 medical books, e-journals, and online databases",
+        description: "5000+ medical books, e-journals, and online databases",
         icon: <BookOpen className="w-6 h-6 sm:w-8 sm:h-8" />,
         iconBg: "bg-[#0b6d41]"
     },
@@ -31,7 +31,7 @@ const facilities = [
     },
     {
         title: "Transportation",
-        description: "College buses covering Namakkal, Salem, Erode, Coimbatore routes, Tirupur and Local city.",
+        description: "College buses covering Namakkal, Salem, Erode, Coimbatore routes, Tirupur, Karur and Mettur",
         icon: <Bus className="w-6 h-6 sm:w-8 sm:h-8" />,
         iconBg: "bg-[#0b6d41]"
     },

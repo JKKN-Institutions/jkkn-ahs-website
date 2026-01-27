@@ -45,7 +45,7 @@ function HeroSection() {
                         B.Sc <span className="text-[#0b6d41]">Critical Care Technology</span>
                     </h1>
                     <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                        Embark on a life-saving journey into intensive care healthcare. Our comprehensive 3 years + 1 year internship program prepares Learners to become skilled critical care technologists, mastering ICU management, ventilator support, hemodynamic monitoring, and advanced life support systems.
+                        Embark on a life-saving journey into intensive care healthcare. Our comprehensive 3 Years + 1 Year Internship program prepares Learners to become skilled critical care technologists, mastering ICU management, ventilator support, hemodynamic monitoring, and advanced life support systems.
                     </p>
                     <div className="flex flex-wrap gap-4">
                         <button className="px-8 py-3.5 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-[#095c37] transition-all transform hover:-translate-y-1">
@@ -147,7 +147,7 @@ function AboutSection() {
                                 { label: "Duration", value: "3 + 1" },
                                 { label: "Degree", value: "B.Sc" },
                                 { label: "Intake", value: "10 Seats" },
-                                { label: "Session", value: "2025-2026" },
+                                { label: "Session", value: "2026-2027" },
                                 { label: "Approval", value: "UGC Approved" },
                                 { label: "Fee", value: "Contact Us" },
                             ].map((item, i) => (
@@ -432,13 +432,13 @@ function FacilitiesSection() {
         <section className="py-24 bg-white text-center">
             <div className="max-w-7xl mx-auto px-4">
                 <span className="text-[#0b6d41] font-bold tracking-widest uppercase text-xs mb-2 p-1 bg-[#0b6d41]/10 rounded inline-block">Infrastructure</span>
-                <h2 className="text-3xl font-black text-[#0b6d41] mb-4">World-Class Facilities</h2>
+                <h2 className="text-3xl font-black text-[#0b6d41] mb-4">World-Class Facilities with Tieup Hospitals </h2>
                 <p className="text-gray-500 mb-12 max-w-3xl mx-auto">State-of-the-art infrastructure for hands-on experience with industry-standard critical care equipment</p>
 
                 <div className="grid md:grid-cols-4 gap-6">
                     {[
-                        { title: "ICU Simulation Lab (Tieup Hospitals)", color: "bg-[#0b6d41]", text: "text-white", desc: "High-fidelity mannequins and multi-parameter monitors with partner hospitals." },
-                        { title: "Ventilator Suite (Tieup Hospitals)", color: "bg-[#ffde59]", text: "text-[#0b6d41]", desc: "Multiple ventilator brands with simulation modes at partner hospitals." },
+                        { title: "ICU Simulation Lab", color: "bg-[#0b6d41]", text: "text-white", desc: "High-fidelity mannequins and multi-parameter monitors with partner hospitals." },
+                        { title: "Ventilator Suite", color: "bg-[#ffde59]", text: "text-[#0b6d41]", desc: "Multiple ventilator brands with simulation modes at partner hospitals." },
                         { title: "Dialysis Unit", color: "bg-[#163a4a]", text: "text-white", desc: "Hemodialysis and CRRT training equipment." },
                         { title: "Digital Library", color: "bg-white", text: "text-[#0b6d41] border border-[#0b6d41]/10", desc: "E-journals and critical care databases access." },
                     ].map((fac, i) => (

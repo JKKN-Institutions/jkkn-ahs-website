@@ -109,8 +109,8 @@ export function CareerPaths() {
                     {/* Stats Cards */}
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-12 md:mb-16">
                         {[
-                            { label: "Placement Rate", value: "95%+" },
-                            { label: "Recruiting Partners", value: "100+" },
+                            { label: "Placement Rate", value: "95%" },
+                            { label: "Recruiting Partners", value: "20+" },
                             { label: "Highest Package", value: "₹7.5L" },
                             { label: "Average Package", value: "₹3.2L" },
                         ].map((stat, i) => (
@@ -138,13 +138,7 @@ export function CareerPaths() {
                                 'Fortis Healthcare',
                                 'Manipal Hospitals',
                                 'Columbia Asia',
-                                'Narayana Health',
-                                "Dr. Agarwal's Eye",
-                                'SRL Diagnostics',
-                                'Thyrocare',
-                                'Dr. Lal PathLabs',
-                                'Metropolis Labs',
-                                'Medall Healthcare'
+                                'Narayana Health'
                             ].map((company, index) => (
                                 <motion.div
                                     key={index}

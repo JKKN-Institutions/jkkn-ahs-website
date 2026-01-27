@@ -25,7 +25,7 @@ export function CTASection() {
                             Ready to Transform <span className="text-[#ffde59]">Healthcare?</span>
                         </h2>
                         <p className="text-gray-600 text-sm sm:text-base md:text-lg mb-8 sm:mb-10 md:mb-12 max-w-2xl mx-auto px-4">
-                            Join thousands of students who are shaping the future of medicine. Our admissions for 2025-26 are now open. Secure your future today.
+                            Join thousands of students who are shaping the future of medicine. Our admissions for 2026-27 are now open. Secure your future today.
                         </p>
 
                         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">

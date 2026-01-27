@@ -44,7 +44,7 @@ function HeroSection() {
                         B.Sc <span className="text-[#0b6d41]">Respiratory Therapy</span>
                     </h1>
                     <p className="text-gray-900 text-lg mb-8 leading-relaxed">
-                        Embark on a transformative journey into respiratory healthcare. Our comprehensive 4-year program prepares learners to master advanced respiratory care technologies, including mechanical ventilation, pulmonary function testing, arterial blood gas analysis, and critical airway management.
+                        Embark on a transformative journey into respiratory healthcare. Our comprehensive 3 Years + 1 Year Internship program prepares learners to master advanced respiratory care technologies, including mechanical ventilation, pulmonary function testing, arterial blood gas analysis, and critical airway management.
                     </p>
                     <div className="flex flex-wrap gap-4">
                         <button className="px-8 py-3.5 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-[#095c37] transition-all transform hover:-translate-y-1">
@@ -72,10 +72,10 @@ function HeroSection() {
 // 2. Stats Section
 function StatsSection() {
     const stats = [
-        { label: "Years Duration", value: "4", icon: <Clock className="w-5 h-5" /> },
-        { label: "Placement Rate", value: "92%", icon: <Users className="w-5 h-5" /> },
-        { label: "Hospital Partners", value: "50+", icon: <Building2 className="w-5 h-5" /> },
-        { label: "Clinical Hours", value: "1000+", icon: <Activity className="w-5 h-5" /> },
+        { label: "Years Duration", value: "3+1", icon: <Clock className="w-5 h-5" /> },
+        { label: "Placement Rate", value: "95%", icon: <Users className="w-5 h-5" /> },
+        { label: "Hospital Partners", value: "25+", icon: <Building2 className="w-5 h-5" /> },
+        { label: "Clinical Hours", value: "2000+", icon: <Activity className="w-5 h-5" /> },
     ];
 
     return (
@@ -122,7 +122,7 @@ function AboutSection() {
                     <div className="grid md:grid-cols-2 gap-6 mt-10">
                         {[
                             { title: "Advanced Ventilation", icon: <Activity />, desc: "Mastery in mechanical ventilation" },
-                            { title: "Clinical Excellence", icon: <Stethoscope />, desc: "1000+ hours of clinical training" },
+                            { title: "Clinical Excellence", icon: <Stethoscope />, desc: "2000+ hours of clinical training" },
                             { title: "Modern Equipment", icon: <Laptop />, desc: "Latest respiratory care technology" },
                             { title: "Critical Care", icon: <Wind />, desc: "ICU & emergency care expertise" },
                         ].map((item, i) => (
@@ -145,7 +145,7 @@ function AboutSection() {
                         <h3 className="text-xl font-bold mb-6 border-b border-gray-100 pb-4 text-[#0b6d41]">Quick Course Information</h3>
                         <ul className="space-y-4 text-sm">
                             {[
-                                { label: "Duration", value: "4 Years" },
+                                { label: "Duration", value: "3 + 1" },
                                 { label: "Degree", value: "B.Sc" },
                                 { label: "Mode", value: "Full-time" },
                                 { label: "Hospital Partners", value: "Apollo, KMCH" },
@@ -186,10 +186,10 @@ function EligibilitySection() {
                         </h3>
                         <ul className="space-y-4">
                             {[
-                                "Passed 10+2 or equivalent from a recognized board",
+                                "Passed +2 or equivalent from a recognized board",
                                 "Physics, Chemistry, and Biology/Mathematics as core subjects",
-                                "Minimum 50% aggregate marks (45% for SC/ST/OBC)",
-                                "English as a compulsory subject in 10+2"
+                                "Minimum 50% aggregate marks (40% for SC/ST/OBC)",
+                                "English as a compulsory subject in +2"
                             ].map((item, i) => (
                                 <li key={i} className="flex gap-3 text-gray-900">
                                     <CheckCircle2 className="w-5 h-5 text-[#0b6d41] shrink-0" />
@@ -230,9 +230,7 @@ function SyllabusSection() {
     const syllabus = {
         'Year 1': [
             {
-                sem: 'Semester 1',
-                credits: '22 Credits',
-                subjects: [
+                sem: 'Semester 1', subjects: [
                     { name: 'Human Anatomy', type: 'Theory' },
                     { name: 'Human Physiology', type: 'Theory' },
                     { name: 'Biochemistry', type: 'Theory' },
@@ -243,7 +241,6 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 2',
-                credits: '24 Credits',
                 subjects: [
                     { name: 'Respiratory Anatomy', type: 'Theory' },
                     { name: 'Respiratory Physiology', type: 'Theory' },
@@ -257,7 +254,6 @@ function SyllabusSection() {
         'Year 2': [
             {
                 sem: 'Semester 3',
-                credits: '24 Credits',
                 subjects: [
                     { name: 'Pharmacology', type: 'Theory' },
                     { name: 'Oxygen Therapy', type: 'Theory' },
@@ -269,7 +265,6 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 4',
-                credits: '26 Credits',
                 subjects: [
                     { name: 'Pulmonary Function Testing', type: 'Theory' },
                     { name: 'Airway Management', type: 'Theory' },
@@ -283,7 +278,6 @@ function SyllabusSection() {
         'Year 3': [
             {
                 sem: 'Semester 5',
-                credits: '26 Credits',
                 subjects: [
                     { name: 'Mechanical Ventilation - I', type: 'Theory' },
                     { name: 'Critical Care RT', type: 'Theory' },
@@ -295,7 +289,6 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 6',
-                credits: '26 Credits',
                 subjects: [
                     { name: 'Mechanical Ventilation - II', type: 'Theory' },
                     { name: 'Neonatal RT', type: 'Theory' },
@@ -309,7 +302,6 @@ function SyllabusSection() {
         'Year 4': [
             {
                 sem: 'Semester 7',
-                credits: '28 Credits',
                 subjects: [
                     { name: 'Advanced Ventilation', type: 'Theory' },
                     { name: 'Emergency RT', type: 'Theory' },
@@ -321,7 +313,6 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 8',
-                credits: '30 Credits',
                 subjects: [
                     { name: 'Professional Ethics', type: 'Theory' },
                     { name: 'Quality Management', type: 'Theory' },
@@ -431,7 +422,7 @@ function FacilitiesSection() {
         <section className="py-24 bg-white text-center">
             <div className="max-w-7xl mx-auto px-4">
                 <span className="text-[#0b6d41] font-bold tracking-widest uppercase text-xs mb-2 p-1 bg-[#0b6d41]/10 rounded inline-block">Infrastructure</span>
-                <h2 className="text-3xl font-black text-[#0b6d41] mb-12">World-Class Facilities</h2>
+                <h2 className="text-3xl font-black text-[#0b6d41] mb-12">World-Class Facilities with Tie-up Hospitals</h2>
 
                 <div className="grid md:grid-cols-4 gap-6">
                     {[

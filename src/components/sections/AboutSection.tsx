@@ -7,7 +7,7 @@ import { CheckCircle2 } from 'lucide-react';
 export function AboutSection() {
     const points = [
         { text: "University-affiliated programs with clinical internship" },
-        { text: "Hospital partnerships with Senthil Multi sepciality, lotus" },
+        { text: "Hospital partnerships with Senthil Multispeciality, Lotus" },
         { text: "Industry-experienced Learning Facilitators" }
     ];
 
@@ -32,7 +32,7 @@ export function AboutSection() {
                         </p>
 
                         <p className="text-gray-700 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed">
-                            Affiliated with The Tamil Nadu Dr. M.G.R. Medical University, we offer comprehensive programs in Critical care technology, physician assistant, Cardiac Technology, Radiology, and more. Our Learning Facilitators bring decades of clinical and academic experience to every Learning Studio.
+                            Affiliated with The Tamil Nadu Dr. M.G.R. Medical University, we offer comprehensive programs in Critical Care Technology, Physician Assistant, Cardiac Technology, Radiology, and more. Our Learning Facilitators bring decades of clinical and academic experience to every Learning Studio.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">

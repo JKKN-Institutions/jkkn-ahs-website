@@ -17,7 +17,7 @@ const reasons = [
     },
     {
         title: "Hospital Partnerships",
-        description: "Clinical training at partner hospitals including Senthil Multi sepciality, lotus for real-world exposure.",
+        description: "Clinical training at partner hospitals including Senthil Multi-Speciality, Lotus for real-world exposure.",
         icon: <Building2 className="w-10 h-10" />,
     },
     {

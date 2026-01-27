@@ -33,11 +33,11 @@ export function Hero() {
                     >
                         <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-3 sm:px-5 py-2 rounded-full text-white text-xs sm:text-sm font-semibold mb-6 sm:mb-8 border border-white/30 shadow-lg">
                             <span className="bg-[#ffde59] text-[#0b6d41] px-2 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider">New</span>
-                            <span>Admissions Open for 2025-26</span>
+                            <span>Admissions Open for 2026-27</span>
                         </div>
 
                         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6 sm:mb-8">
-                            Shape the Future of <span className="text-[#ffde59]">Healthcare</span> with JKKN Allied Health Sciences
+                            Shape the Future of <span className="text-[#ffde59]">Healthcare</span> with JKKN College of Allied Health Sciences
                         </h1>
 
                         <p className="text-base sm:text-lg text-white/90 mb-8 sm:mb-10 max-w-2xl leading-relaxed">
@@ -49,7 +49,7 @@ export function Hero() {
                                 Explore Programs <ArrowRight className="w-5 h-5" />
                             </button>
                             <button className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-white/20 backdrop-blur-md text-white rounded-full font-semibold transition-all hover:bg-white/30 border-2 border-white/40 hover:shadow-xl hover:scale-105 text-sm sm:text-base">
-                                Apply for 2025-26
+                                Apply for 2026-27
                             </button>
                         </div>
 
@@ -154,7 +154,7 @@ export function Hero() {
                         </div>
                         <div>
                             <h3 className="text-xs sm:text-sm font-bold text-[#1a5f7a] mb-1">Admission Open</h3>
-                            <p className="text-gray-700 font-semibold text-xs sm:text-sm">2025-26 Batch Now</p>
+                            <p className="text-gray-700 font-semibold text-xs sm:text-sm">2026-27 Batch Now</p>
                         </div>
                     </div>
                 </motion.div>

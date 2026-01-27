@@ -44,7 +44,7 @@ export function AdmissionJourney() {
                         Start Your Healthcare Journey
                     </h2>
                     <p className="text-gray-600 max-w-3xl mx-auto text-sm sm:text-base px-4">
-                        Applications are open for the 2025-26 academic year. Secure your seat in Tamil Nadu's leading Allied Health Sciences institution.
+                        Applications are open for the 2026-27 academic year. Secure your seat in Tamil Nadu's leading Allied Health Sciences institution.
                     </p>
                 </div>
 

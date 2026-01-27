@@ -42,10 +42,10 @@ function HeroSection() {
                 <div className="md:w-1/2">
                     <span className="text-[#0b6d41] font-bold tracking-widest uppercase text-xs mb-4 block p-1 bg-[#0b6d41]/10 w-fit rounded">Allied Health Sciences</span>
                     <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
-                        B.Sc <span className="text-[#ffde59]">Medical Record Science</span>
+                        B.Sc Medical Record Science
                     </h1>
                     <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                        Embark on a rewarding career in health information management. Our comprehensive 3 years + 1 year internship program prepares Learners to become skilled professionals in medical coding, health records administration, ICD classification, healthcare data analytics, and hospital information systems management.
+                        Embark on a rewarding career in health information management. Our comprehensive3 Years + 1 Year Internship program prepares Learners to become skilled professionals in medical coding, health records administration, ICD classification, healthcare data analytics, and hospital information systems management.
                     </p>
                     <div className="flex flex-wrap gap-4">
                         <button className="px-8 py-3.5 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-[#095c37] transition-all transform hover:-translate-y-1">
@@ -147,8 +147,8 @@ function AboutSection() {
                         {[
                             { label: "Duration", value: "3 + 1" },
                             { label: "Degree", value: "B.Sc" },
-                            { label: "Intake", value: "10 Seats" },
-                            { label: "Session", value: "2025-2026" },
+                            { label: "Intake", value: "15 Seats" },
+                            { label: "Session", value: "2026-2027" },
                             { label: "Approval", value: "UGC Approved" },
                             { label: "Fee", value: "Contact Us" },
                         ].map((item, i) => (
@@ -185,10 +185,10 @@ function EligibilitySection() {
                         </h3>
                         <ul className="space-y-4">
                             {[
-                                "Passed 10+2 or equivalent from a recognized board",
+                                "Passed +2 or equivalent from a recognized board",
                                 "Physics, Chemistry, and Biology/Mathematics as core subjects",
-                                "Minimum 50% aggregate marks (45% for SC/ST/OBC)",
-                                "English as a compulsory subject in 10+2"
+                                "Minimum 50% aggregate marks (40% for SC/ST/OBC)",
+                                "English as a compulsory subject in +2"
                             ].map((item, i) => (
                                 <li key={i} className="flex gap-3 text-gray-600">
                                     <CheckCircle2 className="w-5 h-5 text-[#0b6d41] shrink-0" />
@@ -230,7 +230,6 @@ function SyllabusSection() {
         'Year 1': [
             {
                 sem: 'Semester 1',
-                credits: '22 Credits',
                 subjects: [
                     { name: 'Human Anatomy', type: 'Theory' },
                     { name: 'Human Physiology', type: 'Theory' },
@@ -242,7 +241,6 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 2',
-                credits: '24 Credits',
                 subjects: [
                     { name: 'Pathology', type: 'Theory' },
                     { name: 'Microbiology', type: 'Theory' },
@@ -256,7 +254,6 @@ function SyllabusSection() {
         'Year 2': [
             {
                 sem: 'Semester 3',
-                credits: '24 Credits',
                 subjects: [
                     { name: 'Pharmacology', type: 'Theory' },
                     { name: 'ICD-10 Coding - I', type: 'Theory' },
@@ -268,7 +265,6 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 4',
-                credits: '26 Credits',
                 subjects: [
                     { name: 'ICD-10 Coding - II', type: 'Theory' },
                     { name: 'CPT Coding', type: 'Theory' },
@@ -282,7 +278,6 @@ function SyllabusSection() {
         'Year 3': [
             {
                 sem: 'Semester 5',
-                credits: '26 Credits',
                 subjects: [
                     { name: 'Healthcare Quality Management', type: 'Theory' },
                     { name: 'Health Insurance & Reimbursement', type: 'Theory' },
@@ -294,7 +289,6 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 6',
-                credits: '28 Credits',
                 subjects: [
                     { name: 'Healthcare Informatics', type: 'Theory' },
                     { name: 'Legal Aspects of Health Records', type: 'Theory' },
@@ -308,7 +302,6 @@ function SyllabusSection() {
         'Year 4': [
             {
                 sem: 'Semester 7',
-                credits: '28 Credits',
                 subjects: [
                     { name: 'Hospital Administration', type: 'Theory' },
                     { name: 'Healthcare IT Systems', type: 'Theory' },
@@ -320,7 +313,6 @@ function SyllabusSection() {
             },
             {
                 sem: 'Semester 8',
-                credits: '30 Credits',
                 subjects: [
                     { name: 'Professional Ethics', type: 'Theory' },
                     { name: 'Healthcare Management', type: 'Theory' },
@@ -430,14 +422,14 @@ function FacilitiesSection() {
     return (
         <section className="py-24 max-w-7xl mx-auto px-4 text-center">
             <span className="text-[#0b6d41] font-bold tracking-widest uppercase text-xs mb-2 p-1 bg-[#0b6d41]/10 rounded inline-block">Infrastructure</span>
-            <h2 className="text-3xl font-black text-[#0b6d41] mb-4">World-Class Facilities</h2>
+            <h2 className="text-3xl font-black text-[#0b6d41] mb-4">World-Class Facilities with Tie-up Hospitals</h2>
             <p className="text-gray-500 mb-12 max-w-3xl mx-auto">State-of-the-art infrastructure for hands-on experience with industry-standard health information management systems</p>
 
             <div className="grid md:grid-cols-4 gap-6">
                 {[
                     { title: "Computer Lab", color: "bg-[#0b6d41]", text: "text-white", desc: "Latest systems with HIM software and EHR platforms." },
-                    { title: "Coding Lab (Tieup Hospitals)", color: "bg-[#ffde59]", text: "text-[#0b6d41]", desc: "ICD-10, CPT coding practice stations." },
-                    { title: "MRD Simulation (Tieup Hospitals)", color: "bg-[#163a4a]", text: "text-white", desc: "Medical Records Department simulation setup." },
+                    { title: "Coding Lab ", color: "bg-[#ffde59]", text: "text-[#0b6d41]", desc: "ICD-10, CPT coding practice stations." },
+                    { title: "MRD Simulation ", color: "bg-[#163a4a]", text: "text-white", desc: "Medical Records Department simulation setup." },
                     { title: "Digital Library", color: "bg-white", text: "text-[#0b6d41] border border-[#0b6d41]/10", desc: "Healthcare journals and coding resources." },
                 ].map((fac, i) => (
                     <div key={i} className={`${fac.color} ${fac.text} rounded-[2rem] p-8 text-left h-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all`}>
