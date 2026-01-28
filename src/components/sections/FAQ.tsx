@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Plus, Minus } from 'lucide-react';
+import { BRAND_LEGACY } from '@/lib/constants';
 
 const faqs = [
     {
@@ -43,7 +44,7 @@ const faqs = [
     },
     {
         question: "What makes JKKN different from other Allied Health Sciences colleges?",
-        answer: "JKKN stands apart with its 100-year legacy (#JKKN100) of educational excellence, state-of-the-art laboratories matching hospital standards, partnerships with 50+ leading hospitals for clinical training, experienced Learning Facilitators with industry expertise, 95%+ placement rate with top healthcare organizations, scholarship programs for deserving Learners, and comprehensive support from admissions through career placement."
+        answer: `JKKN stands apart with its ${BRAND_LEGACY.FULL_TEXT} of educational excellence, state-of-the-art laboratories matching hospital standards, partnerships with 50+ leading hospitals for clinical training, experienced Learning Facilitators with industry expertise, 95%+ placement rate with top healthcare organizations, scholarship programs for deserving Learners, and comprehensive support from admissions through career placement.`
     }
 ];
 

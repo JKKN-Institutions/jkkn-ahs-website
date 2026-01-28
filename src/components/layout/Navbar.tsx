@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ChevronDown, Rocket } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -15,7 +15,7 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
     {
-        name: 'About',
+        name: 'ABOUT',
         href: '/#about',
         submenu: [
             { name: 'Our Trust', href: '/our-trust' },

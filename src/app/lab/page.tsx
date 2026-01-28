@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 
@@ -16,34 +15,6 @@ export default function Labs() {
                     <h1 className="text-4xl md:text-5xl font-bold text-[#0b6d41] mb-8">
                         Labs
                     </h1>
-
-                    {/* Three Images Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                        <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
-                            <Image
-                                src="/lab/lab-1.webp"
-                                alt="Allied Health Science Lab with wooden desks and equipment"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                        <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
-                            <Image
-                                src="/lab/lab-2.png"
-                                alt="Students in lab coats with books"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                        <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
-                            <Image
-                                src="/lab/lab-3.png"
-                                alt="Student reading in library"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                    </div>
 
                     {/* Content Section */}
                     <div className="space-y-6 text-gray-700 text-base leading-relaxed max-w-full">

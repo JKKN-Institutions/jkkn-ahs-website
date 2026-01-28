@@ -95,27 +95,56 @@ export default function OurTrust() {
                         </div>
                     </motion.div>
 
-                    {/* Legacy Text Section */}
-                    <div className="max-w-4xl mx-auto mb-20 text-center md:text-left">
-                        <div className="inline-block relative mb-6">
-                            <h2 className="text-3xl font-black text-[#0b6d41]">A Legacy of Service</h2>
-                            <div className="h-1.5 w-full bg-[#ffde59] absolute bottom-1 left-0 -z-10 bg-opacity-60 rounded-full"></div>
-                        </div>
-                        <p className="text-gray-600 text-lg leading-relaxed text-justify">
-                            The J.K.K. Rangammal Charitable Trust was established in 1969 with the motto of providing literacy and women's empowerment. Walking in the footsteps of her father, Smt. N. Sendamaraai, Managing Trustee, expanded the service by providing multi-disciplinary education to both genders. Now, under the umbrella, there are ten institutions, including Dental, Pharmacy, Nursing, Education, Engineering, Arts, and Science colleges.
-                        </p>
+                    {/* Legacy of Service Section */}
+                    <div className="max-w-6xl mx-auto mb-20">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="bg-white rounded-[3rem] p-8 md:p-12 shadow-xl border border-gray-100 hover:shadow-2xl transition-all"
+                        >
+                            <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
+                                {/* Left: Content */}
+                                <div className="flex-1 text-center md:text-left">
+                                    <div className="inline-block relative mb-6">
+                                        <h2 className="text-3xl md:text-4xl font-black text-[#0b6d41]">A Legacy of Service</h2>
+                                        <div className="h-1.5 w-full bg-[#ffde59] absolute bottom-1 left-0 -z-10 bg-opacity-60 rounded-full"></div>
+                                    </div>
+                                    <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
+                                        The J.K.K. Rangammal Charitable Trust was established in 1969 with the motto of providing literacy and women's empowerment. Walking in the footsteps of her father, Smt. N. Sendamaraai, Managing Trustee, expanded the service by providing multi-disciplinary education to both genders.
+                                    </p>
+                                    <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+                                        Now, under the umbrella, there are ten institutions, including Dental, Pharmacy, Nursing, Education, Engineering, Arts, and Science colleges.
+                                    </p>
+                                </div>
+
+                                {/* Right: Rounded Logo */}
+                                <div className="shrink-0">
+                                    <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full border-8 border-[#fbfbee] shadow-2xl overflow-hidden bg-white relative">
+                                        <Image
+                                            src="/jkkn-100-logo.png"
+                                            alt="JKKN 100 Years - Century of Transforming Lives"
+                                            width={320}
+                                            height={320}
+                                            className="w-full h-full object-cover"
+                                        />
+                                        <div className="absolute inset-0 border-4 border-[#0b6d41]/10 rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
 
                     {/* Stats Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                         <StatsCard
                             icon={<Calendar className="w-8 h-8 text-[#0b6d41]" />}
-                            value="1,969"
+                            value="1969"
                             label="Year Established"
                         />
                         <StatsCard
                             icon={<Building2 className="w-8 h-8 text-[#0b6d41]" />}
-                            value="10+"
+                            value="8+"
                             label="Institutions"
                         />
                         <StatsCard

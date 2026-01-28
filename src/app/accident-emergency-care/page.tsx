@@ -203,10 +203,10 @@ function EligibilitySection() {
                         </h3>
                         <ul className="space-y-4">
                             {[
-                                "Age: Minimum 17 years as on December 31st",
+                                "Age: Candidates should have completed 17 years of age as on 31st December 2025.",
                                 "Valid entrance exam score (if applicable)",
                                 "Medical fitness certificate",
-                                "Character certificate from last attended institution"
+                                "Conduct certificate from last attended institution"
                             ].map((item, i) => (
                                 <li key={i} className="flex gap-3 text-gray-600">
                                     <CheckCircle2 className="w-5 h-5 text-[#0b6d41] shrink-0" />
@@ -224,113 +224,40 @@ function EligibilitySection() {
 // 5. Syllabus Section
 function SyllabusSection() {
     const [activeYear, setActiveYear] = useState('Year 1');
-    const years = ['Year 1', 'Year 2', 'Year 3', 'Year 4'];
+    const years = ['Year 1', 'Year 2', 'Year 3'];
+
+    const getSubjectType = (hasTheory: boolean, hasPractical: boolean) => {
+        if (hasTheory && hasPractical) return 'Theory + Practical';
+        if (hasTheory) return 'Theory';
+        if (hasPractical) return 'Practical';
+        return 'Theory';
+    };
 
     const syllabus = {
-        'Year 1': [
-            {
-                sem: 'Semester 1',
-
-                subjects: [
-                    { name: 'Human Anatomy', type: 'Theory' },
-                    { name: 'Human Physiology', type: 'Theory' },
-                    { name: 'Biochemistry', type: 'Theory' },
-                    { name: 'English Communication', type: 'Theory' },
-                    { name: 'Computer Applications', type: 'Practical' },
-                    { name: 'Anatomy Practical', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 2',
-
-                subjects: [
-                    { name: 'Emergency Medicine Fundamentals', type: 'Theory' },
-                    { name: 'Pathology Basics', type: 'Theory' },
-                    { name: 'Microbiology', type: 'Theory' },
-                    { name: 'First Aid Principles', type: 'Theory' },
-                    { name: 'Basic Life Support (BLS)', type: 'Practical' },
-                    { name: 'Physiology Practical', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 2': [
-            {
-                sem: 'Semester 3',
-
-                subjects: [
-                    { name: 'Emergency Pharmacology', type: 'Theory' },
-                    { name: 'Trauma Assessment', type: 'Theory' },
-                    { name: 'Medical Emergencies - I', type: 'Theory' },
-                    { name: 'Emergency Nursing Basics', type: 'Theory' },
-                    { name: 'Emergency Care Lab - I', type: 'Practical' },
-                    { name: 'Cardiopulmonary Resuscitation', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 4',
-
-                subjects: [
-                    { name: 'Medical Emergencies - II', type: 'Theory' },
-                    { name: 'Trauma Management', type: 'Theory' },
-                    { name: 'Advanced Cardiac Life Support', type: 'Theory' },
-                    { name: 'Emergency Radiology', type: 'Theory' },
-                    { name: 'ACLS Training Lab', type: 'Practical' },
-                    { name: 'Emergency Care Lab - II', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 3': [
-            {
-                sem: 'Semester 5',
-
-                subjects: [
-                    { name: 'Advanced Trauma Life Support', type: 'Theory' },
-                    { name: 'Pediatric Emergency Care', type: 'Theory' },
-                    { name: 'Toxicology & Poisoning', type: 'Theory' },
-                    { name: 'Disaster Management', type: 'Theory' },
-                    { name: 'ATLS Training', type: 'Practical' },
-                    { name: 'Emergency Department Rotation', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 6',
-
-                subjects: [
-                    { name: 'Pre-Hospital Emergency Care', type: 'Theory' },
-                    { name: 'Emergency Ventilation', type: 'Theory' },
-                    { name: 'Burns & Wound Management', type: 'Theory' },
-                    { name: 'Research Methodology', type: 'Theory' },
-                    { name: 'Ambulance Training', type: 'Practical' },
-                    { name: 'Trauma Center Posting', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 4': [
-            {
-                sem: 'Semester 7',
-
-                subjects: [
-                    { name: 'Critical Care in Emergency', type: 'Theory' },
-                    { name: 'Triage & Mass Casualty', type: 'Theory' },
-                    { name: 'Emergency Procedures', type: 'Theory' },
-                    { name: 'Quality Management in Emergency', type: 'Theory' },
-                    { name: 'Clinical Internship - I', type: 'Practical' },
-                    { name: 'Emergency Simulation', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 8',
-
-                subjects: [
-                    { name: 'Professional Ethics', type: 'Theory' },
-                    { name: 'Healthcare Management', type: 'Theory' },
-                    { name: 'Clinical Internship - II', type: 'Practical' },
-                    { name: 'Project & Dissertation', type: 'Practical' },
-                    { name: 'Comprehensive Viva', type: 'Practical' },
-                    { name: 'Hospital Placement', type: 'Practical' }
-                ]
-            }
-        ]
+        'Year 1': {
+            sem: 'Semester',
+            subjects: [
+                { name: 'Anatomy, Physiology, Biochemistry', hasTheory: true, hasPractical: true },
+                { name: 'Introduction to Computer', hasTheory: true, hasPractical: false },
+                { name: 'Technical Report Writing/Spoken English/Comprehensive Patient Oriented Communication Skill', hasTheory: true, hasPractical: false }
+            ]
+        },
+        'Year 2': {
+            sem: 'Semester',
+            subjects: [
+                { name: 'Pathology Microbiology Pharmacology', hasTheory: true, hasPractical: false },
+                { name: 'Patient Examination and Nursing', hasTheory: true, hasPractical: false },
+                { name: 'Emergency Medicine (EM) and Emergency Medical Services -II', hasTheory: true, hasPractical: true }
+            ]
+        },
+        'Year 3': {
+            sem: 'Semester',
+            subjects: [
+                { name: 'Emergency Medicine and Emergency Medical Services -III', hasTheory: true, hasPractical: true },
+                { name: 'Emergency Surgery and Emergency Surgical Services', hasTheory: true, hasPractical: false },
+                { name: 'Clinical Procedures & Instrument in Emergency Service', hasTheory: true, hasPractical: true }
+            ]
+        }
     };
 
     return (
@@ -358,30 +285,35 @@ function SyllabusSection() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3 }}
-                className="grid md:grid-cols-2 gap-8"
+                className="flex justify-center"
             >
-                {(syllabus as any)[activeYear].map((sem: any, i: number) => (
-                    <div key={i} className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:border-[#0b6d41] transition-colors">
-                        <div className="bg-[#0b6d41] text-white p-4 flex justify-between items-center">
-                            <h4 className="font-bold">{sem.sem}</h4>
-                        </div>
-                        <div className="p-6">
-                            <ul className="space-y-3">
-                                {sem.subjects.map((sub: any, idx: number) => (
-                                    <li key={idx} className="flex items-center justify-between gap-3 text-gray-700 p-2 rounded hover:bg-gray-50 transition-colors">
+                <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:border-[#0b6d41] transition-colors max-w-3xl w-full">
+                    <div className="bg-[#0b6d41] text-white p-4 flex justify-between items-center">
+                        <h4 className="font-bold">{(syllabus as any)[activeYear].sem}</h4>
+                    </div>
+                    <div className="p-6">
+                        <ul className="space-y-3">
+                            {(syllabus as any)[activeYear].subjects.map((sub: any, idx: number) => {
+                                const type = getSubjectType(sub.hasTheory, sub.hasPractical);
+                                return (
+                                    <li key={idx} className="flex items-center justify-between gap-3 text-gray-700 p-3 rounded hover:bg-gray-50 transition-colors">
                                         <div className="flex items-center gap-3">
-                                            <div className={`w-1.5 h-1.5 rounded-full ${sub.type === 'Theory' ? 'bg-[#ffde59]' : 'bg-[#cc5500]'}`}></div>
+                                            <div className={`w-1.5 h-1.5 rounded-full ${type === 'Theory + Practical' ? 'bg-[#0b6d41]' : type === 'Theory' ? 'bg-[#ffde59]' : 'bg-[#cc5500]'}`}></div>
                                             <span className="font-medium">{sub.name}</span>
                                         </div>
-                                        <span className={`text-[10px] uppercase font-bold px-2 py-1 rounded ${sub.type === 'Theory' ? 'bg-blue-50 text-blue-600' : 'bg-yellow-50 text-yellow-600'}`}>
-                                            {sub.type}
+                                        <span className={`text-[10px] uppercase font-bold px-3 py-1 rounded whitespace-nowrap ${
+                                            type === 'Theory + Practical' ? 'bg-green-50 text-green-600' :
+                                            type === 'Theory' ? 'bg-blue-50 text-blue-600' :
+                                            'bg-yellow-50 text-yellow-600'
+                                        }`}>
+                                            {type}
                                         </span>
                                     </li>
-                                ))}
-                            </ul>
-                        </div>
+                                );
+                            })}
+                        </ul>
                     </div>
-                ))}
+                </div>
             </motion.div>
         </section>
     );
@@ -468,10 +400,9 @@ function AdmissionProcessSection() {
                 {[
                     { step: 1, title: "Online Application", desc: "Complete the online form and upload documents." },
                     { step: 2, title: "Document Verification", desc: "Submit originals for verification at office." },
-                    { step: 3, title: "Counseling Session", desc: "Attend counseling about program details." },
-                    { step: 4, title: "Fee Payment", desc: "Pay fees and complete enrollment." },
+                    { step: 3, title: "Fee Payment", desc: "Pay fees and complete enrollment." },
                 ].map((item, i) => (
-                    <div key={i} className="flex flex-col items-center text-center w-full md:w-1/4">
+                    <div key={i} className="flex flex-col items-center text-center w-full md:w-1/3">
                         <div className="w-20 h-20 rounded-full bg-[#0b6d41] text-white flex items-center justify-center text-2xl font-black shadow-xl ring-8 ring-[#fbfbee] mb-6">
                             {item.step}
                         </div>

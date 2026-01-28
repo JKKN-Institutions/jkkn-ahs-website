@@ -203,10 +203,10 @@ function EligibilitySection() {
                         </h3>
                         <ul className="space-y-4">
                             {[
-                                "Age: Minimum 17 years as on December 31st",
+                                "Age: Candidates should have completed 17 years of age as on 31st December 2025.",
                                 "Valid entrance exam score (if applicable)",
                                 "Medical fitness certificate from registered practitioner",
-                                "Transfer certificate from last attended institution"
+                                "Conduct certificate from last attended institution"
                             ].map((item, i) => (
                                 <li key={i} className="flex gap-3 text-gray-900">
                                     <CheckCircle2 className="w-5 h-5 text-[#0b6d41] shrink-0" />
@@ -467,10 +467,9 @@ function AdmissionProcessSection() {
                 {[
                     { step: 1, title: "Online Application", desc: "Complete the online form and upload documents." },
                     { step: 2, title: "Document Verification", desc: "Submitting proofs for verification at office." },
-                    { step: 3, title: "Counseling Session", desc: "Personal counseling about program details." },
-                    { step: 4, title: "Fee Payment", desc: "Pay fees and complete enrollment." },
+                    { step: 3, title: "Fee Payment", desc: "Pay fees and complete enrollment." },
                 ].map((item, i) => (
-                    <div key={i} className="flex flex-col items-center text-center w-full md:w-1/4">
+                    <div key={i} className="flex flex-col items-center text-center w-full md:w-1/3">
                         <div className="w-20 h-20 rounded-full bg-[#0b6d41] text-white flex items-center justify-center text-2xl font-black shadow-xl ring-8 ring-[#fbfbee] mb-6">
                             {item.step}
                         </div>

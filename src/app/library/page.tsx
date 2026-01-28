@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { motion } from 'framer-motion';
@@ -51,6 +52,49 @@ export default function Library() {
                         </motion.p>
                     </div>
 
+                    {/* Library Images */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-6xl mx-auto">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3 }}
+                            className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl shadow-lg"
+                        >
+                            <Image
+                                src="/lab/lab-1.webp"
+                                alt="Allied Health Science Library with wooden desks and study areas"
+                                fill
+                                className="object-cover"
+                            />
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4 }}
+                            className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl shadow-lg"
+                        >
+                            <Image
+                                src="/lab/lab-2.png"
+                                alt="Students studying with books in the library"
+                                fill
+                                className="object-cover"
+                            />
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.5 }}
+                            className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl shadow-lg"
+                        >
+                            <Image
+                                src="/lab/lab-3.png"
+                                alt="Student reading in the library"
+                                fill
+                                className="object-cover"
+                            />
+                        </motion.div>
+                    </div>
+
                     {/* Main Content Section */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -66,7 +110,7 @@ export default function Library() {
                             {/* Introduction */}
                             <div className="prose prose-lg max-w-none">
                                 <p className="text-gray-700 text-lg leading-relaxed text-justify">
-                                    Within the purlieu of Allied Health Science, the library emerges as an academic crucible, fusing foundational doctrines with emergent discourses. Our repository encapsulates not merely textbooks but a dynamic constellation of peer-reviewed papers, digital narratives, and toolkits for a myriad of health science verticals.
+                                    The Allied Health Science library is more than just a place for books—it’s the heart of our academic community. We bridge the gap between classic healthcare principles and the latest industry breakthroughs. Our collection offers everything from essential textbooks and peer-reviewed research to digital tools designed to support every health science specialty.   Empowering the next generation of healthcare professionals. Our library combines foundational learning with the latest digital research tools to support your journey across all health science disciplines.
                                 </p>
                             </div>
 
@@ -140,7 +184,7 @@ export default function Library() {
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
                         <StatsCard
                             icon={<BookOpen className="w-8 h-8 text-[#0b6d41]" />}
-                            value="10,000+"
+                            value="5,000+"
                             label="Books & Journals"
                         />
                         <StatsCard

@@ -31,10 +31,16 @@ const facilities = [
     },
     {
         title: "Transportation",
-        description: "College buses covering Namakkal, Salem, Erode, Coimbatore routes, Tirupur, Karur and Mettur",
+        description: "College buses covering Namakkal, Salem, Erode and Tiruppur routes.",
         icon: <Bus className="w-6 h-6 sm:w-8 sm:h-8" />,
         iconBg: "bg-[#0b6d41]"
     },
+    {
+        title: "Career Guidance",
+        description: "Career Guidance Incubation Cell",
+        icon: <Home className="w-6 h-6 sm:w-8 sm:h-8" />,
+        iconBg: "bg-[#ffde59]"
+    }
 ];
 
 export function Facilities() {

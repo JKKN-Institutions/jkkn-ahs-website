@@ -26,11 +26,6 @@ export function AdmissionJourney() {
         },
         {
             step: "3",
-            title: "Counseling",
-            desc: "Merit-based program selection and seat allotment"
-        },
-        {
-            step: "4",
             title: "Fee Payment",
             desc: "Complete enrollment and begin your journey"
         },

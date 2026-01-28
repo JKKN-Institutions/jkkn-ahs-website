@@ -12,22 +12,10 @@ const paths = [
         iconBg: "bg-[#0b6d41]/10"
     },
     {
-        title: "Diagnostic Center",
-        description: "Join SRL, Thyrocare, Dr. Lal PathLabs, Metropolis",
-        icon: <FlaskConical className="w-6 h-6 sm:w-8 sm:h-8" />,
-        iconBg: "bg-[#ffde59]/20"
-    },
-    {
         title: "Research Laboratory",
         description: "Work in clinical research, pharmaceutical R&D",
         icon: <Microscope className="w-6 h-6 sm:w-8 sm:h-8" />,
         iconBg: "bg-[#0b6d41]/10"
-    },
-    {
-        title: "Eye Care Chains",
-        description: "Dr. Agarwal's, Sankara, Vasan Eye Care",
-        icon: <Eye className="w-6 h-6 sm:w-8 sm:h-8" />,
-        iconBg: "bg-[#ffde59]/20"
     },
     {
         title: "Medical Equipment",
@@ -46,12 +34,6 @@ const paths = [
         description: "M.Sc., MBA Healthcare, PhD, specialization courses",
         icon: <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8" />,
         iconBg: "bg-[#0b6d41]/10"
-    },
-    {
-        title: "Home Healthcare",
-        description: "Growing sector with portable diagnostic services",
-        icon: <Home className="w-6 h-6 sm:w-8 sm:h-8" />,
-        iconBg: "bg-[#ffde59]/20"
     },
     {
         title: "Teaching & Training",
@@ -138,7 +120,13 @@ export function CareerPaths() {
                                 'Fortis Healthcare',
                                 'Manipal Hospitals',
                                 'Columbia Asia',
-                                'Narayana Health'
+                                'Narayana Health',
+                                'Kauvery Hospital',
+                                'Sub-District Hospital',
+                                'Brookefield Hospital',
+                                'GEM Hospital',
+                                '5C Network',
+                                'Punarvaas Hospital'
                             ].map((company, index) => (
                                 <motion.div
                                     key={index}

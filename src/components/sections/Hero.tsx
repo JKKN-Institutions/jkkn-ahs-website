@@ -7,7 +7,7 @@ import { ArrowRight, Play, CheckCircle2 } from 'lucide-react';
 export function Hero() {
     const stats = [
         { label: 'Specialized Programs', value: '8+' },
-        { label: 'Placement Rate', value: '95%+' },
+        { label: 'Placement Rate', value: '95%' },
         { label: 'Hospital Partners', value: '25+' },
         { label: 'Active Learners', value: '250+' },
     ];
@@ -41,7 +41,7 @@ export function Hero() {
                         </h1>
 
                         <p className="text-base sm:text-lg text-white/90 mb-8 sm:mb-10 max-w-2xl leading-relaxed">
-                            Join JKKN College of Allied Health Sciences and become a vital part of modern healthcare. 8+ specialized B.Sc. programs, hospital training partnerships, and 95%+ placement success.
+                            Join JKKN College of Allied Health Sciences and become a vital part of modern healthcare. 8+ specialized B.Sc. programs, hospital training partnerships, and 95% placement success.
                         </p>
 
                         <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5">

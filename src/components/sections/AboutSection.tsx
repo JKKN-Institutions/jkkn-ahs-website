@@ -3,11 +3,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
+import { BRAND_LEGACY } from '@/lib/constants';
 
 export function AboutSection() {
     const points = [
         { text: "University-affiliated programs with clinical internship" },
-        { text: "Hospital partnerships with Senthil Multispeciality, Lotus" },
+        { text: "Hospital partnerships with Senthil Multispeciality, Lotus, Erode Medical Center and Olirum Erode Foundation" },
         { text: "Industry-experienced Learning Facilitators" }
     ];
 
@@ -28,11 +29,11 @@ export function AboutSection() {
                         </h2>
 
                         <p className="text-gray-700 text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed">
-                            JKKN College of Allied Health Sciences, part of JKKN Educational Institutions celebrating #JKKN100, is dedicated to producing skilled Allied Health professionals who form the backbone of modern healthcare delivery. Our Learners are trained not just in technical skills but in compassionate patient care.
+                            JKKN College of Allied Health Sciences, part of JKKN Educational Institutions celebrating #JKKN100 (Centennial Year of Our Founder), is dedicated to producing skilled Allied Health professionals who form the backbone of modern healthcare delivery. Our Learners are trained not just in technical skills but in compassionate patient care.
                         </p>
 
                         <p className="text-gray-700 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed">
-                            Affiliated with The Tamil Nadu Dr. M.G.R. Medical University, we offer comprehensive programs in Critical Care Technology, Physician Assistant, Cardiac Technology, Radiology, and more. Our Learning Facilitators bring decades of clinical and academic experience to every Learning Studio.
+                            Affiliated with The Tamil Nadu Dr. M.G.R. Medical University, we offer comprehensive programs in Critical Care Technology, Physician Assistant, Cardiac Technology, Radiology, and more. Our Learning Facilitators (Senior Learners) bring decades of clinical and academic experience to every Learning Studio.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
@@ -64,14 +65,14 @@ export function AboutSection() {
                             </div>
                         </div>
 
-                        {/* 100 Years Legacy Badge */}
+                        {/* Legacy Badge */}
                         <motion.div
                             animate={{ y: [0, -10, 0] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                             className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-[#0b6d41] rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 text-center"
                         >
-                            <div className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-0.5 sm:mb-1">100</div>
-                            <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-white">Years Legacy</div>
+                            <div className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-0.5 sm:mb-1">{BRAND_LEGACY.YEARS}</div>
+                            <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-white">Year Legacy</div>
                         </motion.div>
                     </motion.div>
                 </div>
