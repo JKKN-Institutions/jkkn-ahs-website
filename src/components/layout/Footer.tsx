@@ -115,19 +115,16 @@ export function Footer() {
                                 FOLLOW US
                             </h4>
                             <div className="flex gap-3 sm:gap-4">
-                                <a href="#" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-[#ffde59] flex items-center justify-center transition-colors">
+                                <a href="https://www.facebook.com/jkknallied" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-[#ffde59] flex items-center justify-center transition-colors">
                                     <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
                                 </a>
-                                <a href="#" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-[#ffde59] flex items-center justify-center transition-colors">
-                                    <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
-                                </a>
-                                <a href="#" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-[#ffde59] flex items-center justify-center transition-colors">
+                                <a href="https://www.instagram.com/jkknallied/" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-[#ffde59] flex items-center justify-center transition-colors">
                                     <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
                                 </a>
-                                <a href="#" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-[#ffde59] flex items-center justify-center transition-colors">
+                                <a href="https://www.linkedin.com/company/jkknallied/" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-[#ffde59] flex items-center justify-center transition-colors">
                                     <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
                                 </a>
-                                <a href="#" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-[#ffde59] flex items-center justify-center transition-colors">
+                                <a href="https://www.youtube.com/playlist?list=PL6QsTq-__HhsWGzdJbTOuadFqdXlcawUE" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-[#ffde59] flex items-center justify-center transition-colors">
                                     <Youtube className="w-4 h-4 sm:w-5 sm:h-5" />
                                 </a>
                             </div>

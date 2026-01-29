@@ -14,9 +14,9 @@ const testimonials = [
     },
     {
         name: "Rajesh Sundaram",
-        role: "B.Sc. Optometry 2021 | Own Practice",
+        role: "B.Sc. CCT 2021 | Own Practice",
         initials: "RS",
-        content: "JKKN's optometry program and clinical exposure helped me start my own eye care practice within 2 years of graduation. The foundation was exceptional.",
+        content: "JKKN's CCT program and clinical exposure helped me start my own eye care practice within 2 years of graduation. The foundation was exceptional.",
         bgColor: "bg-[#0b6d41]"
     },
     {

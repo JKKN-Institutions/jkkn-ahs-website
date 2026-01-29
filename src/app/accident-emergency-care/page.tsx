@@ -49,10 +49,21 @@ function HeroSection() {
                         Embark on a life-saving career in emergency medicine. Our comprehensive 3 Years + 1 Year Internship program prepares Learners to become skilled emergency care technologists, mastering trauma management, emergency response, critical care, advanced life support, disaster management, and pre-hospital emergency care.
                     </p>
                     <div className="flex flex-wrap gap-4">
-                        <button className="px-8 py-3.5 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-[#095c37] transition-all transform hover:-translate-y-1">
+                        <a
+                            href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-8 py-3.5 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-[#095c37] transition-all transform hover:-translate-y-1 inline-block"
+                        >
                             Apply Now →
-                        </button>
-                        <button className="px-8 py-3.5 bg-white text-[#0b6d41] border border-[#0b6d41]/20 rounded-full font-bold shadow-lg hover:bg-gray-50 transition-all">
+                        </a>
+                        <button
+                            onClick={() => {
+                                const syllabusSection = document.getElementById('academic-curriculum');
+                                syllabusSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }}
+                            className="px-8 py-3.5 bg-white text-[#0b6d41] border border-[#0b6d41]/20 rounded-full font-bold shadow-lg hover:bg-gray-50 transition-all"
+                        >
                             View Curriculum
                         </button>
                     </div>
@@ -153,7 +164,7 @@ function AboutSection() {
                     <h3 className="text-xl font-bold mb-6 border-b border-gray-100 pb-4 text-[#0b6d41]">Quick Course Information</h3>
                     <ul className="space-y-4 text-sm">
                         {[
-                            { label: "Duration", value: "3 Years + 1 Year Internship" },
+                            { label: "Duration", value: "3 + 1" },
                             { label: "Degree", value: "B.Sc" },
                             { label: "Intake", value: "10 Seats" },
                             { label: "Session", value: "2026-2027" },
@@ -269,7 +280,7 @@ function SyllabusSection() {
     };
 
     return (
-        <section className="py-24 max-w-7xl mx-auto px-4">
+        <section id="academic-curriculum" className="py-24 max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
                 <span className="text-[#0b6d41] font-bold tracking-widest uppercase text-xs mb-2">Academic Curriculum</span>
                 <h2 className="text-3xl font-black text-[#0b6d41]">Program Structure & Syllabus</h2>
@@ -510,8 +521,20 @@ function CTASection() {
                     <p className="font-medium opacity-90 text-[#0b6d41]">Join JKKN College and become a skilled emergency care professional saving lives.</p>
                 </div>
                 <div className="flex gap-4">
-                    <button className="px-8 py-3 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-opacity-90 transition-colors">Apply Now</button>
-                    <button className="px-8 py-3 border-2 border-[#0b6d41] text-[#0b6d41] rounded-full font-bold hover:bg-[#0b6d41] hover:text-white transition-colors">Contact Admissions</button>
+                    <a
+                        href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-8 py-3 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-opacity-90 transition-colors inline-block"
+                    >
+                        Apply Now
+                    </a>
+                    <a
+                        href="tel:91 9345855001"
+                        className="px-8 py-3 border-2 border-[#0b6d41] text-[#0b6d41] rounded-full font-bold hover:bg-[#0b6d41] hover:text-white transition-colors inline-block"
+                    >
+                        Contact Admissions
+                    </a>
                 </div>
             </div>
         </section>

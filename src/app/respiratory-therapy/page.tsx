@@ -47,10 +47,21 @@ function HeroSection() {
                         Embark on a transformative journey into respiratory healthcare. Our comprehensive 4-year program prepares learners to become skilled respiratory therapists, mastering pulmonary diagnostics, mechanical ventilation, critical care respiratory management, and cardiopulmonary rehabilitation.
                     </p>
                     <div className="flex flex-wrap gap-4">
-                        <button className="px-8 py-3.5 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-[#095c37] transition-all transform hover:-translate-y-1">
+                        <a
+                            href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-8 py-3.5 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-[#095c37] transition-all transform hover:-translate-y-1 inline-block"
+                        >
                             Apply Now →
-                        </button>
-                        <button className="px-8 py-3.5 bg-white text-[#0b6d41] border border-[#0b6d41]/20 rounded-full font-bold shadow-lg hover:bg-gray-50 transition-all">
+                        </a>
+                        <button
+                            onClick={() => {
+                                const syllabusSection = document.getElementById('academic-curriculum');
+                                syllabusSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }}
+                            className="px-8 py-3.5 bg-white text-[#0b6d41] border border-[#0b6d41]/20 rounded-full font-bold shadow-lg hover:bg-gray-50 transition-all"
+                        >
                             View Curriculum
                         </button>
                     </div>
@@ -326,7 +337,7 @@ function SyllabusSection() {
     };
 
     return (
-        <section className="py-24 bg-white">
+        <section id="academic-curriculum" className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-12">
                     <span className="text-[#0b6d41] font-bold tracking-widest uppercase text-xs mb-2">Academic Path</span>
@@ -539,8 +550,20 @@ function CTASection() {
                     <p className="font-medium opacity-90 text-gray-900">Join JKKN College and become a skilled respiratory therapy professional.</p>
                 </div>
                 <div className="flex gap-4">
-                    <button className="px-8 py-3 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-opacity-90 transition-colors">Apply Now</button>
-                    <button className="px-8 py-3 border-2 border-[#0b6d41] text-[#0b6d41] rounded-full font-bold hover:bg-[#0b6d41] hover:text-white transition-colors">Contact Admission</button>
+                    <a
+                        href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-8 py-3 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-opacity-90 transition-colors inline-block"
+                    >
+                        Apply Now
+                    </a>
+                    <a
+                        href="tel:91 9345855001"
+                        className="px-8 py-3 border-2 border-[#0b6d41] text-[#0b6d41] rounded-full font-bold hover:bg-[#0b6d41] hover:text-white transition-colors inline-block"
+                    >
+                        Contact Admissions
+                    </a>
                 </div>
             </div>
         </section>

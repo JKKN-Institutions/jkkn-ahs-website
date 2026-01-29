@@ -114,7 +114,7 @@ export default function OurTrust() {
                                         The J.K.K. Rangammal Charitable Trust was established in 1969 with the motto of providing literacy and women's empowerment. Walking in the footsteps of her father, Smt. N. Sendamaraai, Managing Trustee, expanded the service by providing multi-disciplinary education to both genders.
                                     </p>
                                     <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-                                        Now, under the umbrella, there are ten institutions, including Dental, Pharmacy, Nursing, Education, Engineering, Arts, and Science colleges.
+                                        Now, under the umbrella, there are 8+ institutions, including Dental, Pharmacy, Nursing, Education, Engineering, Arts, and Science colleges.
                                     </p>
                                 </div>
 

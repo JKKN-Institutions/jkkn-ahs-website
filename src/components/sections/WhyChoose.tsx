@@ -22,7 +22,7 @@ const reasons = [
         icon: <Building2 className="w-10 h-10" />,
     },
     {
-        title: "95%+ Placement Rate",
+        title: "95% Placement Rate",
         description: "Placement with 20+ recruiters. Our alumni work at top hospitals, diagnostic chains, and healthcare organizations globally.",
         icon: <Briefcase className="w-10 h-10" />,
     },
