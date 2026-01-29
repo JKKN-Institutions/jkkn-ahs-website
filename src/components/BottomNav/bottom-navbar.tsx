@@ -78,6 +78,7 @@ export function BottomNavbar() {
         id: group.groupLabel?.toLowerCase().replace(/\s+/g, '-') || 'default',
         groupLabel: group.groupLabel || 'Menu',
         icon: GROUP_ICONS[group.groupLabel || ''] || Home,
+        mainHref: group.mainHref,
         menus: flattenMenuItems(group.menus)
       }));
   }, [navLinks]);
@@ -176,20 +177,24 @@ export function BottomNavbar() {
     (groupId: string) => {
       const group = allNavGroups.find(g => g.id === groupId);
 
-      // If group has only 1 item, navigate directly
-      if (group && group.menus.length === 1) {
+      if (!group) return;
+
+      // If group has only 1 item (no submenu), navigate directly
+      if (group.menus.length === 1) {
         router.push(group.menus[0].href);
         setExpanded(false);
         setMoreMenuOpen(false);
         return;
       }
 
-      // If submenu is open and showing THIS group's items, close it
+      // For groups with multiple items, show submenu
+      // (submenu includes "View All" option for main page navigation)
+      // If submenu is already open for this group, close it
       if (isExpanded && activeNavId === groupId) {
         setExpanded(false);
         setMoreMenuOpen(false);
       } else {
-        // Otherwise, switch to this group's submenu
+        // Otherwise, open this group's submenu
         switchToNav(groupId);
       }
     },
@@ -317,7 +322,6 @@ export function BottomNavbar() {
               label="More"
               isActive={isMoreMenuOpen}
               hasSubmenu={true}
-              badgeCount={moreNavGroups.length}
               onClick={handleMoreClick}
             />
           )}

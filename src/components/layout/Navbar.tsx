@@ -20,7 +20,6 @@ const navLinks: NavLink[] = [
         submenu: [
             { name: 'Our Trust', href: '/our-trust' },
             { name: 'Our Management', href: '/our-management' },
-            { name: 'Principal Message', href: '/principal-message' },
             { name: 'Vision & Mission', href: '/vision-mission' }
         ]
     },

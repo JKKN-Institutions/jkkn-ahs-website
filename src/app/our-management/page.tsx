@@ -81,6 +81,18 @@ export default function OurManagement() {
 }
 
 function ManagementCard({ member, index }: { member: typeof managementTeam[0], index: number }) {
+    // Custom image styles for each member
+    const getImageClass = () => {
+        if (member.role === "DIRECTOR") {
+            return "w-full h-full object-cover scale-110";
+        } else if (member.role === "CHAIRPERSON") {
+            return "w-full h-full object-contain scale-[0.85]";
+        } else if (member.role === "JOINT DIRECTOR") {
+            return "w-full h-full object-cover scale-95";
+        }
+        return "w-full h-full object-cover";
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -94,13 +106,13 @@ function ManagementCard({ member, index }: { member: typeof managementTeam[0], i
 
             {/* Profile Image */}
             <div className="relative mx-auto w-48 h-48 mb-8">
-                <div className="w-full h-full rounded-full border-[6px] border-white shadow-2xl overflow-hidden bg-gray-100 relative z-10">
+                <div className="w-full h-full rounded-full border-[6px] border-white shadow-2xl overflow-hidden bg-white relative z-10">
                     <Image
                         src={member.image}
                         alt={member.name}
                         width={192}
                         height={192}
-                        className="w-full h-full object-cover"
+                        className={getImageClass()}
                     />
                 </div>
                 {/* Decorative Circle Behind */}

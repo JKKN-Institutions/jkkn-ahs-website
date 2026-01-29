@@ -12,6 +12,7 @@ export interface BottomNavGroup {
   id: string;
   groupLabel: string;
   icon: LucideIcon;
+  mainHref?: string; // Optional main page href for the group
   menus: FlatMenuItem[];
 }
 

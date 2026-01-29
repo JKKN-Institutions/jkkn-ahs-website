@@ -21,6 +21,7 @@ export interface MenuItem {
 
 export interface MenuGroup {
   groupLabel: string;
+  mainHref?: string; // Optional main page href for the group
   menus: MenuItem[];
 }
 
@@ -39,7 +40,14 @@ export function getMobileNavLinks(pathname: string): MenuGroup[] {
     },
     {
       groupLabel: 'About',
+      mainHref: '/#about',
       menus: [
+        {
+          href: '/#about',
+          label: 'View All About',
+          icon: Info,
+          active: pathname === '/#about'
+        },
         {
           href: '/our-trust',
           label: 'Our Trust',
@@ -53,12 +61,6 @@ export function getMobileNavLinks(pathname: string): MenuGroup[] {
           active: pathname === '/our-management'
         },
         {
-          href: '/principal-message',
-          label: 'Principal Message',
-          icon: MessageSquare,
-          active: pathname === '/principal-message'
-        },
-        {
           href: '/vision-mission',
           label: 'Vision & Mission',
           icon: Target,
@@ -68,7 +70,14 @@ export function getMobileNavLinks(pathname: string): MenuGroup[] {
     },
     {
       groupLabel: 'Departments',
+      mainHref: '/departments',
       menus: [
+        {
+          href: '/departments',
+          label: 'View All Departments',
+          icon: GraduationCap,
+          active: pathname === '/departments'
+        },
         {
           href: '/accident-emergency-care',
           label: 'Accident & Emergency Care',
@@ -127,7 +136,14 @@ export function getMobileNavLinks(pathname: string): MenuGroup[] {
     },
     {
       groupLabel: 'Facilities',
+      mainHref: '/facilities',
       menus: [
+        {
+          href: '/facilities',
+          label: 'View All Facilities',
+          icon: Building2,
+          active: pathname === '/facilities'
+        },
         {
           href: '/classroom',
           label: 'Class Room',
@@ -186,7 +202,14 @@ export function getMobileNavLinks(pathname: string): MenuGroup[] {
     },
     {
       groupLabel: 'Others',
+      mainHref: '/others',
       menus: [
+        {
+          href: '/others',
+          label: 'View All',
+          icon: FileText,
+          active: pathname === '/others'
+        },
         {
           href: '/NAAC',
           label: 'NAAC',
