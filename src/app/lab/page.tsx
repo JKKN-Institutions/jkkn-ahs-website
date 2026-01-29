@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 
@@ -15,6 +16,37 @@ export default function Labs() {
                     <h1 className="text-4xl md:text-5xl font-bold text-[#0b6d41] mb-8">
                         Labs
                     </h1>
+
+                    {/* Lab Images Gallery */}
+                    <div className="mb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="relative h-64 md:h-72 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <Image
+                                src="/lab/allied health science lab1.png"
+                                alt="Allied Health Science Lab 1"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            />
+                        </div>
+                        <div className="relative h-64 md:h-72 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <Image
+                                src="/lab/allied health science lab2.png"
+                                alt="Allied Health Science Lab 2"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            />
+                        </div>
+                        <div className="relative h-64 md:h-72 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <Image
+                                src="/lab/allied health science lab3.png"
+                                alt="Allied Health Science Lab 3"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            />
+                        </div>
+                    </div>
 
                     {/* Content Section */}
                     <div className="space-y-6 text-gray-700 text-base leading-relaxed max-w-full">

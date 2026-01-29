@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Play, CheckCircle2 } from 'lucide-react';
 
@@ -48,9 +49,14 @@ export function Hero() {
                             <button className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-white text-[#0b6d41] rounded-full font-semibold transition-all hover:bg-white/90 hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base">
                                 Explore Programs <ArrowRight className="w-5 h-5" />
                             </button>
-                            <button className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-white/20 backdrop-blur-md text-white rounded-full font-semibold transition-all hover:bg-white/30 border-2 border-white/40 hover:shadow-xl hover:scale-105 text-sm sm:text-base">
+                            <Link
+                                href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-white/20 backdrop-blur-md text-white rounded-full font-semibold transition-all hover:bg-white/30 border-2 border-white/40 hover:shadow-xl hover:scale-105 text-sm sm:text-base text-center"
+                            >
                                 Apply for 2026-27
-                            </button>
+                            </Link>
                         </div>
 
                         <div className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
@@ -76,7 +82,7 @@ export function Hero() {
                     >
                         <div className="relative z-10 rounded-2xl sm:rounded-[2.5rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(11,109,65,0.2)] border-4 sm:border-8 md:border-[12px] border-white/50 backdrop-blur-md">
                             <div className="aspect-[4/5] bg-gray-100">
-                                <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80&w=1000" alt="Healthcare Professional" className="w-full h-full object-cover" />
+                                <img src="/allied-health-science-hero.png" alt="Allied Health Science - JKKN College" className="w-full h-full object-cover" />
                             </div>
                         </div>
 

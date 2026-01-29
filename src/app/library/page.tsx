@@ -61,10 +61,11 @@ export default function Library() {
                             className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl shadow-lg"
                         >
                             <Image
-                                src="/lab/lab-1.webp"
+                                src="/library/labrary (1).png"
                                 alt="Allied Health Science Library with wooden desks and study areas"
                                 fill
                                 className="object-cover"
+                                unoptimized
                             />
                         </motion.div>
                         <motion.div
@@ -74,7 +75,7 @@ export default function Library() {
                             className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl shadow-lg"
                         >
                             <Image
-                                src="/lab/lab-2.png"
+                                src="/library/labrary1 (1).webp"
                                 alt="Students studying with books in the library"
                                 fill
                                 className="object-cover"
@@ -87,10 +88,11 @@ export default function Library() {
                             className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl shadow-lg"
                         >
                             <Image
-                                src="/lab/lab-3.png"
+                                src="/library/labrary3 (1).png"
                                 alt="Student reading in the library"
                                 fill
                                 className="object-cover"
+                                unoptimized
                             />
                         </motion.div>
                     </div>

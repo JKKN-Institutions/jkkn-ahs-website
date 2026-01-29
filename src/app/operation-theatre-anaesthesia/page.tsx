@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -57,10 +58,15 @@ function HeroSection() {
                     </div>
                 </div>
                 <div className="md:w-1/2 w-full">
-                    <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl border-4 border-white bg-[#0b6d41] flex items-center justify-center group">
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#064225] to-transparent opacity-60"></div>
-                        <Scissors className="w-24 h-24 text-white/80 group-hover:scale-110 transition-transform duration-700" />
-                        <span className="absolute bottom-6 left-6 font-bold text-xl letter-spacing-wide text-white">OT & Anaesthesia</span>
+                    <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl border-4 border-white group">
+                        <Image
+                            src="/allied health science main image7.png"
+                            alt="Operation Theatre & Anaesthesia Technology"
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#064225] to-transparent opacity-40"></div>
+                        <span className="absolute bottom-6 left-6 font-bold text-xl letter-spacing-wide text-white z-10">OT & Anaesthesia</span>
                     </div>
                 </div>
             </div>

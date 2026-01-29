@@ -89,7 +89,8 @@ export function Navbar() {
         <nav
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 py-3",
-                scrolled ? "bg-white shadow-md py-2" : "bg-white/95 backdrop-blur-sm shadow-sm"
+                scrolled ? "bg-white shadow-md py-2" : "bg-white/95 backdrop-blur-sm shadow-sm",
+                "hidden lg:block"  // Hide on mobile, show on desktop only
             )}
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -106,7 +107,7 @@ export function Navbar() {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden lg:flex items-center gap-8">
+                <div className="flex items-center gap-8">
                     {navLinks.map((link) => (
                         <div
                             key={link.name}
@@ -146,88 +147,16 @@ export function Navbar() {
                             </AnimatePresence>
                         </div>
                     ))}
-                    <button className="text-sm py-2 px-6 bg-[#0b6d41] text-white rounded-full font-semibold transition-all hover:bg-[#085231] hover:shadow-lg">
-                        Apply Now
-                    </button>
-                </div>
-
-                {/* Mobile Menu Toggle */}
-                <button
-                    className="lg:hidden p-2"
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    {isOpen ? (
-                        <X className="w-6 h-6 text-primary" />
-                    ) : (
-                        <Menu className="w-6 h-6 text-primary" />
-                    )}
-                </button>
-            </div>
-
-            {/* Mobile Menu */}
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-full left-0 right-0 bg-white shadow-xl p-4 lg:hidden flex flex-col gap-4 overflow-y-auto max-h-[80vh]"
+                    <Link
+                        href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm py-2 px-6 bg-[#0b6d41] text-white rounded-full font-semibold transition-all hover:bg-[#085231] hover:shadow-lg"
                     >
-                        {navLinks.map((link) => (
-                            <div key={link.name} className="border-b border-gray-100 last:border-0 pb-2">
-                                {link.submenu ? (
-                                    <>
-                                        <button
-                                            onClick={() => toggleMobileDropdown(link.name)}
-                                            className="flex items-center justify-between w-full text-gray-700 font-medium py-2"
-                                        >
-                                            {link.name}
-                                            <ChevronDown
-                                                className={cn(
-                                                    "w-5 h-5 transition-transform",
-                                                    mobileDropdownOpen === link.name ? "rotate-180" : ""
-                                                )}
-                                            />
-                                        </button>
-                                        <AnimatePresence>
-                                            {mobileDropdownOpen === link.name && (
-                                                <motion.div
-                                                    initial={{ height: 0, opacity: 0 }}
-                                                    animate={{ height: "auto", opacity: 1 }}
-                                                    exit={{ height: 0, opacity: 0 }}
-                                                    className="overflow-hidden bg-gray-50 rounded-md"
-                                                >
-                                                    {link.submenu.map((sub) => (
-                                                        <Link
-                                                            key={sub.name}
-                                                            href={sub.href}
-                                                            className="block px-4 py-3 text-sm text-gray-600 hover:text-primary"
-                                                            onClick={() => setIsOpen(false)}
-                                                        >
-                                                            {sub.name}
-                                                        </Link>
-                                                    ))}
-                                                </motion.div>
-                                            )}
-                                        </AnimatePresence>
-                                    </>
-                                ) : (
-                                    <Link
-                                        href={link.href}
-                                        className="block text-gray-700 font-medium py-2"
-                                        onClick={() => setIsOpen(false)}
-                                    >
-                                        {link.name}
-                                    </Link>
-                                )}
-                            </div>
-                        ))}
-                        <button className="btn-primary w-full mt-2">
-                            Apply Now
-                        </button>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                        Apply Now
+                    </Link>
+                </div>
+            </div>
         </nav>
     );
 }

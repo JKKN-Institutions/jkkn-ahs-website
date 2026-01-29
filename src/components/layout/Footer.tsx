@@ -5,15 +5,42 @@ import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 export function Footer() {
     const institutions = [
-        'JKKN Dental College and Hospital',
-        'JKKN College Of Allied Health Science',
-        'JKKN College of Pharmacy',
-        'Srisakthimayeil Institute of Nursing and Research',
-        'JKKN College of Education',
-        'JKKN College of Arts and Science (Autonomous)',
-        'JKKN College of Engineering and Technology',
-        'JKKN Matriculation Higher Secondary School',
-        'Nattraja Vidhyalya'
+        {
+            name: 'JKKN Dental College and Hospital',
+            url: 'https://dental.jkkn.ac.in/'
+        },
+        {
+            name: 'JKKN College Of Allied Health Science',
+            url: 'https://ahs.jkkn.ac.in/'
+        },
+        {
+            name: 'JKKN College of Pharmacy',
+            url: 'https://pharmacy.jkkn.ac.in/'
+        },
+        {
+            name: 'Srisakthimayeil Institute of Nursing and Research',
+            url: 'https://nursing.sresakthimayeil.jkkn.ac.in/'
+        },
+        {
+            name: 'JKKN College of Education',
+            url: 'https://edu.jkkn.ac.in/'
+        },
+        {
+            name: 'JKKN College of Arts and Science (Autonomous)',
+            url: 'https://cas.jkkn.ac.in/'
+        },
+        {
+            name: 'JKKN College of Engineering and Technology',
+            url: 'https://engg.jkkn.ac.in/'
+        },
+        {
+            name: 'JKKN Matriculation Higher Secondary School',
+            url: 'https://school.jkkn.ac.in/'
+        },
+        {
+            name: 'Nattraja Vidhyalya',
+            url: 'https://nv.jkkn.ac.in/'
+        }
     ];
 
     return (
@@ -50,8 +77,13 @@ export function Footer() {
                         <ul className="space-y-2 sm:space-y-2.5">
                             {institutions.map((institution, index) => (
                                 <li key={index}>
-                                    <a href="#" className="text-white hover:text-[#ffde59] transition-colors text-xs sm:text-sm leading-relaxed">
-                                        {institution}
+                                    <a
+                                        href={institution.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-white hover:text-[#ffde59] transition-colors text-xs sm:text-sm leading-relaxed"
+                                    >
+                                        {institution.name}
                                     </a>
                                 </li>
                             ))}

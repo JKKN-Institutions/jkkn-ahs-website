@@ -58,7 +58,7 @@ export function AboutSection() {
                         <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
                             <div className="aspect-[4/3] bg-gray-200">
                                 <img
-                                    src="https://images.unsplash.com/photo-1576091160550-217359f4ecf8?auto=format&fit=crop&q=80&w=1000"
+                                    src="/allied-health-science-about.png"
                                     alt="JKKN Allied Health Sciences College Laboratory"
                                     className="w-full h-full object-cover"
                                 />

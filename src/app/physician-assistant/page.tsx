@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -57,10 +58,16 @@ function HeroSection() {
                     </div>
                 </div>
                 <div className="md:w-1/2 w-full">
-                    <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl border-4 border-white bg-[#0b6d41] flex items-center justify-center group">
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#064225] to-transparent opacity-60"></div>
-                        <UserCheck className="w-24 h-24 text-white/80 group-hover:scale-110 transition-transform duration-700" />
-                        <span className="absolute bottom-6 left-6 font-bold text-xl letter-spacing-wide text-white">Physician Assistant</span>
+                    <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl border-4 border-white group">
+                        <Image
+                            src="/allied health science main image8.png"
+                            alt="Physician Assistant"
+                            fill
+                            className="object-cover group-hover:scale-110 transition-transform duration-700"
+                            priority
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#064225] to-transparent opacity-40"></div>
+                        <span className="absolute bottom-6 left-6 font-bold text-xl letter-spacing-wide text-white z-10">Physician Assistant</span>
                     </div>
                 </div>
             </div>
@@ -224,105 +231,27 @@ function EligibilitySection() {
 // 5. Syllabus Section
 function SyllabusSection() {
     const [activeYear, setActiveYear] = useState('Year 1');
-    const years = ['Year 1', 'Year 2', 'Year 3', 'Year 4'];
+    const years = ['Year 1', 'Year 2', 'Year 3'];
 
     const syllabus = {
-        'Year 1': [
-            {
-                sem: 'Semester 1',
-                subjects: [
-                    { name: 'Human Anatomy', type: 'Theory' },
-                    { name: 'Human Physiology', type: 'Theory' },
-                    { name: 'Biochemistry', type: 'Theory' },
-                    { name: 'Medical Terminology', type: 'Theory' },
-                    { name: 'Computer Applications in Healthcare', type: 'Practical' },
-                    { name: 'Anatomy Dissection Lab', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 2',
-                subjects: [
-                    { name: 'Pathology', type: 'Theory' },
-                    { name: 'Microbiology', type: 'Theory' },
-                    { name: 'Introduction to Clinical Medicine', type: 'Theory' },
-                    { name: 'Health Assessment Fundamentals', type: 'Theory' },
-                    { name: 'Clinical Skills Lab - I', type: 'Practical' },
-                    { name: 'Patient Communication Skills', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 2': [
-            {
-                sem: 'Semester 3',
-                subjects: [
-                    { name: 'Pharmacology - I', type: 'Theory' },
-                    { name: 'Clinical Diagnosis - I', type: 'Theory' },
-                    { name: 'Physical Examination Techniques', type: 'Theory' },
-                    { name: 'Medical Imaging Interpretation', type: 'Theory' },
-                    { name: 'Clinical Skills Lab - II', type: 'Practical' },
-                    { name: 'Basic Life Support', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 4',
-                subjects: [
-                    { name: 'Pharmacology - II', type: 'Theory' },
-                    { name: 'Clinical Diagnosis - II', type: 'Theory' },
-                    { name: 'Internal Medicine - I', type: 'Theory' },
-                    { name: 'Diagnostic Laboratory Procedures', type: 'Theory' },
-                    { name: 'Clinical Practicum - I', type: 'Practical' },
-                    { name: 'Advanced Life Support', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 3': [
-            {
-                sem: 'Semester 5',
-                subjects: [
-                    { name: 'Internal Medicine - II', type: 'Theory' },
-                    { name: 'Surgery & Surgical Assistance', type: 'Theory' },
-                    { name: 'Emergency Medicine', type: 'Theory' },
-                    { name: 'Obstetrics & Gynecology', type: 'Theory' },
-                    { name: 'Clinical Rotation - Medicine', type: 'Practical' },
-                    { name: 'Emergency Care Training', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 6',
-                subjects: [
-                    { name: 'Pediatrics & Neonatology', type: 'Theory' },
-                    { name: 'Orthopedics & Trauma Care', type: 'Theory' },
-                    { name: 'Community Medicine & Public Health', type: 'Theory' },
-                    { name: 'Research Methodology', type: 'Theory' },
-                    { name: 'Clinical Rotation - Surgery', type: 'Practical' },
-                    { name: 'Pediatric Care Training', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 4': [
-            {
-                sem: 'Semester 7',
-                subjects: [
-                    { name: 'Psychiatry & Mental Health', type: 'Theory' },
-                    { name: 'Dermatology & ENT', type: 'Theory' },
-                    { name: 'Geriatrics & Palliative Care', type: 'Theory' },
-                    { name: 'Medical Ethics & Jurisprudence', type: 'Theory' },
-                    { name: 'Clinical Internship - I', type: 'Practical' },
-                    { name: 'Specialty Rotations', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 8',
-                subjects: [
-                    { name: 'Healthcare Management', type: 'Theory' },
-                    { name: 'Professional Practice & Leadership', type: 'Theory' },
-                    { name: 'Clinical Internship - II', type: 'Practical' },
-                    { name: 'Project & Dissertation', type: 'Practical' },
-                    { name: 'Comprehensive Clinical Exam', type: 'Practical' },
-                    { name: 'Hospital Placement', type: 'Practical' }
-                ]
-            }
-        ]
+        'Year 1': {
+            semester: 'Semester 1 & 2',
+            syllabusImage: '/physician-assistant/year1-syllabus.png',
+            theoryImage: '/physician-assistant/year1-theory.png',
+            practicalImage: '/physician-assistant/year1-practical.png'
+        },
+        'Year 2': {
+            semester: 'Semester 3 & 4',
+            syllabusImage: '/physician-assistant/year2-syllabus.png',
+            theoryImage: '/physician-assistant/year2-theory.png',
+            practicalImage: '/physician-assistant/year2-practical.png'
+        },
+        'Year 3': {
+            semester: 'Semester 5 & 6',
+            syllabusImage: '/physician-assistant/year3-syllabus.png',
+            theoryImage: '/physician-assistant/year3-theory.png',
+            practicalImage: '/physician-assistant/year3-practical.png'
+        }
     };
 
     return (
@@ -347,34 +276,76 @@ function SyllabusSection() {
 
             <motion.div
                 key={activeYear}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="grid md:grid-cols-2 gap-8"
+                className="flex justify-center"
             >
-                {(syllabus as any)[activeYear].map((sem: any, i: number) => (
-                    <div key={i} className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:border-[#0b6d41] transition-colors">
-                        <div className="bg-[#0b6d41] text-white p-4 flex justify-between items-center">
-                            <h4 className="font-bold">{sem.sem}</h4>
-                            <span className="text-xs bg-white/20 px-2 py-1 rounded">{sem.credits}</span>
+                <div className="w-full max-w-4xl">
+                    <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                        <div className="bg-[#0b6d41] text-white p-6 text-center">
+                            <h4 className="font-bold text-2xl">{(syllabus as any)[activeYear].semester}</h4>
+                            <p className="text-sm text-white/80 mt-1">{activeYear} Curriculum</p>
                         </div>
-                        <div className="p-6">
-                            <ul className="space-y-3">
-                                {sem.subjects.map((sub: any, idx: number) => (
-                                    <li key={idx} className="flex items-center justify-between gap-3 text-gray-700 p-2 rounded hover:bg-gray-50 transition-colors">
-                                        <div className="flex items-center gap-3">
-                                            <div className={`w-1.5 h-1.5 rounded-full ${sub.type === 'Theory' ? 'bg-[#ffde59]' : 'bg-[#cc5500]'}`}></div>
-                                            <span className="font-medium">{sub.name}</span>
-                                        </div>
-                                        <span className={`text-[10px] uppercase font-bold px-2 py-1 rounded ${sub.type === 'Theory' ? 'bg-blue-50 text-blue-600' : 'bg-yellow-50 text-yellow-600'}`}>
-                                            {sub.type}
-                                        </span>
-                                    </li>
-                                ))}
-                            </ul>
+                        <div className="p-8">
+                            {/* Syllabus Overview Image */}
+                            <div className="mb-8">
+                                <h5 className="text-lg font-bold text-[#0b6d41] mb-4 flex items-center gap-2">
+                                    <FileText className="w-5 h-5" />
+                                    Syllabus Overview
+                                </h5>
+                                <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden border-2 border-gray-200">
+                                    <Image
+                                        src={(syllabus as any)[activeYear].syllabusImage}
+                                        alt={`${activeYear} Syllabus`}
+                                        fill
+                                        className="object-contain bg-gray-50"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Theory Content */}
+                            <div className="mb-8">
+                                <h5 className="text-lg font-bold text-[#0b6d41] mb-4 flex items-center gap-2">
+                                    <span className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs uppercase font-bold">Theory</span>
+                                    Theory Subjects
+                                </h5>
+                                <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden border-2 border-blue-200">
+                                    <Image
+                                        src={(syllabus as any)[activeYear].theoryImage}
+                                        alt={`${activeYear} Theory`}
+                                        fill
+                                        className="object-contain bg-blue-50/30"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Theory + Practical Content */}
+                            <div>
+                                <h5 className="text-lg font-bold text-[#0b6d41] mb-4 flex items-center gap-2">
+                                    <span className="px-3 py-1 bg-yellow-50 text-yellow-600 rounded-full text-xs uppercase font-bold">Theory + Practical</span>
+                                    Practical & Clinical Training
+                                </h5>
+                                <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden border-2 border-yellow-200">
+                                    <Image
+                                        src={(syllabus as any)[activeYear].practicalImage}
+                                        alt={`${activeYear} Practical`}
+                                        fill
+                                        className="object-contain bg-yellow-50/30"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Download Button */}
+                            <div className="mt-8 flex justify-center">
+                                <button className="px-8 py-3 bg-[#0b6d41] text-white font-bold rounded-full shadow-lg hover:bg-[#095c37] transition-all flex items-center gap-2">
+                                    <Download className="w-5 h-5" />
+                                    Download {activeYear} Syllabus PDF
+                                </button>
+                            </div>
                         </div>
                     </div>
-                ))}
+                </div>
             </motion.div>
         </section>
     );

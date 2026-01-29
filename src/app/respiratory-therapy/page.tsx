@@ -44,7 +44,7 @@ function HeroSection() {
                         B.Sc <span className="text-[#0b6d41]">Respiratory Therapy</span>
                     </h1>
                     <p className="text-gray-900 text-lg mb-8 leading-relaxed">
-                        Embark on a transformative journey into respiratory healthcare. Our comprehensive 3 Years + 1 Year Internship program prepares learners to master advanced respiratory care technologies, including mechanical ventilation, pulmonary function testing, arterial blood gas analysis, and critical airway management.
+                        Embark on a transformative journey into respiratory healthcare. Our comprehensive 4-year program prepares learners to become skilled respiratory therapists, mastering pulmonary diagnostics, mechanical ventilation, critical care respiratory management, and cardiopulmonary rehabilitation.
                     </p>
                     <div className="flex flex-wrap gap-4">
                         <button className="px-8 py-3.5 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-[#095c37] transition-all transform hover:-translate-y-1">
@@ -72,10 +72,10 @@ function HeroSection() {
 // 2. Stats Section
 function StatsSection() {
     const stats = [
-        { label: "Years Duration", value: "3+1", icon: <Clock className="w-5 h-5" /> },
+        { label: "Years Duration", value: "4", icon: <Clock className="w-5 h-5" /> },
         { label: "Placement Rate", value: "95%", icon: <Users className="w-5 h-5" /> },
         { label: "Hospital Partners", value: "25+", icon: <Building2 className="w-5 h-5" /> },
-        { label: "Clinical Hours", value: "2000+", icon: <Activity className="w-5 h-5" /> },
+        { label: "Clinical Hours", value: "1500+", icon: <Activity className="w-5 h-5" /> },
     ];
 
     return (
@@ -109,22 +109,22 @@ function AboutSection() {
                     <h2 className="text-3xl font-black text-[#0b6d41] mb-6">What is B.Sc Respiratory Therapy?</h2>
                     <div className="text-gray-900 leading-relaxed text-lg space-y-6 text-justify">
                         <p>
-                            B.Sc Respiratory Therapy is a specialized undergraduate program designed to train healthcare professionals in the assessment, treatment, and management of patients with breathing disorders and cardiopulmonary conditions. This program combines theoretical knowledge with extensive practical training.
+                            B.Sc Respiratory Therapy is a specialized undergraduate program designed to train healthcare professionals in the assessment, treatment, and management of patients with respiratory and cardiopulmonary disorders. This program combines theoretical knowledge with extensive practical training, preparing learners to work alongside pulmonologists, intensivists, and critical care physicians in various healthcare settings.
                         </p>
                         <p>
-                            The curriculum covers respiratory anatomy and physiology, mechanical ventilation, pulmonary function testing, arterial blood gas analysis, oxygen therapy, airway management, and neonatal/pediatric respiratory care.
+                            The curriculum covers essential areas including respiratory anatomy and physiology, pulmonary function testing, mechanical ventilation, airway management, arterial blood gas analysis, oxygen therapy, nebulization techniques, and cardiopulmonary rehabilitation. Learners gain hands-on experience through clinical rotations in leading hospitals, ICUs, and respiratory care units.
                         </p>
                         <p>
-                            With the increasing prevalence of respiratory diseases globally, the demand for skilled respiratory therapists continues to grow. Our program ensures graduates are well-equipped with the latest therapeutic techniques.
+                            With the increasing prevalence of respiratory diseases such as COPD, asthma, and the growing need for critical care services, the demand for skilled respiratory therapists continues to rise globally. Our program ensures graduates are well-equipped with the latest therapeutic techniques and technologies used in modern respiratory care facilities.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6 mt-10">
                         {[
-                            { title: "Advanced Ventilation", icon: <Activity />, desc: "Mastery in mechanical ventilation" },
-                            { title: "Clinical Excellence", icon: <Stethoscope />, desc: "2000+ hours of clinical training" },
-                            { title: "Modern Equipment", icon: <Laptop />, desc: "Latest respiratory care technology" },
-                            { title: "Critical Care", icon: <Wind />, desc: "ICU & emergency care expertise" },
+                            { title: "Advanced Ventilation", icon: <Activity />, desc: "Training in ventilators, ABG analysis & ICU protocols" },
+                            { title: "Clinical Excellence", icon: <Stethoscope />, desc: "1500+ hours of hands-on clinical training" },
+                            { title: "Modern Equipment", icon: <Laptop />, desc: "Latest ventilators & diagnostic equipment" },
+                            { title: "Expert Faculty", icon: <Wind />, desc: "Learn from experienced pulmonologists" },
                         ].map((item, i) => (
                             <div key={i} className="flex gap-4 items-start p-4 bg-white rounded-xl hover:shadow-lg transition-all border border-gray-100">
                                 <div className="p-3 bg-[#0b6d41]/10 rounded-lg text-[#0b6d41] shrink-0">
@@ -145,11 +145,11 @@ function AboutSection() {
                         <h3 className="text-xl font-bold mb-6 border-b border-gray-100 pb-4 text-[#0b6d41]">Quick Course Information</h3>
                         <ul className="space-y-4 text-sm">
                             {[
-                                { label: "Duration", value: "3 + 1" },
+                                { label: "Duration", value: "4 Years (8 Sem)" },
                                 { label: "Degree", value: "B.Sc" },
                                 { label: "Mode", value: "Full-time" },
-                                { label: "Hospital Partners", value: "Apollo, KMCH" },
-                                { label: "Eligibility", value: "+2 Pass (Science)" },
+                                { label: "Clinical Training", value: "1500+ Hours" },
+                                { label: "Eligibility", value: "+2 (PCB/PCM)" },
                                 { label: "Fee", value: "Contact Us" },
                             ].map((item, i) => (
                                 <li key={i} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-0">
@@ -186,10 +186,10 @@ function EligibilitySection() {
                         </h3>
                         <ul className="space-y-4">
                             {[
-                                "Passed +2 or equivalent from a recognized board",
+                                "Passed 10+2 or equivalent examination from a recognized board",
                                 "Physics, Chemistry, and Biology/Mathematics as core subjects",
-                                "Minimum 50% aggregate marks (40% for SC/ST/OBC)",
-                                "English as a compulsory subject in +2"
+                                "Minimum 50% aggregate marks (45% for SC/ST/OBC categories)",
+                                "English as a compulsory subject in 10+2"
                             ].map((item, i) => (
                                 <li key={i} className="flex gap-3 text-gray-900">
                                     <CheckCircle2 className="w-5 h-5 text-[#0b6d41] shrink-0" />
@@ -204,10 +204,10 @@ function EligibilitySection() {
                         </h3>
                         <ul className="space-y-4">
                             {[
-                                "Age: Minimum 17 years as on December 31st",
-                                "Valid entrance exam score (if applicable)",
-                                "Medical fitness certificate from registered practitioner",
-                                "Transfer certificate from last attended institution"
+                                "Age: Minimum 17 years as on December 31st of the admission year",
+                                "Valid entrance exam score (if applicable to state regulations)",
+                                "Medical fitness certificate from registered medical practitioner",
+                                "Character certificate from last attended institution"
                             ].map((item, i) => (
                                 <li key={i} className="flex gap-3 text-gray-900">
                                     <CheckCircle2 className="w-5 h-5 text-[#0b6d41] shrink-0" />
@@ -230,96 +230,96 @@ function SyllabusSection() {
     const syllabus = {
         'Year 1': [
             {
-                sem: 'Semester 1', subjects: [
+                sem: 'Semester 1', credits: '22 Credits', subjects: [
                     { name: 'Human Anatomy', type: 'Theory' },
                     { name: 'Human Physiology', type: 'Theory' },
                     { name: 'Biochemistry', type: 'Theory' },
                     { name: 'English Communication', type: 'Theory' },
-                    { name: 'Computer Applications', type: 'Practical' },
+                    { name: 'Computer Applications in Healthcare', type: 'Practical' },
                     { name: 'Anatomy Practical', type: 'Practical' }
                 ]
             },
             {
-                sem: 'Semester 2',
+                sem: 'Semester 2', credits: '24 Credits',
                 subjects: [
                     { name: 'Respiratory Anatomy', type: 'Theory' },
                     { name: 'Respiratory Physiology', type: 'Theory' },
                     { name: 'Pathology Basics', type: 'Theory' },
                     { name: 'Microbiology', type: 'Theory' },
-                    { name: 'Introduction to RT', type: 'Practical' },
+                    { name: 'Introduction to Respiratory Care', type: 'Practical' },
                     { name: 'Physiology Practical', type: 'Practical' }
                 ]
             }
         ],
         'Year 2': [
             {
-                sem: 'Semester 3',
+                sem: 'Semester 3', credits: '24 Credits',
                 subjects: [
                     { name: 'Pharmacology', type: 'Theory' },
-                    { name: 'Oxygen Therapy', type: 'Theory' },
-                    { name: 'Medical Equipment', type: 'Theory' },
-                    { name: 'Clinical RT - I', type: 'Theory' },
-                    { name: 'O2 Therapy Lab', type: 'Practical' },
-                    { name: 'Basic Life Support', type: 'Practical' }
+                    { name: 'Pulmonary Function Testing - I', type: 'Theory' },
+                    { name: 'Medical Electronics', type: 'Theory' },
+                    { name: 'Clinical Pulmonology - I', type: 'Theory' },
+                    { name: 'Spirometry & PFT Practical', type: 'Practical' },
+                    { name: 'Basic Life Support Training', type: 'Practical' }
                 ]
             },
             {
-                sem: 'Semester 4',
+                sem: 'Semester 4', credits: '26 Credits',
                 subjects: [
-                    { name: 'Pulmonary Function Testing', type: 'Theory' },
-                    { name: 'Airway Management', type: 'Theory' },
-                    { name: 'Clinical RT - II', type: 'Theory' },
-                    { name: 'Blood Gas Analysis', type: 'Theory' },
-                    { name: 'PFT Lab', type: 'Practical' },
-                    { name: 'ABG Analysis Lab', type: 'Practical' }
+                    { name: 'Pulmonary Function Testing - II', type: 'Theory' },
+                    { name: 'Oxygen Therapy & Aerosol Therapy', type: 'Theory' },
+                    { name: 'Clinical Pulmonology - II', type: 'Theory' },
+                    { name: 'Arterial Blood Gas Analysis', type: 'Theory' },
+                    { name: 'ABG Interpretation Practical', type: 'Practical' },
+                    { name: 'Nebulization Techniques', type: 'Practical' }
                 ]
             }
         ],
         'Year 3': [
             {
-                sem: 'Semester 5',
+                sem: 'Semester 5', credits: '26 Credits',
                 subjects: [
                     { name: 'Mechanical Ventilation - I', type: 'Theory' },
-                    { name: 'Critical Care RT', type: 'Theory' },
-                    { name: 'Pulmonary Rehabilitation', type: 'Theory' },
-                    { name: 'Sleep Therapy', type: 'Theory' },
-                    { name: 'Ventilator Lab', type: 'Practical' },
-                    { name: 'ICU Training', type: 'Practical' }
+                    { name: 'Airway Management', type: 'Theory' },
+                    { name: 'Critical Care Respiratory Therapy', type: 'Theory' },
+                    { name: 'Chest Physiotherapy', type: 'Theory' },
+                    { name: 'Ventilator Operation Practical', type: 'Practical' },
+                    { name: 'Intubation & Airway Practical', type: 'Practical' }
                 ]
             },
             {
-                sem: 'Semester 6',
+                sem: 'Semester 6', credits: '26 Credits',
                 subjects: [
                     { name: 'Mechanical Ventilation - II', type: 'Theory' },
-                    { name: 'Neonatal RT', type: 'Theory' },
-                    { name: 'Pediatric RT', type: 'Theory' },
+                    { name: 'Neonatal & Pediatric Respiratory Care', type: 'Theory' },
+                    { name: 'Sleep Medicine & Polysomnography', type: 'Theory' },
                     { name: 'Research Methodology', type: 'Theory' },
-                    { name: 'NICU Training', type: 'Practical' },
-                    { name: 'Pediatric Lab', type: 'Practical' }
+                    { name: 'NICU Respiratory Care Practical', type: 'Practical' },
+                    { name: 'Sleep Lab Practical', type: 'Practical' }
                 ]
             }
         ],
         'Year 4': [
             {
-                sem: 'Semester 7',
+                sem: 'Semester 7', credits: '28 Credits',
                 subjects: [
-                    { name: 'Advanced Ventilation', type: 'Theory' },
-                    { name: 'Emergency RT', type: 'Theory' },
-                    { name: 'ACLS & PALS', type: 'Theory' },
+                    { name: 'Cardiopulmonary Rehabilitation', type: 'Theory' },
+                    { name: 'Emergency & Trauma Respiratory Care', type: 'Theory' },
+                    { name: 'Advanced Cardiac Life Support', type: 'Theory' },
                     { name: 'Healthcare Management', type: 'Theory' },
-                    { name: 'Emergency Care Lab', type: 'Practical' },
+                    { name: 'ICU Rotation Practical', type: 'Practical' },
                     { name: 'Clinical Internship - I', type: 'Practical' }
                 ]
             },
             {
-                sem: 'Semester 8',
+                sem: 'Semester 8', credits: '30 Credits',
                 subjects: [
-                    { name: 'Professional Ethics', type: 'Theory' },
-                    { name: 'Quality Management', type: 'Theory' },
+                    { name: 'Professional Ethics & Communication', type: 'Theory' },
+                    { name: 'Quality Management in Healthcare', type: 'Theory' },
                     { name: 'Clinical Internship - II', type: 'Practical' },
-                    { name: 'Project & Dissertation', type: 'Practical' },
-                    { name: 'Comprehensive Viva', type: 'Practical' },
-                    { name: 'Industry Placement', type: 'Practical' }
+                    { name: 'Project Work & Dissertation', type: 'Practical' },
+                    { name: 'Comprehensive Viva Voce', type: 'Practical' },
+                    { name: 'Industry Placement Training', type: 'Practical' }
                 ]
             }
         ]
@@ -385,12 +385,12 @@ function SyllabusSection() {
 // 6. Career Section
 function CareerSection() {
     const jobs = [
-        { title: "Respiratory Therapist", desc: "Provide respiratory care in hospitals and clinics.", icon: <Activity /> },
-        { title: "Ventilator Specialist", desc: "Manage mechanical ventilation for critical patients.", icon: <Wind /> },
-        { title: "Pulmonary Function Technologist", desc: "Conduct lung function tests and diagnostics.", icon: <Stethoscope /> },
-        { title: "ICU RT Specialist", desc: "Provide critical respiratory care in intensive care units.", icon: <Activity /> },
-        { title: "Sleep Lab Technologist", desc: "Conduct sleep studies and manage therapy.", icon: <Clock /> },
-        { title: "Clinical Educator", desc: "Train and educate future respiratory therapists.", icon: <Users /> },
+        { title: "Respiratory Therapist", desc: "Provide respiratory care to patients with breathing disorders in hospitals, clinics, and home care settings.", salary: "₹3 - 6 LPA", icon: <Activity /> },
+        { title: "ICU Ventilator Specialist", desc: "Manage mechanical ventilation for critically ill patients in intensive care units under physician guidance.", salary: "₹5 - 10 LPA", icon: <Wind /> },
+        { title: "Pulmonary Function Technologist", desc: "Conduct pulmonary function tests to diagnose and monitor respiratory conditions like asthma and COPD.", salary: "₹3 - 6 LPA", icon: <Stethoscope /> },
+        { title: "Sleep Lab Technician", desc: "Perform sleep studies and polysomnography to diagnose sleep disorders including sleep apnea.", salary: "₹4 - 7 LPA", icon: <Clock /> },
+        { title: "Neonatal Respiratory Care Specialist", desc: "Provide specialized respiratory care for newborns and premature infants in NICUs.", salary: "₹4 - 8 LPA", icon: <Activity /> },
+        { title: "Cardiopulmonary Rehabilitation Specialist", desc: "Design rehabilitation programs for patients recovering from heart and lung conditions.", salary: "₹4 - 8 LPA", icon: <Users /> },
     ];
 
     return (
@@ -406,8 +406,8 @@ function CareerSection() {
                                 {React.cloneElement(job.icon as React.ReactElement<any>, { className: "w-6 h-6" })}
                             </div>
                             <h3 className="text-xl font-bold mb-3 text-[#0b6d41]">{job.title}</h3>
-                            <p className="text-gray-900 text-sm leading-relaxed">{job.desc}</p>
-                            <button className="text-[#0b6d41] text-xs font-bold uppercase tracking-wider mt-6 hover:text-[#095c37] transition-colors border-b border-[#0b6d41] pb-1 w-fit">Read More</button>
+                            <p className="text-gray-900 text-sm leading-relaxed mb-4">{job.desc}</p>
+                            <span className="inline-block bg-[#0b6d41]/10 text-[#0b6d41] px-3 py-1 rounded-full text-xs font-bold">{job.salary}</span>
                         </div>
                     ))}
                 </div>
@@ -426,10 +426,10 @@ function FacilitiesSection() {
 
                 <div className="grid md:grid-cols-4 gap-6">
                     {[
-                        { title: "Ventilator Lab", color: "bg-[#0b6d41]", text: "text-white", desc: "State-of-art ventilators for hands-on training." },
-                        { title: "PFT Lab", color: "bg-[#ffde59]", text: "text-[#0b6d41]", desc: "Advanced pulmonary function testing equipment." },
-                        { title: "Simulation Lab", color: "bg-[#163a4a]", text: "text-white", desc: "Realistic clinical scenarios for practice." },
-                        { title: "Library", color: "bg-white", text: "text-[#0b6d41] border border-[#0b6d41]/10", desc: "Digital Library. Vast collection of medical references." },
+                        { title: "PFT Lab", color: "bg-[#0b6d41]", text: "text-white", desc: "Equipped with advanced spirometers, plethysmographs, and diffusion testing equipment for comprehensive training." },
+                        { title: "Ventilator Lab", color: "bg-[#ffde59]", text: "text-[#0b6d41]", desc: "Modern ICU ventilators, BIPAP, CPAP machines with patient simulators for realistic training." },
+                        { title: "Sleep Lab", color: "bg-[#163a4a]", text: "text-white", desc: "Fully equipped polysomnography suite for sleep study training and diagnosis of sleep disorders." },
+                        { title: "Library", color: "bg-white", text: "text-[#0b6d41] border border-[#0b6d41]/10", desc: "Access to e-journals, medical databases, and extensive collection of pulmonology resources." },
                     ].map((fac, i) => (
                         <div key={i} className={`${fac.color} ${fac.text} rounded-[2rem] p-8 text-left h-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all`}>
                             <h3 className="text-2xl font-black mb-6">{fac.title}</h3>
@@ -457,10 +457,10 @@ function AdmissionProcessSection() {
                 <div className="hidden md:block absolute top-[2.5rem] left-0 w-full h-1 bg-gray-200 -z-10"></div>
 
                 {[
-                    { step: 1, title: "Online Application", desc: "Complete the online form and upload documents." },
-                    { step: 2, title: "Document Verification", desc: "Submit proofs for verification at office." },
-                    { step: 3, title: "Counseling Session", desc: "Personal counseling about program details." },
-                    { step: 4, title: "Fee Payment", desc: "Pay fees and complete enrollment." },
+                    { step: 1, title: "Online Application", desc: "Complete the online application form on our official website. Upload required documents including 10+2 mark sheets, identification proof, and passport-size photographs." },
+                    { step: 2, title: "Document Verification", desc: "Submit original documents for verification at the admissions office. Our team will verify your academic credentials and eligibility criteria." },
+                    { step: 3, title: "Counseling Session", desc: "Attend a counseling session to learn more about the program, career prospects, and interact with Learning Facilitators. Clarify any queries regarding the course." },
+                    { step: 4, title: "Fee Payment", desc: "Upon selection, pay the admission fee and complete the enrollment formalities. Receive your admission letter and welcome kit for the upcoming academic session." },
                 ].map((item, i) => (
                     <div key={i} className="flex flex-col items-center text-center w-full md:w-1/4">
                         <div className="w-20 h-20 rounded-full bg-[#0b6d41] text-white flex items-center justify-center text-2xl font-black shadow-xl ring-8 ring-[#fbfbee] mb-6">
@@ -479,11 +479,14 @@ function AdmissionProcessSection() {
 function FAQSection() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
     const faqs = [
-        { q: "What is B.Sc Respiratory Therapy?", a: "B.Sc Respiratory Therapy is an allied health science course that deals with the diagnosis and treatment of breathing disorders using advanced medical equipment." },
-        { q: "What is the eligibility criteria?", a: "Students must have passed 10+2 with Physics, Chemistry, and Biology/Maths with a minimum of 50% aggregate marks." },
-        { q: "What is the scope of Respiratory Therapy?", a: "Scope is vast, including roles in hospitals, ICUs, pulmonary rehabilitation centers, and medical device companies." },
-        { q: "What are the career opportunities?", a: "Graduates can work as Respiratory Therapists, Ventilator Specialists, PFT Technologists, and Clinical Educators." },
-        { q: "Can I pursue higher education after this course?", a: "Yes, you can pursue M.Sc in Respiratory Therapy or other varied specializations in public health or hospital administration." },
+        { q: "What is B.Sc Respiratory Therapy and what does it involve?", a: "B.Sc Respiratory Therapy is a 4-year undergraduate degree program that trains healthcare professionals in respiratory care, pulmonary diagnostics, and cardiopulmonary management. The program covers pulmonary function testing, mechanical ventilation, oxygen therapy, arterial blood gas analysis, airway management, critical care respiratory therapy, and cardiopulmonary rehabilitation. Graduates work as respiratory therapists in hospitals, ICUs, diagnostic centers, and rehabilitation facilities, assisting pulmonologists and critical care physicians in managing patients with breathing disorders." },
+        { q: "What is the eligibility criteria for B.Sc Respiratory Therapy?", a: "To be eligible for B.Sc Respiratory Therapy, candidates must have passed 10+2 or equivalent examination with Physics, Chemistry, and Biology/Mathematics as core subjects from a recognized board. A minimum of 50% aggregate marks is required (45% for SC/ST/OBC candidates). Applicants must be at least 17 years of age as on December 31st of the admission year and possess a medical fitness certificate." },
+        { q: "What is the salary of a Respiratory Therapist in India?", a: "Entry-level respiratory therapists in India typically earn between ₹3-5 lakhs per annum. With 3-5 years of experience and specialization in areas like critical care or neonatal respiratory care, salaries can range from ₹6-12 lakhs per annum. Senior respiratory therapists in corporate hospitals and those working abroad can earn ₹15-25 lakhs or more per annum. Salaries vary based on location, hospital type, and specialized skills in mechanical ventilation and critical care." },
+        { q: "What are the career opportunities after B.Sc Respiratory Therapy?", a: "Graduates can pursue diverse career paths including Respiratory Therapist, ICU Ventilator Specialist, Pulmonary Function Technologist, Sleep Lab Technician, Neonatal Respiratory Care Specialist, Cardiopulmonary Rehabilitation Specialist, Home Care Respiratory Therapist, and Medical Equipment Sales Representative. Employment opportunities exist in multi-specialty hospitals, ICUs, pulmonary function laboratories, sleep centers, neonatal units, rehabilitation centers, home healthcare companies, and medical device organizations." },
+        { q: "Can I pursue higher education after B.Sc Respiratory Therapy?", a: "Yes, graduates can pursue M.Sc in Respiratory Therapy, M.Sc in Critical Care Technology, MBA in Healthcare Management, or MPH (Master of Public Health). Research-oriented individuals can pursue Ph.D. in Respiratory Sciences. International certifications such as Registered Respiratory Therapist (RRT) from the National Board for Respiratory Care (USA) can significantly enhance career prospects globally. Many graduates also pursue specialized certifications in mechanical ventilation, sleep medicine, and neonatal respiratory care." },
+        { q: "What is the difference between Respiratory Therapy and Pulmonology?", a: "Pulmonology is a medical specialty requiring an MBBS degree followed by MD specialization, enabling physicians to diagnose and treat lung diseases independently. Respiratory Therapy is an allied health program that trains therapists to administer respiratory treatments, manage ventilators, perform pulmonary function tests, and provide respiratory care under medical supervision. While pulmonologists make clinical decisions and prescribe treatments, respiratory therapists execute therapeutic interventions and provide hands-on patient care support." },
+        { q: "Is B.Sc Respiratory Therapy a good career choice?", a: "Yes, B.Sc Respiratory Therapy offers excellent career prospects due to the rising prevalence of respiratory diseases like COPD, asthma, and lung infections globally. The COVID-19 pandemic has highlighted the critical importance of respiratory care professionals, leading to increased demand for skilled respiratory therapists. The field offers job stability, competitive salaries, opportunities for specialization in critical care and neonatal care, and the satisfaction of saving lives. With technological advancements in respiratory care, the scope continues to expand across healthcare settings." },
+        { q: "What practical training is included in the program?", a: "Our program includes over 1500 hours of clinical training across pulmonary function laboratories, intensive care units, respiratory care units, sleep laboratories, and neonatal intensive care units. Learners gain hands-on experience with spirometry, arterial blood gas analysis, mechanical ventilator operation (invasive and non-invasive), oxygen therapy administration, nebulization techniques, airway management, chest physiotherapy, and polysomnography. Clinical rotations in partnered hospitals ensure exposure to real-world patient care scenarios and emergency respiratory protocols." },
     ];
 
     return (

@@ -5,6 +5,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { motion } from 'framer-motion';
 import { Utensils, Coffee, Leaf, ShieldCheck, IndianRupee, Heart } from 'lucide-react';
+import Image from 'next/image';
 
 export default function FoodCourt() {
     return (
@@ -14,7 +15,15 @@ export default function FoodCourt() {
             <main className="flex-grow pt-24">
                 {/* Hero Title Section */}
                 <section className="relative py-20 bg-[#0b6d41] overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1554284126-bb15fbdaff81?q=80&w=2074&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
+                    <div className="absolute inset-0">
+                        <Image
+                            src="/food court/allied health science food court.png"
+                            alt="Food Court Background"
+                            fill
+                            className="object-cover opacity-20"
+                            priority
+                        />
+                    </div>
                     <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -114,6 +123,100 @@ export default function FoodCourt() {
                             </div>
 
                         </div>
+                    </div>
+                </section>
+
+                {/* Image Gallery Section */}
+                <section className="py-20 bg-gradient-to-b from-[#fbfbee] to-white">
+                    <div className="max-w-7xl mx-auto px-4">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-center mb-12"
+                        >
+                            <h2 className="text-4xl font-black text-[#0b6d41] uppercase tracking-tight mb-4">
+                                Our Food Court
+                            </h2>
+                            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                                Take a virtual tour of our modern, hygienic, and vibrant food court facility
+                            </p>
+                        </motion.div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {[
+                                { src: '/food court/allied health science food court.png', alt: 'Food Court Main Area', title: 'Spacious Dining Area' },
+                                { src: '/food court/allied health science food court1.png', alt: 'Food Court Seating', title: 'Comfortable Seating' },
+                                { src: '/food court/allied health science food court22.png', alt: 'Food Court Ambiance', title: 'Modern Ambiance' }
+                            ].map((image, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    className="group relative overflow-hidden rounded-[2rem] shadow-lg hover:shadow-2xl transition-all duration-500"
+                                >
+                                    <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                                        <Image
+                                            src={image.src}
+                                            alt={image.alt}
+                                            fill
+                                            className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                        />
+                                        {/* Gradient Overlay */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                                        {/* Title Overlay */}
+                                        <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                            <h3 className="text-white font-bold text-xl">{image.title}</h3>
+                                        </div>
+                                    </div>
+
+                                    {/* Glass effect border on hover */}
+                                    <div className="absolute inset-0 rounded-[2rem] border-2 border-white/0 group-hover:border-white/50 transition-all duration-500 pointer-events-none"></div>
+                                </motion.div>
+                            ))}
+                        </div>
+
+                        {/* Additional Info Card */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="mt-16 backdrop-blur-md bg-white/60 border border-white/80 p-8 md:p-12 rounded-[2rem] shadow-lg text-center"
+                        >
+                            <div className="flex flex-wrap justify-center gap-8 items-center">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-12 h-12 rounded-full bg-[#0b6d41] flex items-center justify-center">
+                                        <Utensils className="w-6 h-6 text-white" />
+                                    </div>
+                                    <div className="text-left">
+                                        <p className="text-sm text-gray-500">Variety</p>
+                                        <p className="text-lg font-bold text-[#0b6d41]">50+ Dishes</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <div className="w-12 h-12 rounded-full bg-[#ffde59] flex items-center justify-center">
+                                        <Heart className="w-6 h-6 text-[#0b6d41]" />
+                                    </div>
+                                    <div className="text-left">
+                                        <p className="text-sm text-gray-500">Quality</p>
+                                        <p className="text-lg font-bold text-[#0b6d41]">Fresh Daily</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <div className="w-12 h-12 rounded-full bg-[#0b6d41] flex items-center justify-center">
+                                        <ShieldCheck className="w-6 h-6 text-white" />
+                                    </div>
+                                    <div className="text-left">
+                                        <p className="text-sm text-gray-500">Safety</p>
+                                        <p className="text-lg font-bold text-[#0b6d41]">100% Hygienic</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
                 </section>
             </main>

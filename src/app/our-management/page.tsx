@@ -100,7 +100,7 @@ function ManagementCard({ member, index }: { member: typeof managementTeam[0], i
                         alt={member.name}
                         width={192}
                         height={192}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                     />
                 </div>
                 {/* Decorative Circle Behind */}

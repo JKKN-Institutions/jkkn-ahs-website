@@ -57,10 +57,14 @@ function HeroSection() {
                     </div>
                 </div>
                 <div className="md:w-1/2 w-full">
-                    <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl border-4 border-white bg-[#0b6d41] flex items-center justify-center group">
+                    <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl border-4 border-white group">
+                        <img
+                            src="/critical-care-technology-hero.png"
+                            alt="Critical Care Technology ICU Lab"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#064225] to-transparent opacity-60"></div>
-                        <Activity className="w-24 h-24 text-white/80 group-hover:scale-110 transition-transform duration-700" />
-                        <span className="absolute bottom-6 left-6 font-bold text-xl letter-spacing-wide text-white">Critical Care ICU Lab</span>
+                        <span className="absolute bottom-6 left-6 font-bold text-xl letter-spacing-wide text-white z-10">Critical Care ICU Lab</span>
                     </div>
                 </div>
             </div>
