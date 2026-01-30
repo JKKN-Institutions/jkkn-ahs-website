@@ -15,7 +15,7 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {
 
       <main className={cn(
         'min-h-screen bg-background',
-        isMobile ? 'pt-16 pb-20' : 'pt-0'  // Top padding for mobile header, bottom padding for navbar
+        isMobile ? 'pt-16 pb-20' : 'pt-20'  // Top padding for fixed headers on both mobile and desktop
       )}>
         {children}
       </main>

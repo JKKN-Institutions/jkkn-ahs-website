@@ -497,18 +497,18 @@ function CTASection() {
                     <h2 className="text-3xl md:text-4xl font-black mb-2">Ready to Start Your Career in Cardiac Technology?</h2>
                     <p className="font-medium opacity-90 text-gray-900">Join JKKN College and become a skilled cardiac technology professional.</p>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex flex-nowrap gap-3 items-center justify-center shrink-0">
                     <a
                         href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-8 py-3 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-opacity-90 transition-colors inline-block"
+                        className="px-6 md:px-8 py-3 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-opacity-90 transition-colors whitespace-nowrap text-sm md:text-base"
                     >
                         Apply Now
                     </a>
                     <a
                         href="tel:91 9345855001"
-                        className="px-8 py-3 border-2 border-[#0b6d41] text-[#0b6d41] rounded-full font-bold hover:bg-[#0b6d41] hover:text-white transition-colors inline-block"
+                        className="px-6 md:px-8 py-3 border-2 border-[#0b6d41] text-[#0b6d41] rounded-full font-bold hover:bg-[#0b6d41] hover:text-white transition-colors whitespace-nowrap text-sm md:text-base"
                     >
                         Contact Admissions
                     </a>

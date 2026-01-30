@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, FileText, Download } from 'lucide-react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { motion } from 'framer-motion';
@@ -22,6 +22,20 @@ export default function NAACPage() {
       title: 'Over View',
       content: (
         <>
+          {/* NAAC PDF Button */}
+          <div className="mb-8 flex justify-center">
+            <a
+              href="/pdfs/NAAC-certificate.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-3 bg-[#0b6d41] text-white rounded-lg font-semibold transition-all hover:bg-[#085231] hover:shadow-lg"
+            >
+              <FileText className="w-5 h-5" />
+              <span>View NAAC Certificate</span>
+              <Download className="w-4 h-4" />
+            </a>
+          </div>
+
           <h2 className="text-3xl font-extrabold text-[#003f13] mb-6">Introduction</h2>
           <div className="text-gray-700 leading-relaxed text-justify space-y-4">
             <p>

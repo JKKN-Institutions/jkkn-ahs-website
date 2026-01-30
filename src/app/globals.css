@@ -119,3 +119,47 @@ body {
 .sidebar-scroll::-webkit-scrollbar-thumb:hover {
   background: #085231;
 }
+
+/* 3D Gallery Perspective */
+.perspective-2000 {
+  perspective: 2000px;
+  perspective-origin: center center;
+}
+
+.masonry-card {
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.masonry-card:hover {
+  transform: translateZ(80px) scale(1.05) rotateZ(0deg) !important;
+  z-index: 999 !important;
+}
+
+/* Swiper Custom Styles for Gallery */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #0b6d41;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 32px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #0b6d41 0%, #085231 100%);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #0b6d41;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #085231;
+  transform: scale(1.1);
+}

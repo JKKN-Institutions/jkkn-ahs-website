@@ -112,13 +112,13 @@ export function Programs() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 text-left">
                     {programs.map((program, index) => (
-                        <Link key={index} href={program.link}>
+                        <Link key={index} href={program.link} className="h-full">
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className={`bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all relative cursor-pointer ${program.popular ? 'border-2 border-[#0b6d41]' : 'border border-gray-100'
+                                className={`bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all relative cursor-pointer h-full flex flex-col ${program.popular ? 'border-2 border-[#0b6d41]' : 'border border-gray-100'
                                     }`}
                             >
                                 {program.popular && (
@@ -142,11 +142,11 @@ export function Programs() {
                                     <span className="text-xs sm:text-sm text-gray-600 font-medium">{program.duration}</span>
                                 </div>
 
-                                <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">
+                                <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed flex-grow">
                                     {program.description}
                                 </p>
 
-                                <div className="pt-3 sm:pt-4 border-t border-gray-100">
+                                <div className="pt-3 sm:pt-4 border-t border-gray-100 mt-auto">
                                     <p className="text-xs font-bold text-[#0b6d41] mb-1 sm:mb-2">Careers:</p>
                                     <p className="text-xs text-gray-600 leading-relaxed">{program.careers}</p>
                                 </div>

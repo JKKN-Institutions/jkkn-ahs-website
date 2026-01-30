@@ -14,7 +14,7 @@ export function Hero() {
     ];
 
     return (
-        <section className="relative pt-20 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-24 overflow-hidden bg-gradient-to-br from-[#0b6d41] via-[#0a5f3a] to-[#085231]">
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#0b6d41] via-[#0a5f3a] to-[#085231]">
             {/* Glassmorphism overlay */}
             <div className="absolute inset-0 bg-[#0b6d41]/30 backdrop-blur-3xl"></div>
 
@@ -25,47 +25,47 @@ export function Hero() {
                 <div className="absolute top-[30%] right-[20%] w-[30%] h-[30%] bg-[#0b6d41]/20 rounded-full blur-[100px]"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16 relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-3 sm:px-5 py-2 rounded-full text-white text-xs sm:text-sm font-semibold mb-6 sm:mb-8 border border-white/30 shadow-lg">
+                        <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-3 sm:px-4 py-1.5 rounded-full text-white text-xs font-semibold mb-3 sm:mb-4 border border-white/30 shadow-lg">
                             <span className="bg-[#ffde59] text-[#0b6d41] px-2 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider">New</span>
                             <span>Admissions Open for 2026-27</span>
                         </div>
 
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6 sm:mb-8">
+                        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-black text-white leading-[1.2] mb-3 sm:mb-4">
                             Shape the Future of <span className="text-[#ffde59]">Healthcare</span> with JKKN College of Allied Health Sciences
                         </h1>
 
-                        <p className="text-base sm:text-lg text-white/90 mb-8 sm:mb-10 max-w-2xl leading-relaxed">
+                        <p className="text-sm sm:text-base text-white/90 mb-4 sm:mb-6 max-w-2xl leading-relaxed">
                             Join JKKN College of Allied Health Sciences and become a vital part of modern healthcare. 8+ specialized B.Sc. programs, hospital training partnerships, and 95% placement success.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5">
+                        <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                             <button
                                 onClick={() => {
                                     const programsSection = document.getElementById('programs');
                                     programsSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                                 }}
-                                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-white text-[#0b6d41] rounded-full font-semibold transition-all hover:bg-white/90 hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base"
+                                className="w-full sm:w-auto px-5 sm:px-6 py-2.5 bg-white text-[#0b6d41] rounded-full font-semibold transition-all hover:bg-white/90 hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2 text-sm"
                             >
-                                Explore Programs <ArrowRight className="w-5 h-5" />
+                                Explore Programs <ArrowRight className="w-4 h-4" />
                             </button>
                             <Link
                                 href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-white/20 backdrop-blur-md text-white rounded-full font-semibold transition-all hover:bg-white/30 border-2 border-white/40 hover:shadow-xl hover:scale-105 text-sm sm:text-base text-center"
+                                className="w-full sm:w-auto px-5 sm:px-6 py-2.5 bg-white/20 backdrop-blur-md text-white rounded-full font-semibold transition-all hover:bg-white/30 border-2 border-white/40 hover:shadow-xl hover:scale-105 text-sm text-center"
                             >
                                 Apply for 2026-27
                             </Link>
                         </div>
 
-                        <div className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+                        <div className="mt-5 sm:mt-6 lg:mt-8 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                             {stats.map((stat, index) => (
                                 <motion.div
                                     key={index}
@@ -73,8 +73,8 @@ export function Hero() {
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ delay: 0.3 + index * 0.1 }}
                                 >
-                                    <div className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-1 sm:mb-2">{stat.value}</div>
-                                    <div className="text-xs sm:text-sm text-white font-medium leading-tight">{stat.label}</div>
+                                    <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-1">{stat.value}</div>
+                                    <div className="text-xs text-white font-medium leading-tight">{stat.label}</div>
                                 </motion.div>
                             ))}
                         </div>
@@ -84,10 +84,10 @@ export function Hero() {
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1 }}
-                        className="relative mt-8 lg:mt-0"
+                        className="relative mt-6 lg:mt-0"
                     >
-                        <div className="relative z-10 rounded-2xl sm:rounded-[2.5rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(11,109,65,0.2)] border-4 sm:border-8 md:border-[12px] border-white/50 backdrop-blur-md">
-                            <div className="aspect-[4/5] bg-gray-100">
+                        <div className="relative z-10 rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_20px_40px_-12px_rgba(11,109,65,0.2)] border-4 sm:border-6 border-white/50 backdrop-blur-md max-w-sm lg:max-w-md mx-auto lg:mx-0">
+                            <div className="aspect-[5/4] lg:aspect-[4/3] bg-gray-100">
                                 <img src="/allied-health-science-hero.png" alt="Allied Health Science - JKKN College" className="w-full h-full object-cover" />
                             </div>
                         </div>
@@ -96,13 +96,13 @@ export function Hero() {
                         <motion.div
                             animate={{ y: [0, -20, 0] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -top-6 -right-6 md:-top-8 md:-right-8 glass-card p-4 sm:p-6 rounded-2xl sm:rounded-3xl z-20 hidden sm:block"
+                            className="absolute -top-4 -right-4 md:-top-6 md:-right-6 glass-card p-3 sm:p-4 rounded-xl sm:rounded-2xl z-20 hidden sm:block"
                         >
-                            <div className="flex items-center gap-3 sm:gap-4">
-                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-xl sm:rounded-2xl flex items-center justify-center font-black text-primary text-sm sm:text-base">A+</div>
+                            <div className="flex items-center gap-2 sm:gap-3">
+                                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-secondary rounded-lg sm:rounded-xl flex items-center justify-center font-black text-primary text-xs sm:text-sm">A+</div>
                                 <div>
-                                    <div className="text-xs sm:text-sm font-bold text-gray-800 leading-none">NAAC Accredited</div>
-                                    <div className="text-[9px] sm:text-[10px] text-gray-500 font-medium">Top Rank Institution</div>
+                                    <div className="text-[10px] sm:text-xs font-bold text-gray-800 leading-none">NAAC Accredited</div>
+                                    <div className="text-[8px] sm:text-[9px] text-gray-500 font-medium">Top Rank Institution</div>
                                 </div>
                             </div>
                         </motion.div>
@@ -110,13 +110,13 @@ export function Hero() {
                         <motion.div
                             animate={{ y: [0, 20, 0] }}
                             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                            className="absolute -bottom-8 -left-8 md:-bottom-10 md:-left-10 glass-card p-4 sm:p-6 rounded-2xl sm:rounded-3xl z-20 hidden sm:block"
+                            className="absolute -bottom-6 -left-6 md:-bottom-8 md:-left-8 glass-card p-3 sm:p-4 rounded-xl sm:rounded-2xl z-20 hidden sm:block"
                         >
-                            <div className="flex items-center gap-3 sm:gap-4">
-                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-xl sm:rounded-2xl flex items-center justify-center text-white text-xl sm:text-2xl">🏆</div>
+                            <div className="flex items-center gap-2 sm:gap-3">
+                                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary rounded-lg sm:rounded-xl flex items-center justify-center text-white text-lg sm:text-xl">🏆</div>
                                 <div>
-                                    <div className="text-xs sm:text-sm font-bold text-gray-800 leading-none">95% Placement</div>
-                                    <div className="text-[9px] sm:text-[10px] text-gray-500 font-medium">Global Opportunities</div>
+                                    <div className="text-[10px] sm:text-xs font-bold text-gray-800 leading-none">95% Placement</div>
+                                    <div className="text-[8px] sm:text-[9px] text-gray-500 font-medium">Global Opportunities</div>
                                 </div>
                             </div>
                         </motion.div>
@@ -128,45 +128,45 @@ export function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6, duration: 0.8 }}
-                    className="mt-12 sm:mt-16 md:mt-20 bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 border border-white/20"
+                    className="mt-5 sm:mt-6 lg:mt-8 bg-white/95 backdrop-blur-xl rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-4 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 border border-white/20"
                 >
-                    <div className="flex items-start gap-3 sm:gap-4">
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-50 rounded-xl sm:rounded-2xl flex items-center justify-center text-xl sm:text-2xl shrink-0">
+                    <div className="flex items-start gap-2 sm:gap-3">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-50 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl shrink-0">
                             🎓
                         </div>
                         <div>
-                            <h3 className="text-xs sm:text-sm font-bold text-[#1a5f7a] mb-1">University Affiliated</h3>
-                            <p className="text-[#0b6d41] font-semibold text-xs sm:text-sm">TN Dr. M.G.R. Medical University</p>
+                            <h3 className="text-[10px] sm:text-xs font-bold text-[#1a5f7a] mb-0.5">University Affiliated</h3>
+                            <p className="text-[#0b6d41] font-semibold text-[10px] sm:text-xs">TN Dr. M.G.R. Medical University</p>
                         </div>
                     </div>
 
-                    <div className="flex items-start gap-3 sm:gap-4">
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-50 rounded-xl sm:rounded-2xl flex items-center justify-center text-xl sm:text-2xl shrink-0">
+                    <div className="flex items-start gap-2 sm:gap-3">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow-50 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl shrink-0">
                             ⏱️
                         </div>
                         <div>
-                            <h3 className="text-xs sm:text-sm font-bold text-[#1a5f7a] mb-1">Program Duration</h3>
-                            <p className="text-gray-700 font-semibold text-xs sm:text-sm">3 Years + 1 Year Internship</p>
+                            <h3 className="text-[10px] sm:text-xs font-bold text-[#1a5f7a] mb-0.5">Program Duration</h3>
+                            <p className="text-gray-700 font-semibold text-[10px] sm:text-xs">3 Years + 1 Year Internship</p>
                         </div>
                     </div>
 
-                    <div className="flex items-start gap-3 sm:gap-4">
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-50 rounded-xl sm:rounded-2xl flex items-center justify-center text-xl sm:text-2xl shrink-0">
+                    <div className="flex items-start gap-2 sm:gap-3">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-50 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl shrink-0">
                             💼
                         </div>
                         <div>
-                            <h3 className="text-xs sm:text-sm font-bold text-[#1a5f7a] mb-1">Avg. Package</h3>
-                            <p className="text-gray-700 font-semibold text-xs sm:text-sm">₹3.2 - 7.5 LPA</p>
+                            <h3 className="text-[10px] sm:text-xs font-bold text-[#1a5f7a] mb-0.5">Avg. Package</h3>
+                            <p className="text-gray-700 font-semibold text-[10px] sm:text-xs">₹3.2 - 7.5 LPA</p>
                         </div>
                     </div>
 
-                    <div className="flex items-start gap-3 sm:gap-4">
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-50 rounded-xl sm:rounded-2xl flex items-center justify-center text-xl sm:text-2xl shrink-0">
+                    <div className="flex items-start gap-2 sm:gap-3">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-purple-50 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl shrink-0">
                             📅
                         </div>
                         <div>
-                            <h3 className="text-xs sm:text-sm font-bold text-[#1a5f7a] mb-1">Admission Open</h3>
-                            <p className="text-gray-700 font-semibold text-xs sm:text-sm">2026-27 Batch Now</p>
+                            <h3 className="text-[10px] sm:text-xs font-bold text-[#1a5f7a] mb-0.5">Admission Open</h3>
+                            <p className="text-gray-700 font-semibold text-[10px] sm:text-xs">2026-27 Batch Now</p>
                         </div>
                     </div>
                 </motion.div>

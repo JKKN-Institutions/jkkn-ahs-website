@@ -43,6 +43,7 @@ export function Footer() {
         }
     ];
 
+
     return (
         <footer className="bg-[#0b6d41] pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">

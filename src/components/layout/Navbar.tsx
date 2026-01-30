@@ -60,6 +60,7 @@ const navLinks: NavLink[] = [
         name: 'OTHERS',
         href: '/others',
         submenu: [
+            { name: 'Gallery', href: '/gallery' },
             { name: 'NAAC', href: '/NAAC' },
             { name: 'Privacy Policy', href: '/privacy-policy' },
             { name: 'Academic Calendar', href: '/academic-calendar' }
