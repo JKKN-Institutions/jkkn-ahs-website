@@ -25,7 +25,7 @@ export default function VisionMission() {
             y: 0,
             transition: {
                 duration: 0.6,
-                ease: "easeOut"
+                ease: [0.17, 0.55, 0.55, 1] // easeOut bezier curve
             }
         }
     };
@@ -45,7 +45,7 @@ export default function VisionMission() {
                     transition={{
                         duration: 8,
                         repeat: Infinity,
-                        ease: "easeInOut"
+                        ease: [0.42, 0, 0.58, 1] // easeInOut bezier curve
                     }}
                     className="absolute top-20 -left-20 w-96 h-96 bg-gradient-to-br from-[#0b6d41]/20 to-transparent rounded-full blur-3xl"
                 />
@@ -57,7 +57,7 @@ export default function VisionMission() {
                     transition={{
                         duration: 10,
                         repeat: Infinity,
-                        ease: "easeInOut",
+                        ease: [0.42, 0, 0.58, 1], // easeInOut bezier curve
                         delay: 1
                     }}
                     className="absolute bottom-20 -right-20 w-96 h-96 bg-gradient-to-br from-[#fbb92c]/20 to-transparent rounded-full blur-3xl"
