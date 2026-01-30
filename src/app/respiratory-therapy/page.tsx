@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -44,7 +45,7 @@ function HeroSection() {
                         B.Sc <span className="text-[#0b6d41]">Respiratory Therapy</span>
                     </h1>
                     <p className="text-gray-900 text-lg mb-8 leading-relaxed">
-                        Embark on a transformative journey into respiratory healthcare. Our comprehensive 4-year program prepares learners to become skilled respiratory therapists, mastering pulmonary diagnostics, mechanical ventilation, critical care respiratory management, and cardiopulmonary rehabilitation.
+                        Embark on a transformative journey into respiratory healthcare. Our comprehensive 3 Years + 1 Year Internship program prepares learners to become skilled respiratory therapists, mastering pulmonary diagnostics, mechanical ventilation, critical care respiratory management, and cardiopulmonary rehabilitation.
                     </p>
                     <div className="flex flex-wrap gap-4">
                         <button className="px-8 py-3.5 bg-[#0b6d41] text-white rounded-full font-bold shadow-lg hover:bg-[#095c37] transition-all transform hover:-translate-y-1">
@@ -56,9 +57,15 @@ function HeroSection() {
                     </div>
                 </div>
                 <div className="md:w-1/2 w-full">
-                    <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl border-4 border-white bg-[#0b6d41] flex items-center justify-center group">
+                    <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl border-4 border-white group">
+                        <Image
+                            src="/images/departments/respiratory-therapy-hero.png"
+                            alt="Respiratory Therapy Department"
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                            priority
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#064225] to-transparent opacity-60"></div>
-                        <Wind className="w-24 h-24 text-white/80 group-hover:scale-110 transition-transform duration-700" />
                         <span className="absolute bottom-6 left-6 font-bold text-xl letter-spacing-wide text-white">Respiratory Care Lab</span>
                     </div>
                 </div>
@@ -72,10 +79,10 @@ function HeroSection() {
 // 2. Stats Section
 function StatsSection() {
     const stats = [
-        { label: "Years Duration", value: "4", icon: <Clock className="w-5 h-5" /> },
+        { label: "Years Duration", value: "3+1", icon: <Clock className="w-5 h-5" /> },
         { label: "Placement Rate", value: "95%", icon: <Users className="w-5 h-5" /> },
         { label: "Hospital Partners", value: "25+", icon: <Building2 className="w-5 h-5" /> },
-        { label: "Clinical Hours", value: "1500+", icon: <Activity className="w-5 h-5" /> },
+        { label: "Clinical Hours", value: "2000+", icon: <Activity className="w-5 h-5" /> },
     ];
 
     return (
@@ -122,7 +129,7 @@ function AboutSection() {
                     <div className="grid md:grid-cols-2 gap-6 mt-10">
                         {[
                             { title: "Advanced Ventilation", icon: <Activity />, desc: "Training in ventilators, ABG analysis & ICU protocols" },
-                            { title: "Clinical Excellence", icon: <Stethoscope />, desc: "1500+ hours of hands-on clinical training" },
+                            { title: "Clinical Excellence", icon: <Stethoscope />, desc: "2000+ hours of hands-on clinical training" },
                             { title: "Modern Equipment", icon: <Laptop />, desc: "Latest ventilators & diagnostic equipment" },
                             { title: "Expert Faculty", icon: <Wind />, desc: "Learn from experienced pulmonologists" },
                         ].map((item, i) => (
@@ -145,11 +152,11 @@ function AboutSection() {
                         <h3 className="text-xl font-bold mb-6 border-b border-gray-100 pb-4 text-[#0b6d41]">Quick Course Information</h3>
                         <ul className="space-y-4 text-sm">
                             {[
-                                { label: "Duration", value: "4 Years (8 Sem)" },
+                                { label: "Duration", value: "3 + 1" },
                                 { label: "Degree", value: "B.Sc" },
-                                { label: "Mode", value: "Full-time" },
-                                { label: "Clinical Training", value: "1500+ Hours" },
-                                { label: "Eligibility", value: "+2 (PCB/PCM)" },
+                                { label: "Intake", value: "5 Seats" },
+                                { label: "Session", value: "2026-2027" },
+                                { label: "Approval", value: "UGC Approved" },
                                 { label: "Fee", value: "Contact Us" },
                             ].map((item, i) => (
                                 <li key={i} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-0">
@@ -186,10 +193,10 @@ function EligibilitySection() {
                         </h3>
                         <ul className="space-y-4">
                             {[
-                                "Passed 10+2 or equivalent examination from a recognized board",
+                                "Passed +2 or equivalent examination from a recognized board",
                                 "Physics, Chemistry, and Biology/Mathematics as core subjects",
-                                "Minimum 50% aggregate marks (45% for SC/ST/OBC categories)",
-                                "English as a compulsory subject in 10+2"
+                                "Minimum 50% aggregate marks (40% for SC/ST/OBC categories)",
+                                "English as a compulsory subject in +2"
                             ].map((item, i) => (
                                 <li key={i} className="flex gap-3 text-gray-900">
                                     <CheckCircle2 className="w-5 h-5 text-[#0b6d41] shrink-0" />
@@ -204,10 +211,10 @@ function EligibilitySection() {
                         </h3>
                         <ul className="space-y-4">
                             {[
-                                "Age: Minimum 17 years as on December 31st of the admission year",
+                                "Age: Candidates should have completed 17 years of age as on 31st December 2025.",
                                 "Valid entrance exam score (if applicable to state regulations)",
                                 "Medical fitness certificate from registered medical practitioner",
-                                "Character certificate from last attended institution"
+                                "Conduct certificate from last attended institution"
                             ].map((item, i) => (
                                 <li key={i} className="flex gap-3 text-gray-900">
                                     <CheckCircle2 className="w-5 h-5 text-[#0b6d41] shrink-0" />
@@ -225,104 +232,43 @@ function EligibilitySection() {
 // 5. Syllabus Section
 function SyllabusSection() {
     const [activeYear, setActiveYear] = useState('Year 1');
-    const years = ['Year 1', 'Year 2', 'Year 3', 'Year 4'];
+    const years = ['Year 1', 'Year 2', 'Year 3'];
+
+    const getSubjectType = (hasTheory: boolean, hasPractical: boolean) => {
+        if (hasTheory && hasPractical) return 'THEORY + PRACTICAL';
+        if (hasTheory) return 'THEORY';
+        if (hasPractical) return 'PRACTICAL';
+        return 'THEORY';
+    };
 
     const syllabus = {
-        'Year 1': [
-            {
-                sem: 'Semester 1', credits: '22 Credits', subjects: [
-                    { name: 'Human Anatomy', type: 'Theory' },
-                    { name: 'Human Physiology', type: 'Theory' },
-                    { name: 'Biochemistry', type: 'Theory' },
-                    { name: 'English Communication', type: 'Theory' },
-                    { name: 'Computer Applications in Healthcare', type: 'Practical' },
-                    { name: 'Anatomy Practical', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 2', credits: '24 Credits',
-                subjects: [
-                    { name: 'Respiratory Anatomy', type: 'Theory' },
-                    { name: 'Respiratory Physiology', type: 'Theory' },
-                    { name: 'Pathology Basics', type: 'Theory' },
-                    { name: 'Microbiology', type: 'Theory' },
-                    { name: 'Introduction to Respiratory Care', type: 'Practical' },
-                    { name: 'Physiology Practical', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 2': [
-            {
-                sem: 'Semester 3', credits: '24 Credits',
-                subjects: [
-                    { name: 'Pharmacology', type: 'Theory' },
-                    { name: 'Pulmonary Function Testing - I', type: 'Theory' },
-                    { name: 'Medical Electronics', type: 'Theory' },
-                    { name: 'Clinical Pulmonology - I', type: 'Theory' },
-                    { name: 'Spirometry & PFT Practical', type: 'Practical' },
-                    { name: 'Basic Life Support Training', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 4', credits: '26 Credits',
-                subjects: [
-                    { name: 'Pulmonary Function Testing - II', type: 'Theory' },
-                    { name: 'Oxygen Therapy & Aerosol Therapy', type: 'Theory' },
-                    { name: 'Clinical Pulmonology - II', type: 'Theory' },
-                    { name: 'Arterial Blood Gas Analysis', type: 'Theory' },
-                    { name: 'ABG Interpretation Practical', type: 'Practical' },
-                    { name: 'Nebulization Techniques', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 3': [
-            {
-                sem: 'Semester 5', credits: '26 Credits',
-                subjects: [
-                    { name: 'Mechanical Ventilation - I', type: 'Theory' },
-                    { name: 'Airway Management', type: 'Theory' },
-                    { name: 'Critical Care Respiratory Therapy', type: 'Theory' },
-                    { name: 'Chest Physiotherapy', type: 'Theory' },
-                    { name: 'Ventilator Operation Practical', type: 'Practical' },
-                    { name: 'Intubation & Airway Practical', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 6', credits: '26 Credits',
-                subjects: [
-                    { name: 'Mechanical Ventilation - II', type: 'Theory' },
-                    { name: 'Neonatal & Pediatric Respiratory Care', type: 'Theory' },
-                    { name: 'Sleep Medicine & Polysomnography', type: 'Theory' },
-                    { name: 'Research Methodology', type: 'Theory' },
-                    { name: 'NICU Respiratory Care Practical', type: 'Practical' },
-                    { name: 'Sleep Lab Practical', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 4': [
-            {
-                sem: 'Semester 7', credits: '28 Credits',
-                subjects: [
-                    { name: 'Cardiopulmonary Rehabilitation', type: 'Theory' },
-                    { name: 'Emergency & Trauma Respiratory Care', type: 'Theory' },
-                    { name: 'Advanced Cardiac Life Support', type: 'Theory' },
-                    { name: 'Healthcare Management', type: 'Theory' },
-                    { name: 'ICU Rotation Practical', type: 'Practical' },
-                    { name: 'Clinical Internship - I', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 8', credits: '30 Credits',
-                subjects: [
-                    { name: 'Professional Ethics & Communication', type: 'Theory' },
-                    { name: 'Quality Management in Healthcare', type: 'Theory' },
-                    { name: 'Clinical Internship - II', type: 'Practical' },
-                    { name: 'Project Work & Dissertation', type: 'Practical' },
-                    { name: 'Comprehensive Viva Voce', type: 'Practical' },
-                    { name: 'Industry Placement Training', type: 'Practical' }
-                ]
-            }
-        ]
+        'Year 1': {
+            sem: 'Year 1 Subjects',
+            subjects: [
+                { name: 'Anatomy and Physiology', hasTheory: true, hasPractical: true },
+                { name: 'Microbiology and Pathology', hasTheory: true, hasPractical: true },
+                { name: 'Biochemistry and Pharmacology', hasTheory: true, hasPractical: true },
+                { name: 'Biostatistics and Physics', hasTheory: true, hasPractical: true }
+            ]
+        },
+        'Year 2': {
+            sem: 'Year 2 Subjects',
+            subjects: [
+                { name: 'Respiratory Diseases', hasTheory: true, hasPractical: true },
+                { name: 'Cardiovascular Diseases', hasTheory: true, hasPractical: true },
+                { name: 'Diagnostic Techniques in Cardio-Respiratory Diseases', hasTheory: true, hasPractical: true },
+                { name: 'Equipments in Respiratory Care', hasTheory: true, hasPractical: true }
+            ]
+        },
+        'Year 3': {
+            sem: 'Year 3 Subjects',
+            subjects: [
+                { name: 'Respiratory Therapy Techniques 1', hasTheory: true, hasPractical: true },
+                { name: 'Respiratory Therapy Techniques 2', hasTheory: true, hasPractical: true },
+                { name: 'Life Support System', hasTheory: true, hasPractical: true },
+                { name: 'Cardio Pulmonary Rehabilitation', hasTheory: true, hasPractical: true }
+            ]
+        }
     };
 
     return (
@@ -339,7 +285,7 @@ function SyllabusSection() {
                         <button
                             key={year}
                             onClick={() => setActiveYear(year)}
-                            className={`px-8 py-2 rounded-full font-bold transition-all ${activeYear === year ? 'bg-[#0b6d41] text-white shadow-lg' : 'text-gray-500 hover:bg-gray-100'}`}
+                            className={`px-8 py-3 rounded-full font-bold transition-all ${activeYear === year ? 'bg-[#0b6d41] text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'}`}
                         >
                             {year}
                         </button>
@@ -351,31 +297,32 @@ function SyllabusSection() {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="grid md:grid-cols-2 gap-8"
+                    className="flex justify-center"
                 >
-                    {(syllabus as any)[activeYear].map((sem: any, i: number) => (
-                        <div key={i} className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:border-[#0b6d41] transition-colors">
-                            <div className="bg-[#0b6d41] text-white p-4 flex justify-between items-center">
-                                <h4 className="font-bold">{sem.sem}</h4>
-                                <span className="text-xs bg-white/20 px-2 py-1 rounded">{sem.credits}</span>
-                            </div>
-                            <div className="p-6">
-                                <ul className="space-y-3">
-                                    {sem.subjects.map((sub: any, idx: number) => (
-                                        <li key={idx} className="flex items-center justify-between gap-3 text-gray-900 p-2 rounded hover:bg-gray-50 transition-colors">
-                                            <div className="flex items-center gap-3">
-                                                <div className={`w-1.5 h-1.5 rounded-full ${sub.type === 'Theory' ? 'bg-[#ffde59]' : 'bg-[#cc5500]'}`}></div>
-                                                <span className="font-medium">{sub.name}</span>
+                    <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden max-w-3xl w-full">
+                        <div className="bg-[#0b6d41] text-white px-6 py-4">
+                            <h4 className="font-bold text-lg">{(syllabus as any)[activeYear].sem}</h4>
+                        </div>
+                        <div className="p-8 bg-[#fbfbee]">
+                            <ul className="space-y-4">
+                                {(syllabus as any)[activeYear].subjects.map((sub: any, idx: number) => {
+                                    const type = getSubjectType(sub.hasTheory, sub.hasPractical);
+                                    return (
+                                        <li key={idx} className="flex items-center justify-between gap-4 text-gray-800 py-2">
+                                            <div className="flex items-center gap-3 flex-1">
+                                                <div className={`w-2 h-2 rounded-full shrink-0 ${type === 'THEORY + PRACTICAL' ? 'bg-purple-600' : 'bg-orange-500'}`}></div>
+                                                <span className="font-medium text-[15px]">{sub.name}</span>
                                             </div>
-                                            <span className={`text-[10px] uppercase font-bold px-2 py-1 rounded ${sub.type === 'Theory' ? 'bg-blue-50 text-blue-600' : 'bg-yellow-50 text-yellow-600'}`}>
-                                                {sub.type}
+                                            <span className={`text-[10px] uppercase font-bold px-3 py-1.5 rounded-md whitespace-nowrap tracking-wide ${type === 'THEORY + PRACTICAL' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
+                                                }`}>
+                                                {type}
                                             </span>
                                         </li>
-                                    ))}
-                                </ul>
-                            </div>
+                                    );
+                                })}
+                            </ul>
                         </div>
-                    ))}
+                    </div>
                 </motion.div>
             </div>
         </section>
@@ -459,8 +406,7 @@ function AdmissionProcessSection() {
                 {[
                     { step: 1, title: "Online Application", desc: "Complete the online application form on our official website. Upload required documents including 10+2 mark sheets, identification proof, and passport-size photographs." },
                     { step: 2, title: "Document Verification", desc: "Submit original documents for verification at the admissions office. Our team will verify your academic credentials and eligibility criteria." },
-                    { step: 3, title: "Counseling Session", desc: "Attend a counseling session to learn more about the program, career prospects, and interact with Learning Facilitators. Clarify any queries regarding the course." },
-                    { step: 4, title: "Fee Payment", desc: "Upon selection, pay the admission fee and complete the enrollment formalities. Receive your admission letter and welcome kit for the upcoming academic session." },
+                    { step: 3, title: "Fee Payment", desc: "Upon selection, pay the admission fee and complete the enrollment formalities. Receive your admission letter and welcome kit for the upcoming academic session." }
                 ].map((item, i) => (
                     <div key={i} className="flex flex-col items-center text-center w-full md:w-1/4">
                         <div className="w-20 h-20 rounded-full bg-[#0b6d41] text-white flex items-center justify-center text-2xl font-black shadow-xl ring-8 ring-[#fbfbee] mb-6">

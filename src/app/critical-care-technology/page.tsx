@@ -228,113 +228,41 @@ function EligibilitySection() {
 // 5. Syllabus Section
 function SyllabusSection() {
     const [activeYear, setActiveYear] = useState('Year 1');
-    const years = ['Year 1', 'Year 2', 'Year 3', 'Year 4'];
+    const years = ['Year 1', 'Year 2', 'Year 3'];
+
+    const getSubjectType = (hasTheory: boolean, hasPractical: boolean) => {
+        if (hasTheory && hasPractical) return 'THEORY + PRACTICAL';
+        if (hasTheory) return 'THEORY';
+        if (hasPractical) return 'PRACTICAL';
+        return 'THEORY';
+    };
 
     const syllabus = {
-        'Year 1': [
-            {
-                sem: 'Semester 1',
-                credits: '22 Credits',
-                subjects: [
-                    { name: 'Human Anatomy', type: 'Theory' },
-                    { name: 'Human Physiology', type: 'Theory' },
-                    { name: 'Biochemistry', type: 'Theory' },
-                    { name: 'English Communication', type: 'Theory' },
-                    { name: 'Computer Applications', type: 'Practical' },
-                    { name: 'Anatomy Practical', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 2',
-                credits: '24 Credits',
-                subjects: [
-                    { name: 'Respiratory Anatomy & Physiology', type: 'Theory' },
-                    { name: 'Cardiovascular Physiology', type: 'Theory' },
-                    { name: 'Pathology Basics', type: 'Theory' },
-                    { name: 'Microbiology & Infection Control', type: 'Theory' },
-                    { name: 'Basic Life Support (BLS)', type: 'Practical' },
-                    { name: 'Physiology Practical', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 2': [
-            {
-                sem: 'Semester 3',
-                credits: '24 Credits',
-                subjects: [
-                    { name: 'Pharmacology', type: 'Theory' },
-                    { name: 'Critical Care Medicine - I', type: 'Theory' },
-                    { name: 'Medical Electronics', type: 'Theory' },
-                    { name: 'Patient Monitoring Systems', type: 'Theory' },
-                    { name: 'ECG & Vital Signs Monitoring', type: 'Practical' },
-                    { name: 'ICU Equipment Orientation', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 4',
-                credits: '26 Credits',
-                subjects: [
-                    { name: 'Critical Care Medicine - II', type: 'Theory' },
-                    { name: 'Respiratory Care Technology', type: 'Theory' },
-                    { name: 'Hemodynamic Monitoring', type: 'Theory' },
-                    { name: 'Fluid & Electrolyte Management', type: 'Theory' },
-                    { name: 'Ventilator Basics Lab', type: 'Practical' },
-                    { name: 'Arterial Blood Gas Analysis', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 3': [
-            {
-                sem: 'Semester 5',
-                credits: '26 Credits',
-                subjects: [
-                    { name: 'Advanced Ventilator Management', type: 'Theory' },
-                    { name: 'Cardiac Critical Care', type: 'Theory' },
-                    { name: 'Renal Replacement Therapy', type: 'Theory' },
-                    { name: 'Neurological Critical Care', type: 'Theory' },
-                    { name: 'Dialysis Lab Practical', type: 'Practical' },
-                    { name: 'Advanced Life Support (ACLS)', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 6',
-                credits: '26 Credits',
-                subjects: [
-                    { name: 'Trauma & Emergency Care', type: 'Theory' },
-                    { name: 'Pediatric & Neonatal ICU', type: 'Theory' },
-                    { name: 'Sepsis & Infection Management', type: 'Theory' },
-                    { name: 'Research Methodology', type: 'Theory' },
-                    { name: 'NICU/PICU Training', type: 'Practical' },
-                    { name: 'Emergency Department Posting', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 4': [
-            {
-                sem: 'Semester 7',
-                credits: '28 Credits',
-                subjects: [
-                    { name: 'ECMO & Advanced Life Support', type: 'Theory' },
-                    { name: 'Organ Transplant Care', type: 'Theory' },
-                    { name: 'ICU Management & Administration', type: 'Theory' },
-                    { name: 'Palliative & End-of-Life Care', type: 'Theory' },
-                    { name: 'Clinical Internship - I', type: 'Practical' },
-                    { name: 'Critical Care Simulation Lab', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 8',
-                credits: '28 Credits',
-                subjects: [
-                    { name: 'Professional Ethics & Communication', type: 'Theory' },
-                    { name: 'Quality Management in ICU', type: 'Theory' },
-                    { name: 'Clinical Internship - II', type: 'Practical' },
-                    { name: 'Project & Dissertation', type: 'Practical' },
-                    { name: 'Comprehensive Viva', type: 'Practical' },
-                    { name: 'Industry Placement', type: 'Practical' }
-                ]
-            }
-        ]
+        'Year 1': {
+            sem: 'First Year',
+            subjects: [
+                { name: 'Paper 1: Anatomy + Applied Anatomy + Biochemistry (Anatomy 75% + Biochemistry 25%)', hasTheory: true, hasPractical: true },
+                { name: 'Paper 2: Physiology + Basic physics (Physiology 75% + Physics 25%)', hasTheory: true, hasPractical: true },
+                { name: 'Paper 3: Computer + English (Computer 50% + English 50%)', hasTheory: true, hasPractical: true }
+            ]
+        },
+        'Year 2': {
+            sem: 'Second Year',
+            subjects: [
+                { name: 'Paper 1: Anatomy + Applied Anatomy & Physiology', hasTheory: true, hasPractical: true },
+                { name: 'Paper 2: Clinical Microbiology', hasTheory: true, hasPractical: true },
+                { name: 'Paper 3: ICU Monitoring I (Basic) & Biomedical Engineering (ICU Monitoring 75% + BE 25%)', hasTheory: true, hasPractical: true },
+                { name: 'Paper 4: Pathology, Pathophysiology & Pharmacology (Pathology 50% + Pharmacology 50%)', hasTheory: true, hasPractical: false }
+            ]
+        },
+        'Year 3': {
+            sem: 'Third Year',
+            subjects: [
+                { name: 'Paper 1: ICU Monitoring II + Maintenance of Equipment (ICU Monitoring 75% + Maintenance 25%)', hasTheory: true, hasPractical: true },
+                { name: 'Paper 2: ICU Therapy', hasTheory: true, hasPractical: true },
+                { name: 'Paper 3: ICU Administration + Logistics + Statistics + Medical Ethics', hasTheory: true, hasPractical: false }
+            ]
+        }
     };
 
     return (
@@ -351,7 +279,7 @@ function SyllabusSection() {
                         <button
                             key={year}
                             onClick={() => setActiveYear(year)}
-                            className={`px-8 py-2 rounded-full font-bold transition-all ${activeYear === year ? 'bg-[#0b6d41] text-white shadow-lg' : 'text-gray-500 hover:bg-gray-100'}`}
+                            className={`px-8 py-3 rounded-full font-bold transition-all ${activeYear === year ? 'bg-[#0b6d41] text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'}`}
                         >
                             {year}
                         </button>
@@ -363,31 +291,33 @@ function SyllabusSection() {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="grid md:grid-cols-2 gap-8"
+                    className="flex justify-center"
                 >
-                    {(syllabus as any)[activeYear].map((sem: any, i: number) => (
-                        <div key={i} className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:border-[#0b6d41] transition-colors">
-                            <div className="bg-[#0b6d41] text-white p-4 flex justify-between items-center">
-                                <h4 className="font-bold">{sem.sem}</h4>
-                                <span className="text-xs bg-white/20 px-2 py-1 rounded">{sem.credits}</span>
-                            </div>
-                            <div className="p-6">
-                                <ul className="space-y-3">
-                                    {sem.subjects.map((sub: any, idx: number) => (
-                                        <li key={idx} className="flex items-center justify-between gap-3 text-gray-700 p-2 rounded hover:bg-gray-50 transition-colors">
-                                            <div className="flex items-center gap-3">
-                                                <div className={`w-1.5 h-1.5 rounded-full ${sub.type === 'Theory' ? 'bg-[#ffde59]' : 'bg-[#cc5500]'}`}></div>
-                                                <span className="font-medium">{sub.name}</span>
+                    <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden max-w-3xl w-full">
+                        <div className="bg-[#0b6d41] text-white px-6 py-4">
+                            <h4 className="font-bold text-lg">{(syllabus as any)[activeYear].sem}</h4>
+                        </div>
+                        <div className="p-8 bg-[#fbfbee]">
+                            <ul className="space-y-4">
+                                {(syllabus as any)[activeYear].subjects.map((sub: any, idx: number) => {
+                                    const type = getSubjectType(sub.hasTheory, sub.hasPractical);
+                                    return (
+                                        <li key={idx} className="flex items-center justify-between gap-4 text-gray-800 py-2">
+                                            <div className="flex items-center gap-3 flex-1">
+                                                <div className={`w-2 h-2 rounded-full shrink-0 ${type === 'THEORY + PRACTICAL' ? 'bg-purple-600' : 'bg-orange-500'}`}></div>
+                                                <span className="font-medium text-[15px]">{sub.name}</span>
                                             </div>
-                                            <span className={`text-[10px] uppercase font-bold px-2 py-1 rounded ${sub.type === 'Theory' ? 'bg-blue-50 text-blue-600' : 'bg-yellow-50 text-yellow-600'}`}>
-                                                {sub.type}
+                                            <span className={`text-[10px] uppercase font-bold px-3 py-1.5 rounded-md whitespace-nowrap tracking-wide ${
+                                                type === 'THEORY + PRACTICAL' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
+                                            }`}>
+                                                {type}
                                             </span>
                                         </li>
-                                    ))}
-                                </ul>
-                            </div>
+                                    );
+                                })}
+                            </ul>
                         </div>
-                    ))}
+                    </div>
                 </motion.div>
             </div>
         </section>

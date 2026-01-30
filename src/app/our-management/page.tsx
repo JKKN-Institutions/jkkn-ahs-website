@@ -13,19 +13,13 @@ const managementTeam = [
         name: "SMT. N. SENDAMARAAI",
         role: "CHAIRPERSON",
         image: "/chairperson.jpg",
-        quote: "Leadership and Excellence is not merely our motto but the foundation of our values, a testament to our state-of-the-art infrastructure and unwavering commitment to quality education."
+        quote: "As the Chairperson of JKKN Institutions, I am honoured to shoulder this immense responsibility, and I take great pride in our exceptional progress. We have earned the status of the most prestigious colleges in the region. 'Leadership and Excellence' is not merely our motto but the foundation of our values, a testament to our state-of-the-art infrastructure, distinguished faculty, and unwavering commitment to quality education."
     },
     {
         name: "SHRI. S. OMMSHARRAVANA",
         role: "DIRECTOR",
         image: "/director.jpg",
-        quote: "Our mission empowers students to contribute their best to society and the nation. We are committed to innovative education methodologies that enable quality learning."
-    },
-    {
-        name: "MRS. O. ISVARYA LAKSHMI",
-        role: "JOINT DIRECTOR",
-        image: "/joint-director.jpg",
-        quote: "Together, we strive to create an environment where excellence thrives and every student achieves their fullest potential."
+        quote: "I extend my heartiest congratulations to the college for its formations and focused dedication in shaping future engineers of distinction. At JKKN, we are committed to innovative education methodologies that enable quality learning, foster independent thinking and facilitate the development of well-rounded personalities. Our mission empowers students to contribute their best to society and the nation."
     }
 ];
 
@@ -67,7 +61,7 @@ export default function OurManagement() {
                     </div>
 
                     {/* Management Grid */}
-                    <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                         {managementTeam.map((member, index) => (
                             <ManagementCard key={index} member={member} index={index} />
                         ))}
@@ -86,9 +80,7 @@ function ManagementCard({ member, index }: { member: typeof managementTeam[0], i
         if (member.role === "DIRECTOR") {
             return "w-full h-full object-cover scale-110";
         } else if (member.role === "CHAIRPERSON") {
-            return "w-full h-full object-contain scale-[0.85]";
-        } else if (member.role === "JOINT DIRECTOR") {
-            return "w-full h-full object-cover scale-95";
+            return "w-full h-full object-cover scale-90 object-center";
         }
         return "w-full h-full object-cover";
     };
@@ -117,13 +109,6 @@ function ManagementCard({ member, index }: { member: typeof managementTeam[0], i
                 </div>
                 {/* Decorative Circle Behind */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-gray-100 rounded-full -z-0"></div>
-
-                {/* Plus toggle (decorative based on design) */}
-                {index === 2 && (
-                    <div className="absolute top-0 -right-4 bg-[#ffde59] w-10 h-10 rounded-full flex items-center justify-center shadow-lg text-white font-bold cursor-pointer hover:scale-110 transition-transform">
-                        +
-                    </div>
-                )}
             </div>
 
             {/* Content */}

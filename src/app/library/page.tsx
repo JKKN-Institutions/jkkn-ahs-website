@@ -26,19 +26,19 @@ export default function Library() {
                     </div>
 
                     {/* Header Section */}
-                    <div className="text-center mb-16 relative">
+                    <div className="text-center mb-12 sm:mb-14 md:mb-16 relative px-4">
                         <motion.div
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="inline-flex items-center gap-2 bg-white px-4 py-1.5 rounded-full shadow-sm mb-6 border border-gray-100"
+                            className="inline-flex items-center gap-2 bg-white px-3 sm:px-4 py-1.5 rounded-full shadow-sm mb-4 sm:mb-5 md:mb-6 border border-gray-100"
                         >
-                            <BookOpen className="w-4 h-4 text-[#0b6d41] fill-[#0b6d41]" />
-                            <span className="text-xs font-black tracking-widest text-[#0b6d41] uppercase">Academic Excellence</span>
+                            <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#0b6d41] fill-[#0b6d41]" />
+                            <span className="text-[10px] sm:text-xs font-black tracking-widest text-[#0b6d41] uppercase">Academic Excellence</span>
                         </motion.div>
                         <motion.h1
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            className="text-5xl md:text-7xl font-black text-[#0b6d41] mb-4 uppercase tracking-tight"
+                            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#0b6d41] mb-3 sm:mb-4 uppercase tracking-tight break-words"
                         >
                             Library
                         </motion.h1>
@@ -46,19 +46,19 @@ export default function Library() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.2 }}
-                            className="text-gray-600 font-medium text-lg max-w-3xl mx-auto"
+                            className="text-gray-600 font-medium text-sm sm:text-base md:text-lg max-w-3xl mx-auto px-4 break-words"
                         >
                             A Living Laboratory of Thought - Fusing Foundational Doctrines with Emergent Discourses
                         </motion.p>
                     </div>
 
                     {/* Library Images */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mb-8 sm:mb-10 md:mb-12 max-w-6xl mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3 }}
-                            className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl shadow-lg"
+                            className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl shadow-lg"
                         >
                             <Image
                                 src="/library/labrary (1).png"
@@ -72,7 +72,7 @@ export default function Library() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4 }}
-                            className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl shadow-lg"
+                            className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl shadow-lg"
                         >
                             <Image
                                 src="/library/labrary1 (1).webp"
@@ -85,7 +85,7 @@ export default function Library() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5 }}
-                            className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl shadow-lg"
+                            className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl shadow-lg"
                         >
                             <Image
                                 src="/library/labrary3 (1).png"
@@ -102,7 +102,7 @@ export default function Library() {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="glass-card bg-white/80 backdrop-blur-sm rounded-[3rem] p-8 md:p-12 lg:p-16 shadow-xl border border-white/60 relative overflow-hidden max-w-6xl mx-auto mb-16"
+                        className="glass-card bg-white/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl md:rounded-[3rem] p-5 sm:p-6 md:p-12 lg:p-16 shadow-xl border border-white/60 relative overflow-hidden max-w-6xl mx-auto mb-16"
                     >
                         {/* Decorative background elements */}
                         <div className="absolute top-0 right-0 w-96 h-96 bg-[#ffde59]/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
@@ -111,13 +111,13 @@ export default function Library() {
                         <div className="relative z-10 space-y-8">
                             {/* Introduction */}
                             <div className="prose prose-lg max-w-none">
-                                <p className="text-gray-700 text-lg leading-relaxed text-justify">
-                                    The Allied Health Science library is more than just a place for books—it’s the heart of our academic community. We bridge the gap between classic healthcare principles and the latest industry breakthroughs. Our collection offers everything from essential textbooks and peer-reviewed research to digital tools designed to support every health science specialty.   Empowering the next generation of healthcare professionals. Our library combines foundational learning with the latest digital research tools to support your journey across all health science disciplines.
+                                <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed text-justify break-words">
+                                    The Allied Health Science library is more than just a place for books—it's the heart of our academic community. We bridge the gap between classic healthcare principles and the latest industry breakthroughs. Our collection offers everything from essential textbooks and peer-reviewed research to digital tools designed to support every health science specialty.   Empowering the next generation of healthcare professionals. Our library combines foundational learning with the latest digital research tools to support your journey across all health science disciplines.
                                 </p>
                             </div>
 
                             {/* Feature Cards Grid */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6 mt-8 sm:mt-10 md:mt-12">
                                 <FeatureCard
                                     icon={<Layers className="w-8 h-8" />}
                                     title="The Architecture of Thought"
@@ -160,19 +160,19 @@ export default function Library() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="mt-12 pt-8 border-t border-gray-200"
+                                className="mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-7 md:pt-8 border-t border-gray-200"
                             >
-                                <div className="bg-gradient-to-br from-[#0b6d41]/5 to-[#ffde59]/10 rounded-3xl p-8 md:p-10">
-                                    <div className="flex items-start gap-6">
-                                        <div className="flex-shrink-0 bg-white p-4 rounded-2xl shadow-md">
-                                            <Award className="w-10 h-10 text-[#0b6d41]" />
+                                <div className="bg-gradient-to-br from-[#0b6d41]/5 to-[#ffde59]/10 rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 lg:p-10">
+                                    <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5 md:gap-6">
+                                        <div className="flex-shrink-0 bg-white p-3 sm:p-3.5 md:p-4 rounded-xl sm:rounded-2xl shadow-md">
+                                            <Award className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 text-[#0b6d41]" />
                                         </div>
-                                        <div className="flex-1">
-                                            <h3 className="text-2xl font-black text-[#0b6d41] mb-4">Membership as Covenant</h3>
-                                            <p className="text-gray-700 text-lg leading-relaxed text-justify mb-4">
+                                        <div className="flex-1 min-w-0">
+                                            <h3 className="text-xl sm:text-xl md:text-2xl font-black text-[#0b6d41] mb-3 sm:mb-3.5 md:mb-4 break-words">Membership as Covenant</h3>
+                                            <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed text-justify mb-3 sm:mb-3.5 md:mb-4 break-words">
                                                 To indulge in an unbridled quest for health science acumen, consider library membership. This bond unfurls an array of exclusive provisions: special access rights, preferential borrowing conditions, and front-row seats in our scholastic activities.
                                             </p>
-                                            <p className="text-gray-700 text-lg leading-relaxed text-justify font-medium">
+                                            <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed text-justify font-medium break-words">
                                                 So, at the Allied Health Science Library, the invitation is not just to read but to immerse, to question, and to synthesize. Come, be part of a dynamic knowledge ecology that celebrates the endless curiosity and pioneering spirit that define the realm of Allied Health Sciences.
                                             </p>
                                         </div>
@@ -183,7 +183,7 @@ export default function Library() {
                     </motion.div>
 
                     {/* Stats Section */}
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-6xl mx-auto">
                         <StatsCard
                             icon={<BookOpen className="w-8 h-8 text-[#0b6d41]" />}
                             value="5,000+"
@@ -220,17 +220,17 @@ function FeatureCard({ icon, title, description }: { icon: React.ReactNode, titl
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -5 }}
-            className="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 transition-all hover:shadow-xl group"
+            className="bg-white rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 shadow-lg border border-gray-100 transition-all hover:shadow-xl group"
         >
-            <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 bg-[#0b6d41]/10 p-3 rounded-xl group-hover:bg-[#0b6d41] transition-colors">
-                    <div className="text-[#0b6d41] group-hover:text-white transition-colors">
+            <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
+                <div className="flex-shrink-0 bg-[#0b6d41]/10 p-2.5 sm:p-3 rounded-xl group-hover:bg-[#0b6d41] transition-colors">
+                    <div className="text-[#0b6d41] group-hover:text-white transition-colors [&>svg]:w-6 [&>svg]:h-6 sm:[&>svg]:w-8 sm:[&>svg]:h-8">
                         {icon}
                     </div>
                 </div>
-                <div className="flex-1">
-                    <h3 className="text-xl font-black text-[#0b6d41] mb-3 leading-tight">{title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed text-justify">{description}</p>
+                <div className="flex-1 min-w-0">
+                    <h3 className="text-lg sm:text-xl font-black text-[#0b6d41] mb-2 sm:mb-3 leading-tight break-words">{title}</h3>
+                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed text-justify break-words">{description}</p>
                 </div>
             </div>
         </motion.div>
@@ -244,13 +244,13 @@ function StatsCard({ icon, value, label }: { icon: React.ReactNode, value: strin
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -5 }}
-            className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 flex flex-col items-center transition-all hover:shadow-xl"
+            className="bg-white rounded-2xl md:rounded-3xl p-5 sm:p-6 md:p-8 shadow-lg border border-gray-100 flex flex-col items-center transition-all hover:shadow-xl"
         >
-            <div className="bg-[#f0fdf4] p-4 rounded-2xl mb-6">
+            <div className="bg-[#f0fdf4] p-3 md:p-4 rounded-xl md:rounded-2xl mb-4 md:mb-6 [&>svg]:w-6 [&>svg]:h-6 sm:[&>svg]:w-7 sm:[&>svg]:h-7 md:[&>svg]:w-8 md:[&>svg]:h-8">
                 {icon}
             </div>
-            <div className="text-3xl font-black text-gray-900 mb-2 text-center">{value}</div>
-            <div className="text-xs font-bold text-gray-400 uppercase tracking-widest text-center">{label}</div>
+            <div className="text-2xl sm:text-2xl md:text-3xl font-black text-gray-900 mb-1.5 md:mb-2 text-center break-words">{value}</div>
+            <div className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest text-center break-words px-2">{label}</div>
         </motion.div>
     );
 }

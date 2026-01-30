@@ -230,120 +230,56 @@ function EligibilitySection() {
 // 5. Syllabus Section
 function SyllabusSection() {
     const [activeYear, setActiveYear] = useState('Year 1');
-    const years = ['Year 1', 'Year 2', 'Year 3', 'Year 4'];
+    const years = ['Year 1', 'Year 2', 'Year 3'];
+
+    const getSubjectType = (hasTheory: boolean, hasPractical: boolean) => {
+        if (hasTheory && hasPractical) return 'THEORY + PRACTICAL';
+        if (hasTheory) return 'THEORY';
+        if (hasPractical) return 'PRACTICAL';
+        return 'THEORY';
+    };
 
     const syllabus = {
-        'Year 1': [
-            {
-                sem: 'Semester 1',
-
-                subjects: [
-                    { name: 'Human Anatomy', type: 'Theory' },
-                    { name: 'Human Physiology', type: 'Theory' },
-                    { name: 'Biochemistry', type: 'Theory' },
-                    { name: 'English Communication', type: 'Theory' },
-                    { name: 'Computer Applications', type: 'Practical' },
-                    { name: 'Anatomy Practical', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 2',
-
-                subjects: [
-                    { name: 'Cardiovascular Anatomy', type: 'Theory' },
-                    { name: 'Cardiovascular Physiology', type: 'Theory' },
-                    { name: 'Pathology Basics', type: 'Theory' },
-                    { name: 'Microbiology', type: 'Theory' },
-                    { name: 'Introduction to ECG', type: 'Practical' },
-                    { name: 'Physiology Practical', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 2': [
-            {
-                sem: 'Semester 3',
-
-                subjects: [
-                    { name: 'Pharmacology', type: 'Theory' },
-                    { name: 'Electrocardiography - I', type: 'Theory' },
-                    { name: 'Medical Electronics', type: 'Theory' },
-                    { name: 'Clinical Cardiology - I', type: 'Theory' },
-                    { name: 'ECG Recording', type: 'Practical' },
-                    { name: 'Basic Life Support', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 4',
-
-                subjects: [
-                    { name: 'Electrocardiography - II', type: 'Theory' },
-                    { name: 'Echocardiography Basics', type: 'Theory' },
-                    { name: 'Clinical Cardiology - II', type: 'Theory' },
-                    { name: 'Cardiac Imaging', type: 'Theory' },
-                    { name: 'Echocardiography Lab', type: 'Practical' },
-                    { name: 'Holter Monitoring', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 3': [
-            {
-                sem: 'Semester 5',
-
-                subjects: [
-                    { name: 'Advanced Echocardiography', type: 'Theory' },
-                    { name: 'Cardiac Catheterization - I', type: 'Theory' },
-                    { name: 'Pacemaker Technology', type: 'Theory' },
-                    { name: 'Stress Testing', type: 'Theory' },
-                    { name: 'Cath Lab Practical', type: 'Practical' },
-                    { name: 'Treadmill Test Lab', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 6',
-
-                subjects: [
-                    { name: 'Cardiac Catheterization - II', type: 'Theory' },
-                    { name: 'Interventional Cardiology', type: 'Theory' },
-                    { name: 'Pediatric Cardiology', type: 'Theory' },
-                    { name: 'Research Methodology', type: 'Theory' },
-                    { name: 'Angiography Lab', type: 'Practical' },
-                    { name: 'Pediatric Echo Lab', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 4': [
-            {
-                sem: 'Semester 7',
-
-                subjects: [
-                    { name: 'Cardiac Rehabilitation', type: 'Theory' },
-                    { name: 'Electrophysiology Studies', type: 'Theory' },
-                    { name: 'Advanced Cardiac Life Support', type: 'Theory' },
-                    { name: 'Healthcare Management', type: 'Theory' },
-                    { name: 'EP Lab Practical', type: 'Practical' },
-                    { name: 'Clinical Internship - I', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 8',
-
-                subjects: [
-                    { name: 'Professional Ethics', type: 'Theory' },
-                    { name: 'Quality Management', type: 'Theory' },
-                    { name: 'Clinical Internship - II', type: 'Practical' },
-                    { name: 'Project & Dissertation', type: 'Practical' },
-                    { name: 'Comprehensive Viva', type: 'Practical' },
-                    { name: 'Industry Placement', type: 'Practical' }
-                ]
-            }
-        ]
+        'Year 1': {
+            sem: 'First Year',
+            subjects: [
+                { name: 'English', hasTheory: true, hasPractical: false },
+                { name: 'General Tamil', hasTheory: true, hasPractical: false },
+                { name: 'Value Education', hasTheory: true, hasPractical: false },
+                { name: 'Biochemistry & Clinical Biochemistry', hasTheory: true, hasPractical: true },
+                { name: 'Anatomy and Physiology', hasTheory: true, hasPractical: true },
+                { name: 'Pathology & Microbiology', hasTheory: true, hasPractical: true }
+            ]
+        },
+        'Year 2': {
+            sem: 'Second Year',
+            subjects: [
+                { name: 'Clinical Features and Treatment Relevant to Cardiac Technology and Basic Life Support', hasTheory: true, hasPractical: true },
+                { name: 'Advance ECG and Treadmill Exercises Stress Testing and 24 Hour Ambulatory ECG and BP Recording', hasTheory: true, hasPractical: true },
+                { name: 'Pharmacology', hasTheory: true, hasPractical: true },
+                { name: 'Biomedical Instrumentation', hasTheory: true, hasPractical: true },
+                { name: 'Introduction to Computers', hasTheory: true, hasPractical: true },
+                { name: 'Introduction to ECG', hasTheory: true, hasPractical: true }
+            ]
+        },
+        'Year 3': {
+            sem: 'Third Year',
+            subjects: [
+                { name: 'Echocardiography', hasTheory: true, hasPractical: true },
+                { name: 'Advance Cardiac Life Support', hasTheory: true, hasPractical: true },
+                { name: 'Cardiac Catheterization Lab', hasTheory: true, hasPractical: true },
+                { name: 'Pace Maker and Implantable Cardiac Defibrillator', hasTheory: true, hasPractical: true },
+                { name: 'Electro Physiology and Radiofrequency Ablation', hasTheory: true, hasPractical: true },
+                { name: 'Research Methodology and Biostatistics', hasTheory: true, hasPractical: false }
+            ]
+        }
     };
 
     return (
         <section className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-12">
-                    <span className="text-[#0b6d41] font-bold tracking-widest uppercase text-xs mb-2">Academic Path</span>
+                    <span className="text-[#0b6d41] font-bold tracking-widest uppercase text-xs mb-2">Academic Curriculum</span>
                     <h2 className="text-3xl font-black text-[#0b6d41]">Program Structure & Syllabus</h2>
                     <p className="text-gray-900 mt-2">Comprehensive curriculum designed to ensure mastery in cardiac systems</p>
                 </div>
@@ -353,7 +289,7 @@ function SyllabusSection() {
                         <button
                             key={year}
                             onClick={() => setActiveYear(year)}
-                            className={`px-8 py-2 rounded-full font-bold transition-all ${activeYear === year ? 'bg-[#0b6d41] text-white shadow-lg' : 'text-gray-500 hover:bg-gray-100'}`}
+                            className={`px-8 py-3 rounded-full font-bold transition-all ${activeYear === year ? 'bg-[#0b6d41] text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'}`}
                         >
                             {year}
                         </button>
@@ -365,31 +301,33 @@ function SyllabusSection() {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="grid md:grid-cols-2 gap-8"
+                    className="flex justify-center"
                 >
-                    {(syllabus as any)[activeYear].map((sem: any, i: number) => (
-                        <div key={i} className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:border-[#0b6d41] transition-colors">
-                            <div className="bg-[#0b6d41] text-white p-4 flex justify-between items-center">
-                                <h4 className="font-bold">{sem.sem}</h4>
-                                <span className="text-xs bg-white/20 px-2 py-1 rounded">{sem.credits}</span>
-                            </div>
-                            <div className="p-6">
-                                <ul className="space-y-3">
-                                    {sem.subjects.map((sub: any, idx: number) => (
-                                        <li key={idx} className="flex items-center justify-between gap-3 text-gray-900 p-2 rounded hover:bg-gray-50 transition-colors">
-                                            <div className="flex items-center gap-3">
-                                                <div className={`w-1.5 h-1.5 rounded-full ${sub.type === 'Theory' ? 'bg-[#ffde59]' : 'bg-[#cc5500]'}`}></div>
-                                                <span className="font-medium">{sub.name}</span>
+                    <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden max-w-3xl w-full">
+                        <div className="bg-[#0b6d41] text-white px-6 py-4">
+                            <h4 className="font-bold text-lg">{(syllabus as any)[activeYear].sem}</h4>
+                        </div>
+                        <div className="p-8 bg-[#fbfbee]">
+                            <ul className="space-y-4">
+                                {(syllabus as any)[activeYear].subjects.map((sub: any, idx: number) => {
+                                    const type = getSubjectType(sub.hasTheory, sub.hasPractical);
+                                    return (
+                                        <li key={idx} className="flex items-center justify-between gap-4 text-gray-800 py-2">
+                                            <div className="flex items-center gap-3 flex-1">
+                                                <div className={`w-2 h-2 rounded-full shrink-0 ${type === 'THEORY + PRACTICAL' ? 'bg-purple-600' : 'bg-orange-500'}`}></div>
+                                                <span className="font-medium text-[15px]">{sub.name}</span>
                                             </div>
-                                            <span className={`text-[10px] uppercase font-bold px-2 py-1 rounded ${sub.type === 'Theory' ? 'bg-blue-50 text-blue-600' : 'bg-yellow-50 text-yellow-600'}`}>
-                                                {sub.type}
+                                            <span className={`text-[10px] uppercase font-bold px-3 py-1.5 rounded-md whitespace-nowrap tracking-wide ${
+                                                type === 'THEORY + PRACTICAL' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
+                                            }`}>
+                                                {type}
                                             </span>
                                         </li>
-                                    ))}
-                                </ul>
-                            </div>
+                                    );
+                                })}
+                            </ul>
                         </div>
-                    ))}
+                    </div>
                 </motion.div>
             </div>
         </section>

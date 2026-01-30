@@ -20,6 +20,7 @@ const navLinks: NavLink[] = [
         submenu: [
             { name: 'Our Trust', href: '/our-trust' },
             { name: 'Our Management', href: '/our-management' },
+            { name: "Principal's Message", href: '/principals-message' },
             { name: 'Vision & Mission', href: '/vision-mission' }
         ]
     },
@@ -114,13 +115,21 @@ export function Navbar() {
                             onMouseEnter={() => link.submenu && setHoveredDropdown(link.name)}
                             onMouseLeave={() => link.submenu && setHoveredDropdown(null)}
                         >
-                            <Link
-                                href={link.href}
-                                className="flex items-center gap-1 text-sm font-medium transition-colors text-gray-700 hover:text-primary"
-                            >
-                                {link.name}
-                                {link.submenu && <ChevronDown className="w-5 h-5" />}
-                            </Link>
+                            {link.submenu ? (
+                                <button
+                                    className="flex items-center gap-1 text-sm font-medium transition-colors text-gray-700 hover:text-primary"
+                                >
+                                    {link.name}
+                                    <ChevronDown className="w-5 h-5" />
+                                </button>
+                            ) : (
+                                <Link
+                                    href={link.href}
+                                    className="flex items-center gap-1 text-sm font-medium transition-colors text-gray-700 hover:text-primary"
+                                >
+                                    {link.name}
+                                </Link>
+                            )}
 
                             {/* Desktop Dropdown */}
                             <AnimatePresence>

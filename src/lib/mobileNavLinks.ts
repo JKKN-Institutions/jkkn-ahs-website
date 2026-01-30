@@ -43,12 +43,6 @@ export function getMobileNavLinks(pathname: string): MenuGroup[] {
       mainHref: '/#about',
       menus: [
         {
-          href: '/#about',
-          label: 'View All About',
-          icon: Info,
-          active: pathname === '/#about'
-        },
-        {
           href: '/our-trust',
           label: 'Our Trust',
           icon: Users,
@@ -59,6 +53,12 @@ export function getMobileNavLinks(pathname: string): MenuGroup[] {
           label: 'Our Management',
           icon: Building2,
           active: pathname === '/our-management'
+        },
+        {
+          href: '/principals-message',
+          label: "Principal's Message",
+          icon: MessageSquare,
+          active: pathname === '/principals-message'
         },
         {
           href: '/vision-mission',
@@ -72,12 +72,6 @@ export function getMobileNavLinks(pathname: string): MenuGroup[] {
       groupLabel: 'Departments',
       mainHref: '/departments',
       menus: [
-        {
-          href: '/departments',
-          label: 'View All Departments',
-          icon: GraduationCap,
-          active: pathname === '/departments'
-        },
         {
           href: '/accident-emergency-care',
           label: 'Accident & Emergency Care',
@@ -139,12 +133,6 @@ export function getMobileNavLinks(pathname: string): MenuGroup[] {
       mainHref: '/facilities',
       menus: [
         {
-          href: '/facilities',
-          label: 'View All Facilities',
-          icon: Building2,
-          active: pathname === '/facilities'
-        },
-        {
           href: '/classroom',
           label: 'Class Room',
           icon: Building2,
@@ -204,12 +192,6 @@ export function getMobileNavLinks(pathname: string): MenuGroup[] {
       groupLabel: 'Others',
       mainHref: '/others',
       menus: [
-        {
-          href: '/others',
-          label: 'View All',
-          icon: FileText,
-          active: pathname === '/others'
-        },
         {
           href: '/NAAC',
           label: 'NAAC',

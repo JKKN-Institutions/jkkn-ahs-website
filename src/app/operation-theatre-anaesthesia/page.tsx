@@ -230,105 +230,39 @@ function EligibilitySection() {
 // 5. Syllabus Section
 function SyllabusSection() {
     const [activeYear, setActiveYear] = useState('Year 1');
-    const years = ['Year 1', 'Year 2', 'Year 3', 'Year 4'];
+    const years = ['Year 1', 'Year 2', 'Year 3'];
+
+    const getSubjectType = (hasTheory: boolean, hasPractical: boolean) => {
+        if (hasTheory && hasPractical) return 'THEORY + PRACTICAL';
+        if (hasTheory) return 'THEORY';
+        if (hasPractical) return 'PRACTICAL';
+        return 'THEORY';
+    };
 
     const syllabus = {
-        'Year 1': [
-            {
-                sem: 'Semester 1',
-                subjects: [
-                    { name: 'Human Anatomy', type: 'Theory' },
-                    { name: 'Human Physiology', type: 'Theory' },
-                    { name: 'Biochemistry', type: 'Theory' },
-                    { name: 'English Communication', type: 'Theory' },
-                    { name: 'Computer Applications', type: 'Practical' },
-                    { name: 'Anatomy Dissection Lab', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 2',
-                subjects: [
-                    { name: 'Surgical Anatomy', type: 'Theory' },
-                    { name: 'Applied Physiology', type: 'Theory' },
-                    { name: 'Pathology Basics', type: 'Theory' },
-                    { name: 'Microbiology & Infection Control', type: 'Theory' },
-                    { name: 'Introduction to OT Environment', type: 'Practical' },
-                    { name: 'Physiology Lab', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 2': [
-            {
-                sem: 'Semester 3',
-                subjects: [
-                    { name: 'Pharmacology', type: 'Theory' },
-                    { name: 'Anaesthesiology Fundamentals', type: 'Theory' },
-                    { name: 'Surgical Instruments & Equipment', type: 'Theory' },
-                    { name: 'OT Techniques - I', type: 'Theory' },
-                    { name: 'OT Management Lab', type: 'Practical' },
-                    { name: 'Basic Life Support', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 4',
-                subjects: [
-                    { name: 'Anaesthesia Pharmacology', type: 'Theory' },
-                    { name: 'OT Techniques - II', type: 'Theory' },
-                    { name: 'Sterilization & Disinfection', type: 'Theory' },
-                    { name: 'Patient Monitoring Systems', type: 'Theory' },
-                    { name: 'Anaesthesia Equipment Lab', type: 'Practical' },
-                    { name: 'Surgical Scrubbing Practice', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 3': [
-            {
-                sem: 'Semester 5',
-                subjects: [
-                    { name: 'General Surgery Techniques', type: 'Theory' },
-                    { name: 'Anaesthesia Techniques - I', type: 'Theory' },
-                    { name: 'CSSD Management', type: 'Theory' },
-                    { name: 'Emergency Care in OT', type: 'Theory' },
-                    { name: 'OT Clinical Training - I', type: 'Practical' },
-                    { name: 'Advanced Life Support', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 6',
-                subjects: [
-                    { name: 'Specialty Surgical Procedures', type: 'Theory' },
-                    { name: 'Anaesthesia Techniques - II', type: 'Theory' },
-                    { name: 'Endoscopy & Laparoscopy', type: 'Theory' },
-                    { name: 'Research Methodology', type: 'Theory' },
-                    { name: 'OT Clinical Training - II', type: 'Practical' },
-                    { name: 'Anaesthesia Simulation Lab', type: 'Practical' }
-                ]
-            }
-        ],
-        'Year 4': [
-            {
-                sem: 'Semester 7',
-                subjects: [
-                    { name: 'Cardiac & Thoracic Surgery', type: 'Theory' },
-                    { name: 'Neurosurgical Techniques', type: 'Theory' },
-                    { name: 'Paediatric Anaesthesia', type: 'Theory' },
-                    { name: 'OT Administration', type: 'Theory' },
-                    { name: 'Clinical Internship - I', type: 'Practical' },
-                    { name: 'Intensive Surgical Training', type: 'Practical' }
-                ]
-            },
-            {
-                sem: 'Semester 8',
-                subjects: [
-                    { name: 'Professional Ethics', type: 'Theory' },
-                    { name: 'Healthcare Management', type: 'Theory' },
-                    { name: 'Clinical Internship - II', type: 'Practical' },
-                    { name: 'Project & Dissertation', type: 'Practical' },
-                    { name: 'Comprehensive Viva', type: 'Practical' },
-                    { name: 'Industry Placement', type: 'Practical' }
-                ]
-            }
-        ]
+        'Year 1': {
+            sem: 'Semester',
+            subjects: [
+                { name: 'Applied Basic Science', hasTheory: true, hasPractical: true },
+                { name: 'Pharmacology and Microbiology', hasTheory: true, hasPractical: true },
+                { name: 'Medicine and Medical Ethics', hasTheory: true, hasPractical: true },
+                { name: 'Principles of Anaesthesia I', hasTheory: true, hasPractical: true }
+            ]
+        },
+        'Year 2': {
+            sem: 'Semester',
+            subjects: [
+                { name: 'Sterilization Procedures', hasTheory: true, hasPractical: true },
+                { name: 'Principles of Anaesthesia II', hasTheory: true, hasPractical: true }
+            ]
+        },
+        'Year 3': {
+            sem: 'Semester',
+            subjects: [
+                { name: 'Cardiology & Cardiac Surgery, Neurology', hasTheory: true, hasPractical: true },
+                { name: 'Nephrology, Orthopedics, Pulmonology, Gastroenterology', hasTheory: true, hasPractical: true }
+            ]
+        }
     };
 
     return (
@@ -344,7 +278,7 @@ function SyllabusSection() {
                     <button
                         key={year}
                         onClick={() => setActiveYear(year)}
-                        className={`px-8 py-2 rounded-full font-bold transition-all ${activeYear === year ? 'bg-[#0b6d41] text-white shadow-lg' : 'text-gray-500 hover:bg-gray-100'}`}
+                        className={`px-8 py-3 rounded-full font-bold transition-all ${activeYear === year ? 'bg-[#0b6d41] text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'}`}
                     >
                         {year}
                     </button>
@@ -356,31 +290,33 @@ function SyllabusSection() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3 }}
-                className="grid md:grid-cols-2 gap-8"
+                className="flex justify-center"
             >
-                {(syllabus as any)[activeYear].map((sem: any, i: number) => (
-                    <div key={i} className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:border-[#0b6d41] transition-colors">
-                        <div className="bg-[#0b6d41] text-white p-4 flex justify-between items-center">
-                            <h4 className="font-bold">{sem.sem}</h4>
-                            <span className="text-xs bg-white/20 px-2 py-1 rounded">{sem.credits}</span>
-                        </div>
-                        <div className="p-6">
-                            <ul className="space-y-3">
-                                {sem.subjects.map((sub: any, idx: number) => (
-                                    <li key={idx} className="flex items-center justify-between gap-3 text-gray-700 p-2 rounded hover:bg-gray-50 transition-colors">
-                                        <div className="flex items-center gap-3">
-                                            <div className={`w-1.5 h-1.5 rounded-full ${sub.type === 'Theory' ? 'bg-[#ffde59]' : 'bg-[#cc5500]'}`}></div>
-                                            <span className="font-medium">{sub.name}</span>
+                <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden max-w-3xl w-full">
+                    <div className="bg-[#0b6d41] text-white px-6 py-4">
+                        <h4 className="font-bold text-lg">{(syllabus as any)[activeYear].sem}</h4>
+                    </div>
+                    <div className="p-8 bg-[#fbfbee]">
+                        <ul className="space-y-4">
+                            {(syllabus as any)[activeYear].subjects.map((sub: any, idx: number) => {
+                                const type = getSubjectType(sub.hasTheory, sub.hasPractical);
+                                return (
+                                    <li key={idx} className="flex items-center justify-between gap-4 text-gray-800 py-2">
+                                        <div className="flex items-center gap-3 flex-1">
+                                            <div className={`w-2 h-2 rounded-full shrink-0 ${type === 'THEORY + PRACTICAL' ? 'bg-purple-600' : 'bg-orange-500'}`}></div>
+                                            <span className="font-medium text-[15px]">{sub.name}</span>
                                         </div>
-                                        <span className={`text-[10px] uppercase font-bold px-2 py-1 rounded ${sub.type === 'Theory' ? 'bg-blue-50 text-blue-600' : 'bg-yellow-50 text-yellow-600'}`}>
-                                            {sub.type}
+                                        <span className={`text-[10px] uppercase font-bold px-3 py-1.5 rounded-md whitespace-nowrap tracking-wide ${
+                                            type === 'THEORY + PRACTICAL' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
+                                        }`}>
+                                            {type}
                                         </span>
                                     </li>
-                                ))}
-                            </ul>
-                        </div>
+                                );
+                            })}
+                        </ul>
                     </div>
-                ))}
+                </div>
             </motion.div>
         </section>
     );

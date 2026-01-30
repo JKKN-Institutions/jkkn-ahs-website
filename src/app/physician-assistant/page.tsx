@@ -236,21 +236,30 @@ function SyllabusSection() {
     const syllabus = {
         'Year 1': {
             semester: 'Semester 1 & 2',
-            syllabusImage: '/physician-assistant/year1-syllabus.png',
-            theoryImage: '/physician-assistant/year1-theory.png',
-            practicalImage: '/physician-assistant/year1-practical.png'
+            theoryOnly: [
+                'INTRODUCTION TO COMPUTER',
+                'TECHNICAL REPORT WRITING/SPOKEN ENGLISH/COMPREHENSIVE PATIENT ORIENTED COMMUNICATION SKILL'
+            ],
+            theoryPractical: [
+                'ANATOMY, PHYSIOLOGY, BIOCHEMISTRY'
+            ]
         },
         'Year 2': {
             semester: 'Semester 3 & 4',
-            syllabusImage: '/physician-assistant/year2-syllabus.png',
-            theoryImage: '/physician-assistant/year2-theory.png',
-            practicalImage: '/physician-assistant/year2-practical.png'
+            theoryOnly: [],
+            theoryPractical: [
+                'GENERAL MEDICINE & PHARMACOLOGY',
+                'PEDIATRICS & GERIATRICS, CLINICAL MICROBIOLOGY',
+                'OBSTETRICS & GYNAECOLOGY, SURGERY'
+            ]
         },
         'Year 3': {
             semester: 'Semester 5 & 6',
-            syllabusImage: '/physician-assistant/year3-syllabus.png',
-            theoryImage: '/physician-assistant/year3-theory.png',
-            practicalImage: '/physician-assistant/year3-practical.png'
+            theoryOnly: [],
+            theoryPractical: [
+                'CARDIOLOGY & CARDIAC SURGERY, NEUROLOGY',
+                'NEPHROLOGY, ORTHOPEDICS, PULMONOLOGY, GASTROENTEROLOGY'
+            ]
         }
     };
 
@@ -281,58 +290,87 @@ function SyllabusSection() {
                 transition={{ duration: 0.3 }}
                 className="flex justify-center"
             >
-                <div className="w-full max-w-4xl">
+                <div className="w-full max-w-5xl">
                     <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
                         <div className="bg-[#0b6d41] text-white p-6 text-center">
                             <h4 className="font-bold text-2xl">{(syllabus as any)[activeYear].semester}</h4>
                             <p className="text-sm text-white/80 mt-1">{activeYear} Curriculum</p>
                         </div>
                         <div className="p-8">
-                            {/* Syllabus Overview Image */}
+                            {/* Curriculum Table */}
                             <div className="mb-8">
                                 <h5 className="text-lg font-bold text-[#0b6d41] mb-4 flex items-center gap-2">
                                     <FileText className="w-5 h-5" />
-                                    Syllabus Overview
+                                    Course Syllabus
                                 </h5>
-                                <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden border-2 border-gray-200">
-                                    <Image
-                                        src={(syllabus as any)[activeYear].syllabusImage}
-                                        alt={`${activeYear} Syllabus`}
-                                        fill
-                                        className="object-contain bg-gray-50"
-                                    />
+
+                                {/* Complete Curriculum Table */}
+                                <div className="overflow-x-auto rounded-lg border-2 border-gray-200">
+                                    <table className="w-full border-collapse">
+                                        <thead>
+                                            <tr className="bg-gray-100">
+                                                <th className="border border-gray-300 px-6 py-3 text-left font-bold text-gray-700">SUBJECT</th>
+                                                <th className="border border-gray-300 px-6 py-3 text-center font-bold text-gray-700">THEORY</th>
+                                                <th className="border border-gray-300 px-6 py-3 text-center font-bold text-gray-700">PRACTICAL</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {/* Theory + Practical Subjects */}
+                                            {(syllabus as any)[activeYear].theoryPractical.map((subject: string, idx: number) => (
+                                                <tr key={`tp-${idx}`} className="hover:bg-gray-50">
+                                                    <td className="border border-gray-300 px-6 py-4 text-gray-700">{subject}</td>
+                                                    <td className="border border-gray-300 px-6 py-4 text-center font-semibold text-green-600">YES</td>
+                                                    <td className="border border-gray-300 px-6 py-4 text-center font-semibold text-green-600">YES</td>
+                                                </tr>
+                                            ))}
+                                            {/* Theory Only Subjects */}
+                                            {(syllabus as any)[activeYear].theoryOnly.map((subject: string, idx: number) => (
+                                                <tr key={`t-${idx}`} className="hover:bg-gray-50">
+                                                    <td className="border border-gray-300 px-6 py-4 text-gray-700">{subject}</td>
+                                                    <td className="border border-gray-300 px-6 py-4 text-center font-semibold text-green-600">YES</td>
+                                                    <td className="border border-gray-300 px-6 py-4 text-center font-semibold text-red-600">NO</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
 
-                            {/* Theory Content */}
-                            <div className="mb-8">
-                                <h5 className="text-lg font-bold text-[#0b6d41] mb-4 flex items-center gap-2">
-                                    <span className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs uppercase font-bold">Theory</span>
-                                    Theory Subjects
-                                </h5>
-                                <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden border-2 border-blue-200">
-                                    <Image
-                                        src={(syllabus as any)[activeYear].theoryImage}
-                                        alt={`${activeYear} Theory`}
-                                        fill
-                                        className="object-contain bg-blue-50/30"
-                                    />
+                            {/* Theory Only Section */}
+                            {(syllabus as any)[activeYear].theoryOnly.length > 0 && (
+                                <div className="mb-8">
+                                    <h5 className="text-lg font-bold text-[#0b6d41] mb-4 flex items-center gap-2">
+                                        <span className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs uppercase font-bold">Theory</span>
+                                        Theory Only Subjects
+                                    </h5>
+                                    <div className="bg-blue-50/30 rounded-lg p-6 border-2 border-blue-200">
+                                        <ul className="space-y-3">
+                                            {(syllabus as any)[activeYear].theoryOnly.map((subject: string, idx: number) => (
+                                                <li key={idx} className="flex items-start gap-3">
+                                                    <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                                                    <span className="text-gray-700 font-medium">{subject}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
+                            )}
 
-                            {/* Theory + Practical Content */}
+                            {/* Theory + Practical Section */}
                             <div>
                                 <h5 className="text-lg font-bold text-[#0b6d41] mb-4 flex items-center gap-2">
                                     <span className="px-3 py-1 bg-yellow-50 text-yellow-600 rounded-full text-xs uppercase font-bold">Theory + Practical</span>
-                                    Practical & Clinical Training
+                                    Theory & Practical Subjects
                                 </h5>
-                                <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden border-2 border-yellow-200">
-                                    <Image
-                                        src={(syllabus as any)[activeYear].practicalImage}
-                                        alt={`${activeYear} Practical`}
-                                        fill
-                                        className="object-contain bg-yellow-50/30"
-                                    />
+                                <div className="bg-yellow-50/30 rounded-lg p-6 border-2 border-yellow-200">
+                                    <ul className="space-y-3">
+                                        {(syllabus as any)[activeYear].theoryPractical.map((subject: string, idx: number) => (
+                                            <li key={idx} className="flex items-start gap-3">
+                                                <CheckCircle2 className="w-5 h-5 text-yellow-600 shrink-0 mt-0.5" />
+                                                <span className="text-gray-700 font-medium">{subject}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
 

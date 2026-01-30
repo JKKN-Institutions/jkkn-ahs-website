@@ -235,10 +235,10 @@ function SyllabusSection() {
     const years = ['Year 1', 'Year 2', 'Year 3'];
 
     const getSubjectType = (hasTheory: boolean, hasPractical: boolean) => {
-        if (hasTheory && hasPractical) return 'Theory + Practical';
-        if (hasTheory) return 'Theory';
-        if (hasPractical) return 'Practical';
-        return 'Theory';
+        if (hasTheory && hasPractical) return 'THEORY + PRACTICAL';
+        if (hasTheory) return 'THEORY';
+        if (hasPractical) return 'PRACTICAL';
+        return 'THEORY';
     };
 
     const syllabus = {
@@ -281,7 +281,7 @@ function SyllabusSection() {
                     <button
                         key={year}
                         onClick={() => setActiveYear(year)}
-                        className={`px-8 py-2 rounded-full font-bold transition-all ${activeYear === year ? 'bg-[#0b6d41] text-white shadow-lg' : 'text-gray-500 hover:bg-gray-100'}`}
+                        className={`px-8 py-3 rounded-full font-bold transition-all ${activeYear === year ? 'bg-[#0b6d41] text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'}`}
                     >
                         {year}
                     </button>
@@ -295,24 +295,22 @@ function SyllabusSection() {
                 transition={{ duration: 0.3 }}
                 className="flex justify-center"
             >
-                <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:border-[#0b6d41] transition-colors max-w-3xl w-full">
-                    <div className="bg-[#0b6d41] text-white p-4 flex justify-between items-center">
-                        <h4 className="font-bold">{(syllabus as any)[activeYear].sem}</h4>
+                <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden max-w-3xl w-full">
+                    <div className="bg-[#0b6d41] text-white px-6 py-4">
+                        <h4 className="font-bold text-lg">{(syllabus as any)[activeYear].sem}</h4>
                     </div>
-                    <div className="p-6">
-                        <ul className="space-y-3">
+                    <div className="p-8 bg-[#fbfbee]">
+                        <ul className="space-y-4">
                             {(syllabus as any)[activeYear].subjects.map((sub: any, idx: number) => {
                                 const type = getSubjectType(sub.hasTheory, sub.hasPractical);
                                 return (
-                                    <li key={idx} className="flex items-center justify-between gap-3 text-gray-700 p-3 rounded hover:bg-gray-50 transition-colors">
-                                        <div className="flex items-center gap-3">
-                                            <div className={`w-1.5 h-1.5 rounded-full ${type === 'Theory + Practical' ? 'bg-[#0b6d41]' : type === 'Theory' ? 'bg-[#ffde59]' : 'bg-[#cc5500]'}`}></div>
-                                            <span className="font-medium">{sub.name}</span>
+                                    <li key={idx} className="flex items-center justify-between gap-4 text-gray-800 py-2">
+                                        <div className="flex items-center gap-3 flex-1">
+                                            <div className={`w-2 h-2 rounded-full shrink-0 ${type === 'THEORY + PRACTICAL' ? 'bg-purple-600' : 'bg-orange-500'}`}></div>
+                                            <span className="font-medium text-[15px]">{sub.name}</span>
                                         </div>
-                                        <span className={`text-[10px] uppercase font-bold px-3 py-1 rounded whitespace-nowrap ${
-                                            type === 'Theory + Practical' ? 'bg-green-50 text-green-600' :
-                                            type === 'Theory' ? 'bg-blue-50 text-blue-600' :
-                                            'bg-yellow-50 text-yellow-600'
+                                        <span className={`text-[10px] uppercase font-bold px-3 py-1.5 rounded-md whitespace-nowrap tracking-wide ${
+                                            type === 'THEORY + PRACTICAL' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
                                         }`}>
                                             {type}
                                         </span>
