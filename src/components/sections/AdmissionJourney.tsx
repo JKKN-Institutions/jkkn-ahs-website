@@ -101,18 +101,18 @@ export function AdmissionJourney() {
 
                 <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">
                     <a
-                        href="tel:+914288274747"
+                        href="tel:+919345855001"
                         className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#0b6d41] text-white rounded-full font-bold text-sm hover:bg-[#085231] transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
                     >
                         <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                        Call: +91 4288 274747
+                        Call: 91-93458 55001
                     </a>
                     <a
-                        href="mailto:admissions@jkkn.ac.in"
+                        href="mailto:alliedhealth@jkkn.ac.in"
                         className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0b6d41] rounded-full font-bold text-sm border-2 border-[#0b6d41] hover:bg-[#0b6d41] hover:text-white transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2"
                     >
                         <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
-                        Email Admissions
+                        E-Mail Admissions
                     </a>
                 </div>
             </div>

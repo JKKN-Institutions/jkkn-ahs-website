@@ -46,7 +46,13 @@ export function Hero() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5">
-                            <button className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-white text-[#0b6d41] rounded-full font-semibold transition-all hover:bg-white/90 hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base">
+                            <button
+                                onClick={() => {
+                                    const programsSection = document.getElementById('programs');
+                                    programsSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }}
+                                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-white text-[#0b6d41] rounded-full font-semibold transition-all hover:bg-white/90 hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base"
+                            >
                                 Explore Programs <ArrowRight className="w-5 h-5" />
                             </button>
                             <Link
@@ -109,7 +115,7 @@ export function Hero() {
                             <div className="flex items-center gap-3 sm:gap-4">
                                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-xl sm:rounded-2xl flex items-center justify-center text-white text-xl sm:text-2xl">🏆</div>
                                 <div>
-                                    <div className="text-xs sm:text-sm font-bold text-gray-800 leading-none">100% Placement</div>
+                                    <div className="text-xs sm:text-sm font-bold text-gray-800 leading-none">95% Placement</div>
                                     <div className="text-[9px] sm:text-[10px] text-gray-500 font-medium">Global Opportunities</div>
                                 </div>
                             </div>

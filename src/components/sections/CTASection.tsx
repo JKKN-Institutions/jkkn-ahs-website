@@ -30,17 +30,12 @@ export function CTASection() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">
-                            <Link
-                                href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-[#ffde59] text-white rounded-full font-black text-base sm:text-lg shadow-xl transition-all hover:scale-110 hover:bg-[#e5c44f] active:scale-95 flex items-center justify-center gap-2 sm:gap-3"
-                            >
+                            <Link href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-[#ffde59] text-white rounded-full font-black text-base sm:text-lg shadow-xl transition-all hover:scale-110 hover:bg-[#e5c44f] active:scale-95 flex items-center justify-center gap-2 sm:gap-3">
                                 Apply Online <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
                             </Link>
-                            <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 border-2 border-[#0b6d41] text-[#0b6d41] rounded-full font-black text-base sm:text-lg transition-all hover:bg-[#0b6d41] hover:text-white flex items-center justify-center gap-2 sm:gap-3">
+                            <a href="tel:+ 91-93458 55001" className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 border-2 border-[#0b6d41] text-[#0b6d41] rounded-full font-black text-base sm:text-lg transition-all hover:bg-[#0b6d41] hover:text-white flex items-center justify-center gap-2 sm:gap-3">
                                 Talk to Expert <Send className="w-5 h-5 sm:w-6 sm:h-6" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </motion.div>
