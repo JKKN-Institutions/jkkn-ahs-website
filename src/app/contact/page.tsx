@@ -70,8 +70,8 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                                            <a href="mailto:ahs@jkkn.ac.in" className="text-gray-600 hover:text-[#0b6d41] transition-colors">
-                                                ahs@jkkn.ac.in
+                                            <a href="mailto:alliedhealth@jkkn.ac.in" className="text-gray-600 hover:text-[#0b6d41] transition-colors">
+                                                alliedhealth@jkkn.ac.in
                                             </a>
                                         </div>
                                     </div>
@@ -119,7 +119,7 @@ export default function ContactPage() {
                                     Fill out our online admission form to begin your application process. Our team will guide you through every step.
                                 </p>
 
-                                <a href="#" className="inline-flex items-center gap-2 px-8 py-3 bg-[#0b6d41] text-white rounded-full font-semibold transition-all hover:bg-[#085231] hover:shadow-lg mx-auto">
+                                <a href="https://admission.jkkn.ac.in/form/jkkn-institution-admission-yxs3w8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-3 bg-[#0b6d41] text-white rounded-full font-semibold transition-all hover:bg-[#085231] hover:shadow-lg mx-auto">
                                     Apply Now
                                     <ExternalLink className="w-4 h-4" />
                                 </a>
@@ -175,7 +175,7 @@ export default function ContactPage() {
                             <Phone className="w-5 h-5" />
                             Call Us Now
                         </a>
-                        <a href="mailto:ahs@jkkn.ac.in" className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-[#0b6d41] border-2 border-[#0b6d41] rounded-full font-semibold transition-all hover:bg-[#0b6d41] hover:text-white">
+                        <a href="mailto:alliedhealth@jkkn.ac.in" className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-[#0b6d41] border-2 border-[#0b6d41] rounded-full font-semibold transition-all hover:bg-[#0b6d41] hover:text-white">
                             <Mail className="w-5 h-5" />
                             Email Us
                         </a>

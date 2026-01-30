@@ -8,7 +8,8 @@ import {
   Users,
   Target,
   MessageSquare,
-  Award
+  Award,
+  School
 } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
 
@@ -53,6 +54,12 @@ export function getMobileNavLinks(pathname: string): MenuGroup[] {
           label: 'Our Management',
           icon: Building2,
           active: pathname === '/our-management'
+        },
+        {
+          href: '/our-institutions',
+          label: 'Our Institutions',
+          icon: School,
+          active: pathname === '/our-institutions'
         },
         {
           href: '/principals-message',

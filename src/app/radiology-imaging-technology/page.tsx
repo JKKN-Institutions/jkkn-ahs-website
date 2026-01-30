@@ -250,36 +250,30 @@ function SyllabusSection() {
 
     const syllabus = {
         'Year 1': {
-            sem: 'Semester',
+            sem: 'First Year',
             subjects: [
-                { name: 'Human Anatomy, Physiology & Biochemistry', hasTheory: true, hasPractical: true },
-                { name: 'English Communication & Computer Applications', hasTheory: true, hasPractical: true },
-                { name: 'Radiographic Anatomy & Physics of Radiology', hasTheory: true, hasPractical: false },
-                { name: 'Pathology & Microbiology', hasTheory: true, hasPractical: false },
-                { name: 'Introduction to Radiography', hasTheory: false, hasPractical: true }
+                { name: 'Human Anatomy, Physiology & Pathology relevant to Radiology', hasTheory: true, hasPractical: true },
+                { name: 'General Physics, Radiation Physics & Physics of Diagnostic Radiology', hasTheory: true, hasPractical: true },
+                { name: 'Radio diagnosis Equipments, Maintenance and Quality Control', hasTheory: true, hasPractical: true }
             ]
         },
         'Year 2': {
-            sem: 'Semester',
+            sem: 'Second Year',
             subjects: [
-                { name: 'Pharmacology & Radiation Physics', hasTheory: true, hasPractical: false },
-                { name: 'Radiographic Techniques I & II', hasTheory: true, hasPractical: true },
-                { name: 'X-ray Equipment & CT Scan Technology', hasTheory: true, hasPractical: true },
-                { name: 'Radiation Protection & Safety', hasTheory: true, hasPractical: false },
-                { name: 'Darkroom Techniques & Image Processing', hasTheory: true, hasPractical: true },
-                { name: 'Basic Life Support & Positioning', hasTheory: false, hasPractical: true }
+                { name: 'Clinical Radiography', hasTheory: true, hasPractical: true },
+                { name: 'X-ray Film / Image processing Techniques including Dark Room Techniques', hasTheory: true, hasPractical: true },
+                { name: 'Contrast & Special Radiography procedures', hasTheory: true, hasPractical: true }
             ]
         },
         'Year 3': {
-            sem: 'Semester',
+            sem: 'Third Year',
             subjects: [
-                { name: 'MRI Technology & Ultrasound Imaging', hasTheory: true, hasPractical: true },
-                { name: 'Mammography & Fluoroscopy', hasTheory: true, hasPractical: true },
-                { name: 'Interventional Radiology & Nuclear Medicine', hasTheory: true, hasPractical: true },
-                { name: 'Pediatric Imaging & Emergency Radiology', hasTheory: true, hasPractical: false },
-                { name: 'Advanced Imaging & Quality Assurance', hasTheory: true, hasPractical: false },
-                { name: 'PACS, Digital Imaging & Research Methodology', hasTheory: true, hasPractical: true },
-                { name: 'Clinical Internship & Project', hasTheory: false, hasPractical: true }
+                { name: 'Human Anatomy, Physiology & Pathology relevant to Radiology', hasTheory: true, hasPractical: true },
+                { name: 'General Physics, Radiation Physics & Physics of Diagnostic Radiology', hasTheory: true, hasPractical: true },
+                { name: 'Radio diagnosis Equipments, Maintenance and Quality Control', hasTheory: true, hasPractical: true },
+                { name: 'Clinical Radiography', hasTheory: true, hasPractical: true },
+                { name: 'X-ray Film / Image processing Techniques including Dark Room Techniques', hasTheory: true, hasPractical: true },
+                { name: 'Contrast & Special Radiography procedures', hasTheory: true, hasPractical: true }
             ]
         }
     };
@@ -311,29 +305,41 @@ function SyllabusSection() {
                 transition={{ duration: 0.3 }}
                 className="flex justify-center"
             >
-                <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden max-w-3xl w-full">
+                <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden max-w-4xl w-full">
                     <div className="bg-[#0b6d41] text-white px-6 py-4">
                         <h4 className="font-bold text-lg">{(syllabus as any)[activeYear].sem}</h4>
                     </div>
+
+                    {/* Table Header */}
+                    <div className="grid grid-cols-[1fr_120px_120px] gap-4 px-8 py-4 bg-gray-50 border-b border-gray-200">
+                        <div className="font-bold text-[#0b6d41] text-sm uppercase tracking-wide">Subject</div>
+                        <div className="font-bold text-[#0b6d41] text-sm uppercase tracking-wide text-center">Theory</div>
+                        <div className="font-bold text-[#0b6d41] text-sm uppercase tracking-wide text-center">Practical</div>
+                    </div>
+
+                    {/* Table Body */}
                     <div className="p-8 bg-[#fbfbee]">
-                        <ul className="space-y-4">
-                            {(syllabus as any)[activeYear].subjects.map((sub: any, idx: number) => {
-                                const type = getSubjectType(sub.hasTheory, sub.hasPractical);
-                                return (
-                                    <li key={idx} className="flex items-center justify-between gap-4 text-gray-800 py-2">
-                                        <div className="flex items-center gap-3 flex-1">
-                                            <div className={`w-2 h-2 rounded-full shrink-0 ${type === 'THEORY + PRACTICAL' ? 'bg-purple-600' : 'bg-orange-500'}`}></div>
-                                            <span className="font-medium text-[15px]">{sub.name}</span>
-                                        </div>
-                                        <span className={`text-[10px] uppercase font-bold px-3 py-1.5 rounded-md whitespace-nowrap tracking-wide ${
-                                            type === 'THEORY + PRACTICAL' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
-                                        }`}>
-                                            {type}
-                                        </span>
-                                    </li>
-                                );
-                            })}
-                        </ul>
+                        <div className="space-y-3">
+                            {(syllabus as any)[activeYear].subjects.map((sub: any, idx: number) => (
+                                <div key={idx} className="grid grid-cols-[1fr_120px_120px] gap-4 items-center py-3 border-b border-gray-200 last:border-0">
+                                    <div className="font-medium text-gray-800 text-[15px]">{sub.name}</div>
+                                    <div className="text-center">
+                                        {sub.hasTheory ? (
+                                            <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-xs font-bold rounded-md">YES</span>
+                                        ) : (
+                                            <span className="inline-block px-4 py-1.5 bg-gray-100 text-gray-500 text-xs font-bold rounded-md">NO</span>
+                                        )}
+                                    </div>
+                                    <div className="text-center">
+                                        {sub.hasPractical ? (
+                                            <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-xs font-bold rounded-md">YES</span>
+                                        ) : (
+                                            <span className="inline-block px-4 py-1.5 bg-gray-100 text-gray-500 text-xs font-bold rounded-md">NO</span>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </motion.div>

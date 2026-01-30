@@ -100,7 +100,7 @@ export function Footer() {
                                 <p className="text-white font-semibold mb-1 text-xs sm:text-sm">Call: <a href="tel:+919345855001" className="hover:text-[#ffde59] transition-colors">+919345855001</a></p>
                             </div>
                             <div>
-                                <p className="text-white font-semibold mb-1 text-xs sm:text-sm">Email: <a href="mailto:ahs@jkkn.ac.in" className="hover:text-[#ffde59] transition-colors">ahs@jkkn.ac.in</a></p>
+                                <p className="text-white font-semibold mb-1 text-xs sm:text-sm">Email: <a href="mailto:alliedhealth@jkkn.ac.in" className="hover:text-[#ffde59] transition-colors">alliedhealth@jkkn.ac.in</a></p>
                             </div>
                             <div>
                                 <p className="text-white font-semibold mb-2 text-xs sm:text-sm">Address:</p>

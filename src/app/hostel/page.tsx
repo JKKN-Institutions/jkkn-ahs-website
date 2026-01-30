@@ -16,7 +16,7 @@ interface HostelSection {
 const hostelSections: HostelSection[] = [
     {
         title: "BOYS HOSTEL",
-        image: "/hostel/boys-hostel.jpg",
+        image: "/images/boys-hostel.png",
         paragraphs: [
             "Our hostel, situated within the campus, offers a hassle-free commute to classes, making it an excellent option for students. Equipped with essential amenities, the well-maintained hostel provides spacious, well-ventilated single and shared rooms for residents to enjoy a comfortable living experience.",
             "At JKKN, we value academics and provide an environment that promotes concentration and learning. Our hostel fosters a peaceful and quiet atmosphere, free from distractions, while our high-speed internet connectivity facilitates easy access to online resources, aiding academic assignments.",
@@ -26,7 +26,7 @@ const hostelSections: HostelSection[] = [
     },
     {
         title: "GIRLS HOSTEL",
-        image: "/hostel/girls-hostel.jpg",
+        image: "/images/girls-hostel.png",
         paragraphs: [
             "Our female students can enjoy a unique and modern living experience at our girls' hostel, which is equipped with all the necessary facilities for a comfortable and enjoyable stay. Each room is spacious, well-ventilated, and furnished with comfortable beds, study tables, and ample storage space. Privacy is ensured, as every room comes with its own bathroom.",
             "To ensure our students' safety, we have round-the-clock security, CCTV surveillance, and access control systems. We also have a strict no-visitor policy and require valid identification for anyone entering the premises.",

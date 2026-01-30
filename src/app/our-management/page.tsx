@@ -80,7 +80,7 @@ function ManagementCard({ member, index }: { member: typeof managementTeam[0], i
         if (member.role === "DIRECTOR") {
             return "w-full h-full object-cover scale-110";
         } else if (member.role === "CHAIRPERSON") {
-            return "w-full h-full object-cover scale-90 object-center";
+            return "w-full h-full object-cover object-top scale-105";
         }
         return "w-full h-full object-cover";
     };

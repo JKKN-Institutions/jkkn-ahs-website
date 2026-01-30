@@ -165,7 +165,7 @@ function AboutSection() {
                             {[
                                 { label: "Duration", value: "3 + 1" },
                                 { label: "Degree", value: "B.Sc" },
-                                { label: "Intake", value: "5 Seats" },
+                                { label: "Intake", value: "10 Seats" },
                                 { label: "Session", value: "2026-2027" },
                                 { label: "Approval", value: "UGC Approved" },
                                 { label: "Fee", value: "Contact Us" },

@@ -176,7 +176,12 @@ function AboutSection() {
                             </li>
                         ))}
                     </ul>
-                    <button className="w-full mt-8 py-3 bg-[#0b6d41] text-white font-bold rounded-xl shadow-lg hover:bg-[#095c37] transition-all flex items-center justify-center gap-2">
+                    <button
+                        onClick={() => {
+                            alert("For course brochure, please contact our admissions office at +91 93458 55001 or visit the contact page.");
+                        }}
+                        className="w-full mt-8 py-3 bg-[#0b6d41] text-white font-bold rounded-xl shadow-lg hover:bg-[#095c37] transition-all flex items-center justify-center gap-2"
+                    >
                         <Download className="w-4 h-4" /> Download Brochure
                     </button>
                 </div>
@@ -246,30 +251,50 @@ function SyllabusSection() {
 
     const syllabus = {
         'Year 1': {
-            semester: 'Semester 1 & 2',
-            theoryOnly: [
-                'INTRODUCTION TO COMPUTER',
-                'TECHNICAL REPORT WRITING/SPOKEN ENGLISH/COMPREHENSIVE PATIENT ORIENTED COMMUNICATION SKILL'
-            ],
-            theoryPractical: [
-                'ANATOMY, PHYSIOLOGY, BIOCHEMISTRY'
+            title: 'First Year',
+            papers: [
+                {
+                    name: 'Paper 1: Anatomy + Applied Anatomy + Biochemistry (Anatomy 75% + Biochemistry 25%)',
+                    tag: 'THEORY + PRACTICAL'
+                },
+                {
+                    name: 'Paper 2: Physiology + Basic physics (Physiology 75% + Physics 25%)',
+                    tag: 'THEORY + PRACTICAL'
+                },
+                {
+                    name: 'Paper 3: Computer + English (Computer 50% + English 50%)',
+                    tag: 'THEORY + PRACTICAL'
+                }
             ]
         },
         'Year 2': {
-            semester: 'Semester 3 & 4',
-            theoryOnly: [],
-            theoryPractical: [
-                'GENERAL MEDICINE & PHARMACOLOGY',
-                'PEDIATRICS & GERIATRICS, CLINICAL MICROBIOLOGY',
-                'OBSTETRICS & GYNAECOLOGY, SURGERY'
+            title: 'Second Year',
+            papers: [
+                {
+                    name: 'Paper 1: General Medicine & Pharmacology',
+                    tag: 'THEORY + PRACTICAL'
+                },
+                {
+                    name: 'Paper 2: Pediatrics & Geriatrics, Clinical Microbiology',
+                    tag: 'THEORY + PRACTICAL'
+                },
+                {
+                    name: 'Paper 3: Obstetrics & Gynaecology, Surgery',
+                    tag: 'THEORY + PRACTICAL'
+                }
             ]
         },
         'Year 3': {
-            semester: 'Semester 5 & 6',
-            theoryOnly: [],
-            theoryPractical: [
-                'CARDIOLOGY & CARDIAC SURGERY, NEUROLOGY',
-                'NEPHROLOGY, ORTHOPEDICS, PULMONOLOGY, GASTROENTEROLOGY'
+            title: 'Third Year',
+            papers: [
+                {
+                    name: 'Paper 1: Cardiology & Cardiac Surgery, Neurology',
+                    tag: 'THEORY + PRACTICAL'
+                },
+                {
+                    name: 'Paper 2: Nephrology, Orthopedics, Pulmonology, Gastroenterology',
+                    tag: 'THEORY + PRACTICAL'
+                }
             ]
         }
     };
@@ -282,18 +307,24 @@ function SyllabusSection() {
                 <p className="text-gray-500 mt-2">Comprehensive curriculum with strong foundation in clinical medicine and extensive practical training</p>
             </div>
 
+            {/* Year Tabs */}
             <div className="flex justify-center flex-wrap gap-4 mb-12 bg-white p-2 rounded-full shadow-md w-fit mx-auto">
                 {years.map(year => (
                     <button
                         key={year}
                         onClick={() => setActiveYear(year)}
-                        className={`px-8 py-2 rounded-full font-bold transition-all ${activeYear === year ? 'bg-[#0b6d41] text-white shadow-lg' : 'text-gray-500 hover:bg-gray-100'}`}
+                        className={`px-8 py-3 rounded-full font-bold transition-all ${
+                            activeYear === year
+                                ? 'bg-[#0b6d41] text-white shadow-lg'
+                                : 'text-gray-700 hover:bg-gray-100'
+                        }`}
                     >
                         {year}
                     </button>
                 ))}
             </div>
 
+            {/* Curriculum Content */}
             <motion.div
                 key={activeYear}
                 initial={{ opacity: 0, y: 20 }}
@@ -301,97 +332,34 @@ function SyllabusSection() {
                 transition={{ duration: 0.3 }}
                 className="flex justify-center"
             >
-                <div className="w-full max-w-5xl">
-                    <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-                        <div className="bg-[#0b6d41] text-white p-6 text-center">
-                            <h4 className="font-bold text-2xl">{(syllabus as any)[activeYear].semester}</h4>
-                            <p className="text-sm text-white/80 mt-1">{activeYear} Curriculum</p>
-                        </div>
-                        <div className="p-8">
-                            {/* Curriculum Table */}
-                            <div className="mb-8">
-                                <h5 className="text-lg font-bold text-[#0b6d41] mb-4 flex items-center gap-2">
-                                    <FileText className="w-5 h-5" />
-                                    Course Syllabus
-                                </h5>
+                <div className="w-full max-w-4xl">
+                    {/* Year Title Header */}
+                    <div className="bg-[#0b6d41] text-white px-8 py-5 rounded-t-3xl">
+                        <h4 className="text-2xl font-bold">{(syllabus as any)[activeYear].title}</h4>
+                    </div>
 
-                                {/* Complete Curriculum Table */}
-                                <div className="overflow-x-auto rounded-lg border-2 border-gray-200">
-                                    <table className="w-full border-collapse">
-                                        <thead>
-                                            <tr className="bg-gray-100">
-                                                <th className="border border-gray-300 px-6 py-3 text-left font-bold text-gray-700">SUBJECT</th>
-                                                <th className="border border-gray-300 px-6 py-3 text-center font-bold text-gray-700">THEORY</th>
-                                                <th className="border border-gray-300 px-6 py-3 text-center font-bold text-gray-700">PRACTICAL</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {/* Theory + Practical Subjects */}
-                                            {(syllabus as any)[activeYear].theoryPractical.map((subject: string, idx: number) => (
-                                                <tr key={`tp-${idx}`} className="hover:bg-gray-50">
-                                                    <td className="border border-gray-300 px-6 py-4 text-gray-700">{subject}</td>
-                                                    <td className="border border-gray-300 px-6 py-4 text-center font-semibold text-green-600">YES</td>
-                                                    <td className="border border-gray-300 px-6 py-4 text-center font-semibold text-green-600">YES</td>
-                                                </tr>
-                                            ))}
-                                            {/* Theory Only Subjects */}
-                                            {(syllabus as any)[activeYear].theoryOnly.map((subject: string, idx: number) => (
-                                                <tr key={`t-${idx}`} className="hover:bg-gray-50">
-                                                    <td className="border border-gray-300 px-6 py-4 text-gray-700">{subject}</td>
-                                                    <td className="border border-gray-300 px-6 py-4 text-center font-semibold text-green-600">YES</td>
-                                                    <td className="border border-gray-300 px-6 py-4 text-center font-semibold text-red-600">NO</td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            {/* Theory Only Section */}
-                            {(syllabus as any)[activeYear].theoryOnly.length > 0 && (
-                                <div className="mb-8">
-                                    <h5 className="text-lg font-bold text-[#0b6d41] mb-4 flex items-center gap-2">
-                                        <span className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs uppercase font-bold">Theory</span>
-                                        Theory Only Subjects
-                                    </h5>
-                                    <div className="bg-blue-50/30 rounded-lg p-6 border-2 border-blue-200">
-                                        <ul className="space-y-3">
-                                            {(syllabus as any)[activeYear].theoryOnly.map((subject: string, idx: number) => (
-                                                <li key={idx} className="flex items-start gap-3">
-                                                    <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                                                    <span className="text-gray-700 font-medium">{subject}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
+                    {/* Papers List */}
+                    <div className="bg-[#fbfbee] rounded-b-3xl px-8 py-10 shadow-lg">
+                        <div className="space-y-6">
+                            {(syllabus as any)[activeYear].papers.map((paper: any, idx: number) => (
+                                <div
+                                    key={idx}
+                                    className="flex items-start justify-between gap-6 group"
+                                >
+                                    {/* Paper Name with Purple Bullet */}
+                                    <div className="flex items-start gap-4 flex-1">
+                                        <div className="w-3 h-3 rounded-full bg-purple-500 mt-1.5 shrink-0"></div>
+                                        <p className="text-gray-800 font-medium leading-relaxed">
+                                            {paper.name}
+                                        </p>
                                     </div>
-                                </div>
-                            )}
 
-                            {/* Theory + Practical Section */}
-                            <div>
-                                <h5 className="text-lg font-bold text-[#0b6d41] mb-4 flex items-center gap-2">
-                                    <span className="px-3 py-1 bg-yellow-50 text-yellow-600 rounded-full text-xs uppercase font-bold">Theory + Practical</span>
-                                    Theory & Practical Subjects
-                                </h5>
-                                <div className="bg-yellow-50/30 rounded-lg p-6 border-2 border-yellow-200">
-                                    <ul className="space-y-3">
-                                        {(syllabus as any)[activeYear].theoryPractical.map((subject: string, idx: number) => (
-                                            <li key={idx} className="flex items-start gap-3">
-                                                <CheckCircle2 className="w-5 h-5 text-yellow-600 shrink-0 mt-0.5" />
-                                                <span className="text-gray-700 font-medium">{subject}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    {/* Tag */}
+                                    <span className="px-4 py-2 bg-[#d4f4dd] text-[#0b6d41] text-xs font-bold rounded-lg whitespace-nowrap shrink-0">
+                                        {paper.tag}
+                                    </span>
                                 </div>
-                            </div>
-
-                            {/* Download Button */}
-                            <div className="mt-8 flex justify-center">
-                                <button className="px-8 py-3 bg-[#0b6d41] text-white font-bold rounded-full shadow-lg hover:bg-[#095c37] transition-all flex items-center gap-2">
-                                    <Download className="w-5 h-5" />
-                                    Download {activeYear} Syllabus PDF
-                                </button>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>

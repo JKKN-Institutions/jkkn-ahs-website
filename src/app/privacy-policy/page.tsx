@@ -120,7 +120,7 @@ export default function PrivacyPolicy() {
                         <div className="space-y-2 text-sm sm:text-base text-gray-700">
                             <p>
                                 <span className="font-semibold">Call:</span> +91 4344 274 741
-                                <span className="ml-4 font-semibold">Email:</span> info@jkkn.ac.in
+                                <span className="ml-4 font-semibold">Email:</span> alliedhealth@jkkn.ac.in
                             </p>
                             <p>
                                 <span className="font-semibold">Address:</span> JKKN Allied Health Science College, B, Komarapalayam, Namakkal District, Tamil Nadu, India – 638183.

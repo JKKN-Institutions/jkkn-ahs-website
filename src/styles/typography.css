@@ -1,0 +1,222 @@
+/**
+ * JKKN AHS Website - Standardized Typography System
+ * Font Family: Poppins (Google Fonts)
+ *
+ * This file defines consistent font sizes for all text elements across the website.
+ * Use these classes instead of arbitrary Tailwind font size classes.
+ */
+
+/* ============================================
+   HEADING STYLES
+   ============================================ */
+
+/* Hero Title - Main landing page H1 */
+.hero-title {
+  @apply text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tight;
+  /* Mobile: 36px, Tablet: 48px, Desktop: 72px */
+}
+
+/* Page Title - H1 for internal pages */
+.page-title {
+  @apply text-4xl md:text-5xl font-black leading-tight tracking-tight;
+  /* Mobile: 36px, Desktop: 48px */
+}
+
+/* Section Title - H2 */
+.section-title {
+  @apply text-3xl md:text-4xl font-black leading-snug tracking-tight;
+  /* Mobile: 30px, Desktop: 36px */
+}
+
+/* Subsection Title - H3 */
+.subsection-title {
+  @apply text-2xl md:text-3xl font-bold leading-snug;
+  /* Mobile: 24px, Desktop: 30px */
+}
+
+/* Card Title - H4 */
+.card-title {
+  @apply text-xl md:text-2xl font-bold leading-snug;
+  /* Mobile: 20px, Desktop: 24px */
+}
+
+/* Small Title - H5 */
+.small-title {
+  @apply text-lg md:text-xl font-semibold leading-normal;
+  /* Mobile: 18px, Desktop: 20px */
+}
+
+/* Mini Title - H6 */
+.mini-title {
+  @apply text-base md:text-lg font-semibold leading-normal;
+  /* Mobile: 16px, Desktop: 18px */
+}
+
+/* ============================================
+   BODY TEXT STYLES
+   ============================================ */
+
+/* Large Body - For important descriptions */
+.body-large {
+  @apply text-lg leading-relaxed font-normal;
+  /* 18px, line-height: 1.75 */
+}
+
+/* Regular Body - Default paragraph text */
+.body-regular {
+  @apply text-base leading-relaxed font-normal;
+  /* 16px, line-height: 1.75 */
+}
+
+/* Small Body - Secondary information */
+.body-small {
+  @apply text-sm leading-relaxed font-normal;
+  /* 14px, line-height: 1.75 */
+}
+
+/* Extra Small Body - Captions, footnotes */
+.body-xs {
+  @apply text-xs leading-normal font-normal;
+  /* 12px, line-height: 1.5 */
+}
+
+/* ============================================
+   SPECIAL TEXT STYLES
+   ============================================ */
+
+/* Lead Text - Opening paragraphs, hero descriptions */
+.lead-text {
+  @apply text-lg md:text-xl leading-relaxed font-normal;
+  /* Mobile: 18px, Desktop: 20px */
+}
+
+/* Quote Text - Testimonials, quotes */
+.quote-text {
+  @apply text-sm md:text-base leading-relaxed font-normal italic;
+  /* Mobile: 14px, Desktop: 16px */
+}
+
+/* Label - Form labels, badge text */
+.label-text {
+  @apply text-xs md:text-sm font-semibold uppercase tracking-wide;
+  /* Mobile: 12px, Desktop: 14px */
+}
+
+/* Badge - Small status indicators */
+.badge-text {
+  @apply text-xs font-bold uppercase tracking-widest;
+  /* 12px */
+}
+
+/* Button Text */
+.button-text {
+  @apply text-sm md:text-base font-semibold;
+  /* Mobile: 14px, Desktop: 16px */
+}
+
+/* Link Text */
+.link-text {
+  @apply text-base font-medium underline-offset-4 hover:underline;
+  /* 16px */
+}
+
+/* ============================================
+   STAT & NUMBER STYLES
+   ============================================ */
+
+/* Large Stats - Hero section numbers */
+.stat-large {
+  @apply text-4xl sm:text-5xl md:text-6xl font-black leading-none;
+  /* Mobile: 36px, Desktop: 72px */
+}
+
+/* Medium Stats */
+.stat-medium {
+  @apply text-3xl md:text-4xl font-black leading-none;
+  /* Mobile: 30px, Desktop: 36px */
+}
+
+/* Small Stats */
+.stat-small {
+  @apply text-2xl md:text-3xl font-bold leading-none;
+  /* Mobile: 24px, Desktop: 30px */
+}
+
+/* Stat Label */
+.stat-label {
+  @apply text-xs md:text-sm font-medium uppercase tracking-wide;
+  /* Mobile: 12px, Desktop: 14px */
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Text Alignment Utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Gradient Text */
+.text-gradient-primary {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#0b6d41] to-[#085231];
+}
+
+.text-gradient-secondary {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#ffde59] to-[#f5d033];
+}
+
+/* Truncate Text */
+.text-truncate {
+  @apply overflow-hidden text-ellipsis whitespace-nowrap;
+}
+
+.text-truncate-2 {
+  @apply overflow-hidden line-clamp-2;
+}
+
+.text-truncate-3 {
+  @apply overflow-hidden line-clamp-3;
+}
+
+/* ============================================
+   RESPONSIVE HELPER CLASSES
+   ============================================ */
+
+/* Mobile-only larger text */
+@media (max-width: 640px) {
+  .mobile-lead {
+    @apply text-lg leading-relaxed;
+  }
+}
+
+/* Desktop-only larger text */
+@media (min-width: 1024px) {
+  .desktop-hero {
+    @apply text-7xl;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .hero-title,
+  .page-title {
+    @apply text-3xl;
+  }
+
+  .section-title {
+    @apply text-2xl;
+  }
+
+  .subsection-title {
+    @apply text-xl;
+  }
+
+  .body-large,
+  .body-regular {
+    @apply text-sm;
+  }
+}
