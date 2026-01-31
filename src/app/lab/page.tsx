@@ -7,7 +7,7 @@ import { Footer } from '@/components/layout/Footer';
 
 export default function Labs() {
     return (
-        <div className="min-h-screen flex flex-col bg-white font-sans">
+        <div className="min-h-screen flex flex-col bg-white">
             <Navbar />
 
             <main className="flex-grow pt-24 pb-12">

@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/Footer';
 
 export default function BankPostOffice() {
     return (
-        <div className="min-h-screen flex flex-col bg-[#fbfbee] font-sans">
+        <div className="min-h-screen flex flex-col bg-[#fbfbee]">
             <Navbar />
 
             <main className="flex-grow pt-24 pb-20">

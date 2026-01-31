@@ -6,6 +6,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   Home,
   MoreHorizontal,
+  Users,
+  GraduationCap,
+  Building,
+  LayoutGrid,
+  Mail,
   LucideIcon
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -20,11 +25,11 @@ import { BottomNavGroup, FlatMenuItem, ActivePageInfo } from './types';
 // Icon mapping for menu groups
 const GROUP_ICONS: Record<string, LucideIcon> = {
   'Home': Home,
-  'About': Home,
-  'Departments': Home,
-  'Facilities': Home,
-  'Others': Home,
-  'Contact': Home
+  'About': Users,
+  'Departments': GraduationCap,
+  'Facilities': Building,
+  'Others': LayoutGrid,
+  'Contact': Mail
 };
 
 // Flatten menu items including submenus

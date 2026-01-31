@@ -10,7 +10,7 @@ import { ArrowLeft, BookOpen, Users, Lightbulb, Globe, Sparkles, Award, Layers, 
 
 export default function Library() {
     return (
-        <div className="min-h-screen flex flex-col bg-[#fbfbee] font-sans">
+        <div className="min-h-screen flex flex-col bg-[#fbfbee]">
             <Navbar />
 
             <main className="flex-grow pt-24 pb-20">

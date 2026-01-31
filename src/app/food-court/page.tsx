@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 export default function FoodCourt() {
     return (
-        <div className="min-h-screen flex flex-col font-sans bg-[#fbfbee]">
+        <div className="min-h-screen flex flex-col bg-[#fbfbee]">
             <Navbar />
 
             <main className="flex-grow pt-24">

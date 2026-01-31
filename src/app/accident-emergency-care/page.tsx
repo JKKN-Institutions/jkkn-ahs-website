@@ -14,7 +14,7 @@ import {
 
 export default function AccidentEmergencyCare() {
     return (
-        <div className="min-h-screen flex flex-col font-sans bg-[#fbfbee]">
+        <div className="min-h-screen flex flex-col bg-[#fbfbee]">
             <Navbar />
 
             <main className="flex-grow pt-20">

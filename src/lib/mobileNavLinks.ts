@@ -9,8 +9,7 @@ import {
   Target,
   MessageSquare,
   Award,
-  School,
-  Image
+  School
 } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
 
@@ -200,12 +199,6 @@ export function getMobileNavLinks(pathname: string): MenuGroup[] {
       groupLabel: 'Others',
       mainHref: '/others',
       menus: [
-        {
-          href: '/gallery',
-          label: 'Gallery',
-          icon: Image,
-          active: pathname === '/gallery'
-        },
         {
           href: '/NAAC',
           label: 'NAAC',

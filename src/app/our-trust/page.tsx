@@ -10,7 +10,7 @@ import { Calendar, Building2, GraduationCap, Users, Heart, Award, ArrowLeft } fr
 
 export default function OurTrust() {
     return (
-        <div className="min-h-screen flex flex-col bg-[#fbfbee] font-sans">
+        <div className="min-h-screen flex flex-col bg-[#fbfbee]">
             <Navbar />
 
             <main className="flex-grow pt-24 pb-20">

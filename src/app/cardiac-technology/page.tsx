@@ -13,7 +13,7 @@ import {
 
 export default function CardiacTechnology() {
     return (
-        <div className="min-h-screen flex flex-col font-sans bg-[#fbfbee]">
+        <div className="min-h-screen flex flex-col bg-[#fbfbee]">
             <Navbar />
 
             <main className="flex-grow pt-20">

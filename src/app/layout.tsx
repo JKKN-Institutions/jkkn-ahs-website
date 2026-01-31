@@ -10,8 +10,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "AHS Website",
-  description: "Welcome to AHS Website",
+  title: "JKKN Allied Health Sciences",
+  description: "Welcome to JKKN Allied Health Sciences Website",
+  icons: {
+    icon: "/ahs-logo.svg",
+  },
 };
 
 export default function RootLayout({

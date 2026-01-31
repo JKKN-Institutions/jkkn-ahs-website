@@ -10,7 +10,7 @@ import { FaFacebookF, FaInstagram, FaXTwitter, FaYoutube, FaLinkedinIn } from 'r
 
 export default function OurInstitutions() {
     return (
-        <div className="min-h-screen flex flex-col bg-[#fbfbee] font-sans">
+        <div className="min-h-screen flex flex-col bg-[#fbfbee]">
             <Navbar />
 
             {/* Main Content */}

@@ -81,7 +81,7 @@ export function BottomNavMoreMenu({
                 );
 
                 return (
-                  <div key={group.id} className="mb-4 border-b border-border/30 last:border-0">
+                  <div key={group.id} className="mb-4">
                     {/* Accordion Header */}
                     <button
                       onClick={() => toggleGroup(group.id)}
@@ -103,9 +103,6 @@ export function BottomNavMoreMenu({
                       </div>
                       <span className="font-medium text-sm flex-1 text-left">
                         {group.groupLabel}
-                      </span>
-                      <span className="text-xs text-muted-foreground">
-                        {group.menus.length}
                       </span>
                       <ChevronDown
                         className={cn(
