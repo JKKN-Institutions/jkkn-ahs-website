@@ -6,6 +6,7 @@ import { Eye, Target, ArrowLeft, Sparkles, TrendingUp, Users, Heart } from 'luci
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { motion } from 'framer-motion';
+import Typography from '@/components/ui/Typography';
 
 export default function VisionMission() {
     const containerVariants = {
@@ -66,7 +67,7 @@ export default function VisionMission() {
 
             <Navbar />
 
-            <main className="flex-grow pt-32 pb-20">
+            <main className="flex-grow pt-4 md:pt-20 lg:pt-32 pb-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Back Button */}
                     <motion.div
@@ -101,12 +102,20 @@ export default function VisionMission() {
                             <span className="text-sm font-semibold text-[#0b6d41]">Our Purpose & Direction</span>
                         </motion.div>
 
-                        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#0b6d41] via-[#0e8a52] to-[#fbb92c] mb-6 leading-tight">
+                        <Typography
+                            variant="h1"
+                            balance
+                            className="text-transparent bg-clip-text bg-gradient-to-r from-[#0b6d41] via-[#0e8a52] to-[#fbb92c] mb-6"
+                        >
                             Vision & Mission
-                        </h1>
-                        <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                        </Typography>
+                        <Typography
+                            variant="p"
+                            balance
+                            className="text-gray-700 max-w-3xl mx-auto"
+                        >
                             Shaping the future of healthcare through innovation, excellence, and compassionate service
-                        </p>
+                        </Typography>
                     </motion.div>
 
                     <motion.div
@@ -133,7 +142,7 @@ export default function VisionMission() {
                                             >
                                                 <div className="absolute inset-0 bg-gradient-to-br from-[#0b6d41]/20 to-[#0e8a52]/20 rounded-2xl blur-xl" />
                                                 <div className="relative bg-gradient-to-br from-[#0b6d41] to-[#0e8a52] p-6 rounded-2xl">
-                                                    <Eye className="w-16 h-16 sm:w-20 sm:h-20 text-white" strokeWidth={1.5} />
+                                                    <Eye className="w-12 h-12 sm:w-14 sm:h-14 text-white" strokeWidth={1.5} />
                                                 </div>
                                             </motion.div>
                                         </div>
@@ -141,16 +150,23 @@ export default function VisionMission() {
                                         {/* Content Section */}
                                         <div className="flex-grow">
                                             <div className="flex items-center gap-3 mb-6">
-                                                <h2 className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#0b6d41] to-[#0e8a52]">
+                                                <Typography
+                                                    variant="h2"
+                                                    className="text-transparent bg-clip-text bg-gradient-to-r from-[#0b6d41] to-[#0e8a52]"
+                                                >
                                                     Our Vision
-                                                </h2>
+                                                </Typography>
                                                 <TrendingUp className="w-8 h-8 text-[#0b6d41] animate-pulse" />
                                             </div>
 
                                             <div className="space-y-4">
-                                                <p className="text-2xl sm:text-3xl text-gray-800 font-bold leading-relaxed">
+                                                <Typography
+                                                    variant="p"
+                                                    balance
+                                                    className="text-gray-800 font-bold"
+                                                >
                                                     To be a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0b6d41] via-[#0e8a52] to-[#fbb92c]">Leading Global Innovative Solutions</span> provider for the ever-changing needs of the society.
-                                                </p>
+                                                </Typography>
 
                                                 {/* Vision Highlights */}
                                                 <div className="grid sm:grid-cols-2 gap-4 mt-8">
@@ -201,7 +217,7 @@ export default function VisionMission() {
                                             >
                                                 <div className="absolute inset-0 bg-gradient-to-br from-[#0b6d41]/20 to-[#0e8a52]/20 rounded-2xl blur-xl" />
                                                 <div className="relative bg-gradient-to-br from-[#0b6d41] to-[#0e8a52] p-6 rounded-2xl">
-                                                    <Target className="w-16 h-16 sm:w-20 sm:h-20 text-white" strokeWidth={1.5} />
+                                                    <Target className="w-12 h-12 sm:w-14 sm:h-14 text-white" strokeWidth={1.5} />
                                                 </div>
                                             </motion.div>
                                         </div>
@@ -209,15 +225,22 @@ export default function VisionMission() {
                                         {/* Content Section */}
                                         <div className="flex-grow">
                                             <div className="flex items-center gap-3 mb-6">
-                                                <h2 className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#0b6d41] to-[#0e8a52]">
+                                                <Typography
+                                                    variant="h2"
+                                                    className="text-transparent bg-clip-text bg-gradient-to-r from-[#0b6d41] to-[#0e8a52]"
+                                                >
                                                     Our Mission
-                                                </h2>
+                                                </Typography>
                                                 <Heart className="w-8 h-8 text-[#0b6d41] animate-pulse" />
                                             </div>
 
-                                            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8">
+                                            <Typography
+                                                variant="p"
+                                                balance
+                                                className="text-gray-700 mb-8"
+                                            >
                                                 Our mission at JKKN Allied Health and Sciences is to promote health and advance scientific knowledge through innovation, research, and education. We strive to improve the quality of life for individuals and communities by delivering comprehensive and compassionate healthcare services, as well as fostering a culture of collaboration and excellence among healthcare professionals.
-                                            </p>
+                                            </Typography>
 
                                             {/* Mission Pillars */}
                                             <div className="grid sm:grid-cols-3 gap-4">
@@ -262,9 +285,13 @@ export default function VisionMission() {
                             <div className="inline-block relative group">
                                 <div className="absolute -inset-1 bg-gradient-to-r from-[#0b6d41] via-[#fbb92c] to-[#0b6d41] rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition duration-500" />
                                 <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-white/40">
-                                    <p className="text-lg sm:text-xl text-gray-700 max-w-2xl">
+                                    <Typography
+                                        variant="p"
+                                        balance
+                                        className="text-gray-700 max-w-2xl"
+                                    >
                                         Together, we're building a healthier tomorrow through dedication, innovation, and unwavering commitment to excellence.
-                                    </p>
+                                    </Typography>
                                 </div>
                             </div>
                         </motion.div>

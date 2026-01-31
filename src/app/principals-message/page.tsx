@@ -13,7 +13,7 @@ export default function PrincipalsMessage() {
         <div className="min-h-screen flex flex-col bg-[#fbfbee]">
             <Navbar />
 
-            <main className="flex-grow pt-24 pb-16">
+            <main className="flex-grow pt-4 md:pt-20 lg:pt-24 pb-16">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Back Link */}
                     <div className="mb-8">

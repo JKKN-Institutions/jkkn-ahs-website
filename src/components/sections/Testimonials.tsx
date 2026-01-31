@@ -7,7 +7,7 @@ import { Quote } from 'lucide-react';
 const testimonials = [
     {
         name: "Priya Krishnan",
-        role: "B.Sc. MLT 2022 | Apollo Hospitals",
+        role: "B.Sc. OTAT 2022 | Apollo Hospitals",
         initials: "PK",
         content: "The practical training at JKKN prepared me thoroughly for my role at Apollo. The Learning Facilitators' real-world experience made all the difference in understanding complex procedures.",
         bgColor: "bg-[#0b6d41]"

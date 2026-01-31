@@ -186,7 +186,13 @@ export function BottomNavbar() {
 
       // If group has only 1 item (no submenu), navigate directly
       if (group.menus.length === 1) {
-        router.push(group.menus[0].href);
+        const href = group.menus[0].href;
+        // Open PDFs in new tab
+        if (href.endsWith('.pdf')) {
+          window.open(href, '_blank', 'noopener,noreferrer');
+        } else {
+          router.push(href);
+        }
         setExpanded(false);
         setMoreMenuOpen(false);
         return;
@@ -209,7 +215,12 @@ export function BottomNavbar() {
   // Handle submenu item click
   const handleSubmenuClick = useCallback(
     (href: string) => {
-      router.push(href);
+      // Open PDFs in new tab
+      if (href.endsWith('.pdf')) {
+        window.open(href, '_blank', 'noopener,noreferrer');
+      } else {
+        router.push(href);
+      }
       setExpanded(false);
     },
     [router, setExpanded]
@@ -224,7 +235,12 @@ export function BottomNavbar() {
   // Handle click on More menu item
   const handleMoreItemClick = useCallback(
     (href: string) => {
-      router.push(href);
+      // Open PDFs in new tab
+      if (href.endsWith('.pdf')) {
+        window.open(href, '_blank', 'noopener,noreferrer');
+      } else {
+        router.push(href);
+      }
       setMoreMenuOpen(false);
     },
     [router, setMoreMenuOpen]

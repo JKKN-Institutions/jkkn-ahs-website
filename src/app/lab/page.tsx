@@ -10,7 +10,7 @@ export default function Labs() {
         <div className="min-h-screen flex flex-col bg-white">
             <Navbar />
 
-            <main className="flex-grow pt-24 pb-12">
+            <main className="flex-grow pt-4 md:pt-20 lg:pt-24 pb-12">
                 <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
                     {/* Header Section */}
                     <h1 className="text-4xl md:text-5xl font-bold text-[#0b6d41] mb-8">

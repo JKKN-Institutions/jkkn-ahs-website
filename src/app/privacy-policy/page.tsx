@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
         <div className="min-h-screen flex flex-col bg-white">
             <Navbar />
 
-            <main className="flex-grow pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+            <main className="flex-grow pt-4 md:pt-20 lg:pt-24 pb-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto">
                     {/* Privacy Policy Heading */}
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 sm:mb-8">

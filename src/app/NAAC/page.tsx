@@ -969,7 +969,7 @@ export default function NAACPage() {
     <div className="min-h-screen flex flex-col bg-[#fbfbee]">
       <Navbar />
 
-      <main className="flex-grow pt-32 pb-20">
+      <main className="flex-grow pt-4 md:pt-20 lg:pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4">
           {/* Back to Home Link */}
           <div className="mb-8">

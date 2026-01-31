@@ -13,7 +13,7 @@ export default function Library() {
         <div className="min-h-screen flex flex-col bg-[#fbfbee]">
             <Navbar />
 
-            <main className="flex-grow pt-24 pb-20">
+            <main className="flex-grow pt-4 md:pt-20 lg:pt-24 pb-20">
                 <div className="max-w-7xl mx-auto px-4">
                     {/* Breadcrumb / Back Link */}
                     <div className="mb-8">

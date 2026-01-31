@@ -14,7 +14,7 @@ export default function OurInstitutions() {
             <Navbar />
 
             {/* Main Content */}
-            <main className="flex-grow pt-20 lg:pt-24 pb-12">
+            <main className="flex-grow pt-4 md:pt-20 lg:pt-24 pb-12">
                 {/* Header Section */}
                 <div className="bg-[#fbfbee] px-4 py-12 lg:py-16">
                     <div className="max-w-7xl mx-auto">

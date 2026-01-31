@@ -12,7 +12,7 @@ export default function ContactPage() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative bg-[#0b6d41] pt-32 pb-16 px-4 overflow-hidden">
+            <section className="relative bg-[#0b6d41] pt-4 md:pt-20 lg:pt-32 pb-16 px-4 overflow-hidden">
                 {/* Decorative Circles */}
                 <div className="absolute top-20 right-10 w-32 h-32 bg-[#085231] rounded-full opacity-50"></div>
                 <div className="absolute bottom-10 left-10 w-24 h-24 bg-[#085231] rounded-full opacity-30"></div>

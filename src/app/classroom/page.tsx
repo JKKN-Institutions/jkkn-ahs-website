@@ -10,7 +10,7 @@ export default function ClassRoom() {
         <div className="min-h-screen flex flex-col bg-[#fbfbee]">
             <Navbar />
 
-            <main className="flex-grow pt-24 pb-16">
+            <main className="flex-grow pt-4 md:pt-20 lg:pt-24 pb-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Page Title */}
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0b6d41] mb-12 uppercase tracking-tight">

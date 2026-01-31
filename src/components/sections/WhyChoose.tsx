@@ -29,7 +29,7 @@ const reasons = [
 
     {
         title: "Dental Hospital",
-        description: "Placement with 20+ recruiters. Our alumni work at top hospitals, diagnostic chains, and healthcare organizations globally.",
+        description: "Allied Health Science professionals bridge doctors and patients by providing vital diagnostic and therapeutic care, rapid emergency response, early patient support, and smart use of medical technology.",
         icon: <Briefcase className="w-10 h-10" />,
     }
 ];
