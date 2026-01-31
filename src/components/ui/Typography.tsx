@@ -119,12 +119,12 @@ export const Typography = React.forwardRef<HTMLElement, TypographyProps>(
     ref
   ) => {
     const { element: defaultElement, className: variantClassName } =
-      variantStyles[variant];
+      variantStyles[variant as TypographyVariant];
     const Component = as || defaultElement;
 
     const combinedClassName = cn(
       variantClassName,
-      align && alignmentClasses[align],
+      align && alignmentClasses[align as keyof typeof alignmentClasses],
       balance && "text-balance",
       color && (color.startsWith("#") || color.startsWith("rgb")
         ? ""
